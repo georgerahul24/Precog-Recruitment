@@ -9,11 +9,13 @@ from concurrent.futures import ThreadPoolExecutor
 output_dir = "output"
 fonts_dir = "./Fonts"
 image_size = (256, 128)
-font_size = 32
+font_size = 48
 num_samples_per_word = 5  # Number of images per word
 num_required_fonts = 42
 words_list = []
 noise_probability = 0.1
+line_probability = 0.2
+jitter_range = 5
 # Ensure output and fonts directories exist
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(fonts_dir, exist_ok=True)
@@ -29,6 +31,7 @@ font_families = [
     "Shadows+Into+Light", "Amatic+SC", "Indie+Flower"
 ]
 
+
 # Function to download fonts
 def download_fonts():
     print("Downloading fonts from Google Fonts...")
@@ -41,7 +44,8 @@ def download_fonts():
             continue
 
         # Parse CSS to find .ttf or .woff2 URLs
-        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if "url(" in line]
+        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if
+                     "url(" in line]
         for url in font_urls:
             try:
                 font_response = requests.get(url)
@@ -52,6 +56,7 @@ def download_fonts():
                 break  # Download only one variant per font
             except Exception as e:
                 print(f"Failed to download font from {url}: {e}")
+
 
 # Ensure there are at least `num_required_fonts` fonts in the folder
 font_files = [os.path.join(fonts_dir, f) for f in os.listdir(fonts_dir) if f.endswith(".ttf")]
@@ -69,19 +74,36 @@ with open("Dictionary.txt", "r") as file:
     words_list.extend(eval(file.read()))
 print("Number of words found in the Dictionary: ", len(words_list))
 
+
 def randomize_case(word):
     """Randomly capitalize letters in a word."""
     return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
 
-def create_image_bonus(word, font, size):
+
+def draw_random_lines(draw, size):
+    """Draw random straight or curved lines on the image."""
+    num_lines = random.randint(1, 5)  # Randomize number of lines
+    for _ in range(num_lines):
+        if random.random() < 0.5:  # Straight line
+            start_point = (random.randint(0, size[0]), random.randint(0, size[1]))
+            end_point = (random.randint(0, size[0]), random.randint(0, size[1]))
+            line_color = tuple(random.randint(0, 255) for _ in range(3))
+            draw.line([start_point, end_point], fill=line_color, width=random.randint(1, 3))
+        else:  # Curved line (approximation with multiple points)
+            points = [(random.randint(0, size[0]), random.randint(0, size[1])) for _ in range(3)]
+            line_color = tuple(random.randint(0, 255) for _ in range(3))
+            draw.line(points, fill=line_color, width=random.randint(1, 3))
+
+
+def create_image_bonus(word, fonts, size):
     """Create an image with the given word rendered with background-based rules."""
     # Randomly choose a background color: red or green
     background_color = random.choice(["red", "green"])
     img = Image.new("RGB", size, color=background_color)
     draw = ImageDraw.Draw(img)
 
-    # Determine how the word is rendered based on the background color
-    render_word = word if background_color == "green" else word[::-1]
+    # Add random lines for CAPTCHA effect
+    draw_random_lines(draw, size)
 
     # Add random pixelated noise
     for x in range(size[0]):
@@ -90,16 +112,36 @@ def create_image_bonus(word, font, size):
                 noise_color = tuple(random.randint(0, 255) for _ in range(3))
                 draw.point((x, y), fill=noise_color)
 
-    # Calculate text position to center the word
-    text_bbox = draw.textbbox((0, 0), render_word, font=font)
-    text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
-    position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
+    # Render each letter with a random font
 
-    # Render the word in a random color
-    random_color = tuple(random.randint(0, 255) for _ in range(3))
-    draw.text(position, render_word, font=font, fill=random_color)
+    # Calculate total width and height of the word in the selected central font
+    central_font = random.choice(fonts)
+    total_width = sum(draw.textbbox((0, 0), letter, font=central_font)[2] for letter in word)
+    total_height = draw.textbbox((0, 0), word[0], font=central_font)[3] - \
+                   draw.textbbox((0, 0), word[0], font=central_font)[1]
 
+    # Starting position for the first letter
+    x = (size[0] - total_width) // 2
+    y = (size[1] - total_height) // 2
+    if background_color == "red": word = word[::-1] # reversing it for red background
+    # Draw each letter with random font, color, and jitter
+    for letter in word:
+        font = random.choice(fonts)
+        letter_color = tuple(random.randint(0, 255) for _ in range(3))
+        text_bbox = draw.textbbox((0, 0), letter, font=font)
+        text_width = text_bbox[2] - text_bbox[0]
+        text_height = text_bbox[3] - text_bbox[1]
+
+        # Add jitter to position
+        jitter_x = random.randint(-jitter_range, jitter_range)
+        jitter_y = random.randint(-jitter_range, jitter_range)
+
+        draw.text((x + jitter_x, y + jitter_y), letter, font=font, fill=letter_color)
+
+        # Update x position for the next letter
+        x += text_width
     return img
+
 
 def process_word_bonus(word):
     """Generate images for a single word with bonus conditions."""
@@ -107,10 +149,10 @@ def process_word_bonus(word):
     os.makedirs(word_dir, exist_ok=True)
     for i in range(num_samples_per_word):
         randomized_word = randomize_case(word)
-        font = random.choice(fonts)
-        img = create_image_bonus(randomized_word, font, image_size)
+        img = create_image_bonus(randomized_word, fonts, image_size)
         img_filename = os.path.join(word_dir, f"{word}_{i:03d}.png")
         img.save(img_filename)
+
 
 # Generate images using multithreading
 with ThreadPoolExecutor() as executor:
