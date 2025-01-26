@@ -73,6 +73,7 @@ def randomize_case(word):
     """Randomly capitalize letters in a word."""
     return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
 
+
 def create_image(word, font, size):
     """Create an image with the given word rendered in the specified font."""
     img = Image.new("RGB", size, color="white")
@@ -80,9 +81,10 @@ def create_image(word, font, size):
     text_bbox = draw.textbbox((0, 0), word, font=font)
     text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
-    draw.text(position, word, font=font, fill="black")
+    random_color = tuple(random.randint(0, 255) for _ in range(3))
+    draw.text(position, word, font=font, fill=random_color)
     return img
-   
+
 def process_word(word):
     """Generate images for a single word."""
     word_dir = os.path.join(output_dir, word)
