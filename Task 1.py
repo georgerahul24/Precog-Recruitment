@@ -82,7 +82,7 @@ def create_image(word, font, size):
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
     draw.text(position, word, font=font, fill="black")
     return img
-
+   
 def process_word(word):
     """Generate images for a single word."""
     word_dir = os.path.join(output_dir, word)
