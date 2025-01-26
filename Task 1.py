@@ -13,7 +13,7 @@ font_size = 32
 num_samples_per_word = 5  # Number of images per word
 num_required_fonts = 42
 words_list = []
-
+noise_probability = 0.1
 # Ensure output and fonts directories exist
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(fonts_dir, exist_ok=True)
@@ -78,11 +78,20 @@ def create_image(word, font, size):
     """Create an image with the given word rendered in the specified font."""
     img = Image.new("RGB", size, color="white")
     draw = ImageDraw.Draw(img)
+
+    # Add random pixelated noise
+    for x in range(size[0]):
+        for y in range(size[1]):
+            if random.random() < noise_probability:
+                noise_color = tuple(random.randint(0, 255) for _ in range(3))
+                draw.point((x, y), fill=noise_color)
+
     text_bbox = draw.textbbox((0, 0), word, font=font)
     text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
     random_color = tuple(random.randint(0, 255) for _ in range(3))
     draw.text(position, word, font=font, fill=random_color)
+
     return img
 
 def process_word(word):
