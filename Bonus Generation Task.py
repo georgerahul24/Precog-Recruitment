@@ -9,13 +9,13 @@ from concurrent.futures import ThreadPoolExecutor
 output_dir = "output"
 fonts_dir = "./Fonts"
 image_size = (256, 128)
-font_size = 48
+font_size = 40
 num_samples_per_word = 5  # Number of images per word
 num_required_fonts = 42
 words_list = []
 noise_probability = 0.1
-line_probability = 0.2
-jitter_range = 5
+line_probability = 0.1
+jitter_range = 2
 # Ensure output and fonts directories exist
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(fonts_dir, exist_ok=True)
@@ -127,7 +127,7 @@ def create_image_bonus(word, fonts, size):
     # Draw each letter with random font, color, and jitter
     for letter in word:
         font = random.choice(fonts)
-        letter_color = tuple(random.randint(0, 255) for _ in range(3))
+        letter_color = tuple(random.randint(0, 127) for _ in range(3))
         text_bbox = draw.textbbox((0, 0), letter, font=font)
         text_width = text_bbox[2] - text_bbox[0]
         text_height = text_bbox[3] - text_bbox[1]
