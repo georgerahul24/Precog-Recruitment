@@ -12,7 +12,7 @@ train_dir = "train"
 test_dir = "test"
 image_size = (256, 128)
 batch_size = 16
-epochs = 6
+epochs = 20
 learning_rate = 0.001
 
 

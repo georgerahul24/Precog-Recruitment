@@ -3,19 +3,28 @@ import random
 import requests
 from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "output"
+output_dir = "train"
 fonts_dir = "./Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 5  # Number of images per word
+num_samples_per_word = 100  # Number of images per word
 num_required_fonts = 42
-words_list = []
+
+words_list = "Rudra Choudhary Aditya Peketi Vardhan George Rahul Sri Rama Venkata Dinakar Venapati Aashrith Reddy Hrishikesh Milind Gawas Akshath Puneeth Gupta".split()
+# Load words from dictionary file
+# with open("Dictionary.txt", "r") as file:
+#     words_list.extend(eval(file.read()))
+print("Number of words found in the Dictionary: ", len(words_list))
 noise_probability = 0.1
+
 # Ensure output and fonts directories exist
+if os.path.exists(output_dir):
+    os.system(f"rm -rf {output_dir}")
 os.makedirs(output_dir, exist_ok=True)
+
 os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
@@ -64,15 +73,11 @@ print(f"Number of fonts available: {len(font_files)}")
 # Load fonts into memory
 fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 
-# Load words from dictionary file
-with open("Dictionary.txt", "r") as file:
-    words_list.extend(eval(file.read()))
-print("Number of words found in the Dictionary: ", len(words_list))
+
 
 def randomize_case(word):
     """Randomly capitalize letters in a word."""
     return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
-
 
 def create_image(word, font, size):
     """Create an image with the given word rendered in the specified font."""
@@ -107,6 +112,8 @@ def process_word(word):
 
 # Generate images using multithreading
 with ThreadPoolExecutor() as executor:
-    list(tqdm(executor.map(process_word, words_list), desc="Generating Dataset", total=len(words_list)))
+    futures = [executor.submit(process_word, word) for word in words_list]
+    for future in tqdm(as_completed(futures), desc="Generating Dataset", total=len(words_list)):
+        future.result()
 
 print(f"Dataset generated in '{output_dir}'")
