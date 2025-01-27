@@ -1,28 +1,33 @@
 import os
 import random
-import string
 import requests
 from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
 output_dir = "test"
 fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_length = 200
+num_samples_per_word = 100  # Number of images per word
 num_required_fonts = 42
-min_length = 1
-max_length = 10
+words_list = []
+#words_list = "Rudra Choudhary Aditya Peketi Vardhan George Rahul Sri Rama Venkata Dinakar Venapati Aashrith Reddy Hrishikesh Milind Gawas Akshath Puneeth Gupta".split()
+#Load words from dictionary file
+with open("./Approach 1/Dictionary.txt", "r") as file:
+    words_list.extend(eval(file.read()))
+print("Number of words found in the Dictionary: ", len(words_list))
 noise_probability = 0.1
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
     os.system(f"rm -rf {output_dir}")
 os.makedirs(output_dir, exist_ok=True)
+
 os.makedirs(fonts_dir, exist_ok=True)
 
-# Font families list
+# Expanded list of font families with cursive and variety
 font_families = [
     "Roboto", "Open+Sans", "Lato", "Montserrat", "Poppins", "Raleway", "Oswald",
     "Merriweather", "Nunito", "Ubuntu", "Playfair+Display", "Noto+Sans", "Noto+Serif",
@@ -33,7 +38,7 @@ font_families = [
     "Shadows+Into+Light", "Amatic+SC", "Indie+Flower"
 ]
 
-
+# Function to download fonts
 def download_fonts():
     print("Downloading fonts from Google Fonts...")
     base_url = "https://fonts.googleapis.com/css2?family="
@@ -44,8 +49,8 @@ def download_fonts():
             print(f"Failed to fetch CSS for {font_family}")
             continue
 
-        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if
-                     "url(" in line]
+        # Parse CSS to find .ttf or .woff2 URLs
+        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if "url(" in line]
         for url in font_urls:
             try:
                 font_response = requests.get(url)
@@ -53,34 +58,33 @@ def download_fonts():
                 font_filename = os.path.join(fonts_dir, f"{font_family.replace('+', '_')}.ttf")
                 with open(font_filename, "wb") as font_file:
                     font_file.write(font_response.content)
-                break
+                break  # Download only one variant per font
             except Exception as e:
                 print(f"Failed to download font from {url}: {e}")
 
-
-# Check and load fonts
+# Ensure there are at least `num_required_fonts` fonts in the folder
 font_files = [os.path.join(fonts_dir, f) for f in os.listdir(fonts_dir) if f.endswith(".ttf")]
 if len(font_files) < num_required_fonts:
     download_fonts()
     font_files = [os.path.join(fonts_dir, f) for f in os.listdir(fonts_dir) if f.endswith(".ttf")]
 
 print(f"Number of fonts available: {len(font_files)}")
+
+# Load fonts into memory
 fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 
 
-def generate_random_word(length):
-    chars = string.ascii_letters + string.digits
-    return ''.join(random.choices(chars, k=length))
-
 
 def randomize_case(word):
+    """Randomly capitalize letters in a word."""
     return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
 
-
 def create_image(word, font, size):
+    """Create an image with the given word rendered in the specified font."""
     img = Image.new("RGB", size, color="white")
     draw = ImageDraw.Draw(img)
 
+    # Add random pixelated noise
     for x in range(size[0]):
         for y in range(size[1]):
             if random.random() < noise_probability:
@@ -90,32 +94,26 @@ def create_image(word, font, size):
     text_bbox = draw.textbbox((0, 0), word, font=font)
     text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
-    random_color = tuple(random.randint(0, 255) for _ in range(3))
+    random_color = tuple(random.randint(0, 200) for _ in range(3))
     draw.text(position, word, font=font, fill=random_color)
 
     return img
 
-
-# Main execution loop - generate datasets sequentially
-for length in range(min_length, max_length + 1):
-    print(f"\nGenerating dataset for length {length}")
-
-    # Create directory for this length
-    length_dir = os.path.join(output_dir, str(length))
-    os.makedirs(length_dir, exist_ok=True)
-
-    # Generate samples for this length
-    for i in tqdm(range(num_samples_per_length), desc=f"Generating images for length {length}"):
-        # Generate a random word of current length
-        word = generate_random_word(length)
+def process_word(word):
+    """Generate images for a single word."""
+    word_dir = os.path.join(output_dir, word)
+    os.makedirs(word_dir, exist_ok=True)
+    for i in range(num_samples_per_word):
         randomized_word = randomize_case(word)
-
-        # Create and save the image
         font = random.choice(fonts)
         img = create_image(randomized_word, font, image_size)
-        img_filename = os.path.join(length_dir, f"{randomized_word}_{i:03d}.png")
+        img_filename = os.path.join(word_dir, f"{word}_{i:03d}.png")
         img.save(img_filename)
 
-    print(f"Completed generating {num_samples_per_length} images for length {length}")
+# Generate images using multithreading
+with ThreadPoolExecutor() as executor:
+    futures = [executor.submit(process_word, word) for word in words_list]
+    for future in tqdm(as_completed(futures), desc="Generating Dataset", total=len(words_list)):
+        future.result()
 
-print(f"\nComplete dataset generated in '{output_dir}'")
+print(f"Dataset generated in '{output_dir}'")
