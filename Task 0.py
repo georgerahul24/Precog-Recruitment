@@ -3,11 +3,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "output"
+output_dir = "train"
 font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples = 100
+num_samples_per_class = 250
 words_list = ["apple", "bapple", "bpple"]
 
 # # Load additional words from the dictionary file
@@ -34,16 +34,15 @@ def create_image(word, font, size):
 font = ImageFont.truetype(font_path, font_size)
 
 # Generate dataset
-for i in tqdm(range(num_samples), desc="Generating Dataset"):
-    word = words_list[i % len(words_list)]
-
+for word in tqdm(words_list, desc="Generating Dataset"):
     # Create a folder for the word if it doesn't exist
     word_dir = os.path.join(output_dir, word)
     os.makedirs(word_dir, exist_ok=True)
 
-    # Create and save the image
-    img = create_image(word, font, image_size)
-    img_filename = os.path.join(word_dir, f"img_{i:04d}.png")
-    img.save(img_filename)
+    for i in range(num_samples_per_class):
+        # Create and save the image
+        img = create_image(word, font, image_size)
+        img_filename = os.path.join(word_dir, f"img_{i:04d}.png")
+        img.save(img_filename)
 
 print(f"Dataset generated in '{output_dir}'")

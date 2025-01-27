@@ -5,14 +5,16 @@ import torch.optim as optim
 from torchvision import transforms
 from torch.utils.data import DataLoader, Dataset
 from PIL import Image
+import matplotlib.pyplot as plt
 
 # Configuration
 train_dir = "train"
 test_dir = "test"
 image_size = (256, 128)
 batch_size = 16
-epochs = 5
+epochs = 6
 learning_rate = 0.001
+
 
 # Custom Dataset
 class WordImageDataset(Dataset):
@@ -44,6 +46,7 @@ class WordImageDataset(Dataset):
             image = self.transform(image)
         return image, label
 
+
 # Transformations
 transform = transforms.Compose([
     transforms.Resize(image_size),
@@ -56,8 +59,11 @@ test_dataset = WordImageDataset(test_dir, transform=transform)
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
 num_classes = len(train_dataset.label_map)
+print(f"Number of classes: {num_classes}")
+print(f"Number of training images per class: {len(train_dataset)//num_classes}")
+print(f"Number of testing images per class: {len(test_dataset)//num_classes}")
+
 
 # Neural Network
 class SimpleNN(nn.Module):
@@ -73,13 +79,20 @@ class SimpleNN(nn.Module):
     def forward(self, x):
         return self.network(x)
 
+
 # Model, Loss, Optimizer
 model = SimpleNN(num_classes)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
+# Store accuracy and loss for visualization
+train_accuracies = []
+test_accuracies = []
+epoch_losses = []
+
+
 # Training Loop
-def train_model():
+def train_and_record_model():
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
@@ -91,7 +104,18 @@ def train_model():
             optimizer.step()
             running_loss += loss.item()
 
-        print(f"Epoch [{epoch + 1}/{epochs}], Loss: {running_loss / len(train_loader):.4f}")
+        epoch_loss = running_loss / len(train_loader)
+        epoch_losses.append(epoch_loss)
+
+        # Evaluate accuracy after each epoch
+        train_acc = evaluate_model(train_loader)
+        test_acc = evaluate_model(test_loader)
+        train_accuracies.append(train_acc)
+        test_accuracies.append(test_acc)
+
+        print(f"Epoch [{epoch + 1}/{epochs}], Loss: {epoch_loss:.4f}, "
+              f"Train Accuracy: {train_acc:.2f}%, Test Accuracy: {test_acc:.2f}%")
+
 
 # Evaluate Accuracy
 def evaluate_model(dataloader):
@@ -107,13 +131,20 @@ def evaluate_model(dataloader):
 
     return 100 * correct / total
 
+
 # Run Training and Evaluation
 print("Starting training...")
-train_model()
+train_and_record_model()
 print("Training complete.")
-
-train_accuracy = evaluate_model(train_loader)
-print(f"Accuracy on training set: {train_accuracy:.2f}%")
-
-test_accuracy = evaluate_model(test_loader)
-print(f"Accuracy on testing set: {test_accuracy:.2f}%")
+torch.save(model.state_dict(), "model.pth")
+# Generate accuracy graph
+epochs_range = range(1, epochs + 1)
+plt.figure(figsize=(10, 5))
+plt.plot(epochs_range, train_accuracies, label="Training Accuracy")
+plt.plot(epochs_range, test_accuracies, label="Testing Accuracy")
+plt.title("Train and Test Accuracy Per Epoch")
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy (%)")
+plt.legend()
+plt.grid()
+plt.show()
