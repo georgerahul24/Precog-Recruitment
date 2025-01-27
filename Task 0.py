@@ -3,11 +3,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_class = 250
+num_samples_per_class = 100
 words_list = "Curious minds explore, seeking knowledge and finding endless possibilities together.".split()
 
 # # Load additional words from the dictionary file
@@ -17,6 +17,8 @@ words_list = "Curious minds explore, seeking knowledge and finding endless possi
 print("Number of words found in the Dictionary:", len(words_list))
 
 # Create the output directory if it doesn't exist
+# Remove the output directory if it exists and create a new one
+os.system(f"rm -rf {output_dir}")
 os.makedirs(output_dir, exist_ok=True)
 
 def create_image(word, font, size):
