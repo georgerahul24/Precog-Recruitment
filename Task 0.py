@@ -7,15 +7,20 @@ output_dir = "output"
 font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples = 10
-words_list= []
-with open("Dictionary.txt", "r") as file:
-    words_list.extend(eval(file.read()))
-print("Number of words found in the Dictionary: ",len(words_list))
-# Source for the basic logic https://cloudinary.com/guides/image-effects/a-guide-to-adding-text-to-images-with-python
+num_samples = 100
+words_list = ["apple", "bapple", "bpple"]
+
+# # Load additional words from the dictionary file
+# with open("Dictionary.txt", "r") as file:
+#     words_list.extend(eval(file.read()))
+
+print("Number of words found in the Dictionary:", len(words_list))
+
+# Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
 
 def create_image(word, font, size):
+    """Create an image with the specified word and font."""
     img = Image.new("RGB", size, color="white")
     draw = ImageDraw.Draw(img)
     text_bbox = draw.textbbox((0, 0), word, font=font)
@@ -25,18 +30,20 @@ def create_image(word, font, size):
 
     return img
 
+# Load the font
 font = ImageFont.truetype(font_path, font_size)
 
-labels = []
+# Generate dataset
 for i in tqdm(range(num_samples), desc="Generating Dataset"):
     word = words_list[i % len(words_list)]
-    img = create_image(word, font, image_size)
-    img_filename = os.path.join(output_dir, f"img_{i:04d}.png")
-    img.save(img_filename)
-    labels.append(f"{img_filename},{word}\n")
 
-labels_path = os.path.join(output_dir, "labels.csv")
-with open(labels_path, "w") as f:
-    f.writelines(labels)
+    # Create a folder for the word if it doesn't exist
+    word_dir = os.path.join(output_dir, word)
+    os.makedirs(word_dir, exist_ok=True)
+
+    # Create and save the image
+    img = create_image(word, font, image_size)
+    img_filename = os.path.join(word_dir, f"img_{i:04d}.png")
+    img.save(img_filename)
 
 print(f"Dataset generated in '{output_dir}'")
