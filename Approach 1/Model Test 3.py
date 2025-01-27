@@ -8,11 +8,11 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Configuration
-train_dir = "train"
-test_dir = "test"
+train_dir = "../train"
+test_dir = "../test"
 image_size = (256, 128)
 batch_size = 16
-epochs = 6
+epochs = 20
 learning_rate = 0.001
 
 
@@ -66,12 +66,21 @@ print(f"Number of testing images per class: {len(test_dataset) // num_classes}")
 
 
 # Neural Network
-class SimpleNN(nn.Module):
+class ComplexNN(nn.Module):
     def __init__(self, num_classes):
-        super(SimpleNN, self).__init__()
+        super(ComplexNN, self).__init__()
         self.network = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Flatten(),
-            nn.Linear(3 * image_size[0] * image_size[1], 256),
+            nn.Linear(128 * (image_size[0] // 8) * (image_size[1] // 8), 256),
             nn.ReLU(),
             nn.Linear(256, 128),
             nn.ReLU(),
@@ -83,7 +92,7 @@ class SimpleNN(nn.Module):
 
 
 # Model, Loss, Optimizer
-model = SimpleNN(num_classes)
+model = ComplexNN(num_classes)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 

@@ -8,8 +8,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Configuration
-train_dir = "train"
-test_dir = "test"
+train_dir = "../train"
+test_dir = "../test"
 image_size = (256, 128)
 batch_size = 16
 epochs = 20
@@ -23,17 +23,15 @@ class WordImageDataset(Dataset):
         self.transform = transform
         self.data = []
         self.labels = []
-        self.label_map = {}
 
-        # Load data and labels
-        for idx, folder in enumerate(sorted(os.listdir(root_dir))):
+        # Load data and labels (number of letters in each word)
+        for folder in sorted(os.listdir(root_dir)):
             folder_path = os.path.join(root_dir, folder)
             if os.path.isdir(folder_path):
-                self.label_map[idx] = folder
                 for file in os.listdir(folder_path):
                     if file.endswith(".png"):
                         self.data.append(os.path.join(folder_path, file))
-                        self.labels.append(idx)
+                        self.labels.append(len(folder))  # Number of letters in the folder name (assumes folder name is a word)
 
     def __len__(self):
         return len(self.data)
@@ -59,15 +57,10 @@ test_dataset = WordImageDataset(test_dir, transform=transform)
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-num_classes = len(train_dataset.label_map)
-print(f"Number of classes: {num_classes}")
-print(f"Number of training images per class: {len(train_dataset) // num_classes}")
-print(f"Number of testing images per class: {len(test_dataset) // num_classes}")
 
-
-# Neural Network
+# Neural Network for Regression (predict number of letters)
 class ComplexNN(nn.Module):
-    def __init__(self, num_classes):
+    def __init__(self):
         super(ComplexNN, self).__init__()
         self.network = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1),
@@ -84,7 +77,7 @@ class ComplexNN(nn.Module):
             nn.ReLU(),
             nn.Linear(256, 128),
             nn.ReLU(),
-            nn.Linear(128, num_classes)
+            nn.Linear(128, 1)  # Output a single value (number of letters)
         )
 
     def forward(self, x):
@@ -92,8 +85,8 @@ class ComplexNN(nn.Module):
 
 
 # Model, Loss, Optimizer
-model = ComplexNN(num_classes)
-criterion = nn.CrossEntropyLoss()
+model = ComplexNN()
+criterion = nn.MSELoss()  # Use MSELoss for regression
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 # Check if Metal backend is available (for M1 Mac)
@@ -104,9 +97,8 @@ print(f"Using device: {device}")
 model = model.to(device)
 
 # Store accuracy and loss for visualization
-train_accuracies = []
-test_accuracies = []
-epoch_losses = []
+train_losses = []
+test_losses = []
 
 
 # Training Loop
@@ -118,38 +110,33 @@ def train_and_record_model():
             images, labels = images.to(device), labels.to(device)  # Move data to GPU
             optimizer.zero_grad()
             outputs = model(images)
-            loss = criterion(outputs, labels)
+            loss = criterion(outputs.squeeze(), labels.float())  # Squeeze output to match the shape of labels
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
 
         epoch_loss = running_loss / len(train_loader)
-        epoch_losses.append(epoch_loss)
+        train_losses.append(epoch_loss)
 
-        # Evaluate accuracy after each epoch
-        train_acc = evaluate_model(train_loader)
-        test_acc = evaluate_model(test_loader)
-        train_accuracies.append(train_acc)
-        test_accuracies.append(test_acc)
+        # Evaluate loss after each epoch
+        test_loss = evaluate_model(test_loader)
+        test_losses.append(test_loss)
 
-        print(f"Epoch [{epoch + 1}/{epochs}], Loss: {epoch_loss:.4f}, "
-              f"Train Accuracy: {train_acc:.2f}%, Test Accuracy: {test_acc:.2f}%")
+        print(f"Epoch [{epoch + 1}/{epochs}], Loss: {epoch_loss:.4f}, Test Loss: {test_loss:.4f}")
 
 
-# Evaluate Accuracy
+# Evaluate Loss
 def evaluate_model(dataloader):
     model.eval()
-    correct = 0
-    total = 0
+    total_loss = 0.0
     with torch.no_grad():
         for images, labels in dataloader:
             images, labels = images.to(device), labels.to(device)  # Move data to GPU
             outputs = model(images)
-            _, predicted = torch.max(outputs.data, 1)
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
+            loss = criterion(outputs.squeeze(), labels.float())
+            total_loss += loss.item()
 
-    return 100 * correct / total
+    return total_loss / len(dataloader)
 
 
 # Run Training and Evaluation
@@ -160,14 +147,14 @@ print("Training complete.")
 # Save the model
 torch.save(model, "model.pth")
 
-# Generate accuracy graph
+# Generate loss graph
 epochs_range = range(1, epochs + 1)
 plt.figure(figsize=(10, 5))
-plt.plot(epochs_range, train_accuracies, label="Training Accuracy")
-plt.plot(epochs_range, test_accuracies, label="Testing Accuracy")
-plt.title("Train and Test Accuracy Per Epoch")
+plt.plot(epochs_range, train_losses, label="Training Loss")
+plt.plot(epochs_range, test_losses, label="Testing Loss")
+plt.title("Train and Test Loss Per Epoch")
 plt.xlabel("Epochs")
-plt.ylabel("Accuracy (%)")
+plt.ylabel("Loss")
 plt.legend()
 plt.grid()
 plt.show()

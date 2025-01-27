@@ -8,8 +8,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Configuration
-train_dir = "train"
-test_dir = "test"
+train_dir = "../train"
+test_dir = "../test"
 image_size = (256, 128)
 batch_size = 16
 epochs = 6
@@ -87,6 +87,13 @@ model = SimpleNN(num_classes)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
+# Check if Metal backend is available (for M1 Mac)
+device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+print(f"Using device: {device}")
+
+# Move model to GPU (Metal)
+model = model.to(device)
+
 # Store accuracy and loss for visualization
 train_accuracies = []
 test_accuracies = []
@@ -99,6 +106,7 @@ def train_and_record_model():
         model.train()
         running_loss = 0.0
         for images, labels in train_loader:
+            images, labels = images.to(device), labels.to(device)  # Move data to GPU
             optimizer.zero_grad()
             outputs = model(images)
             loss = criterion(outputs, labels)
@@ -126,6 +134,7 @@ def evaluate_model(dataloader):
     total = 0
     with torch.no_grad():
         for images, labels in dataloader:
+            images, labels = images.to(device), labels.to(device)  # Move data to GPU
             outputs = model(images)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
@@ -139,6 +148,7 @@ print("Starting training...")
 train_and_record_model()
 print("Training complete.")
 
+# Save the model
 torch.save(model, "model.pth")
 
 # Generate accuracy graph

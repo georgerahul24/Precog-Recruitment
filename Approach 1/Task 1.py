@@ -6,8 +6,8 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "train"
-fonts_dir = "./Fonts"
+output_dir = "../train"
+fonts_dir = "../Fonts"
 image_size = (256, 128)
 font_size = 32
 num_samples_per_word = 100  # Number of images per word

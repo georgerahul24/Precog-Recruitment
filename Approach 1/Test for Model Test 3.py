@@ -37,7 +37,7 @@ def load_model_and_labels():
         model = torch.load("model.pth")
         model.eval()
 
-        train_dir = "train"
+        train_dir = "../train"
         label_map = {
             idx: folder for idx, folder in enumerate(sorted(os.listdir(train_dir)))
             if os.path.isdir(os.path.join(train_dir, folder))

@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "train"
+output_dir = "../train"
 font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32

@@ -28,7 +28,7 @@ def load_model_and_labels():
         model = torch.load("model.pth")
         model.eval()
 
-        train_dir = "train"
+        train_dir = "../train"
         label_map = {
             idx: folder for idx, folder in enumerate(sorted(os.listdir(train_dir)))
             if os.path.isdir(os.path.join(train_dir, folder))
@@ -39,7 +39,7 @@ def load_model_and_labels():
         sys.exit(1)
 
 
-def process_image(image_path, model, label_map):
+def process_image(image_path, model, label_map, device):
     try:
         # Convert string path to Path object to handle spaces correctly
         image_path = Path(image_path.strip())
@@ -49,7 +49,6 @@ def process_image(image_path, model, label_map):
             return
 
         # Configuration
-
         transform = transforms.Compose([
             transforms.Resize(image_size),
             transforms.ToTensor(),
@@ -57,7 +56,7 @@ def process_image(image_path, model, label_map):
 
         # Load and transform image
         image = Image.open(image_path).convert("RGB")
-        tensor_image = transform(image).unsqueeze(0)
+        tensor_image = transform(image).unsqueeze(0).to(device)
 
         # Make prediction
         with torch.no_grad():
@@ -78,9 +77,14 @@ def process_image(image_path, model, label_map):
 
 
 def main():
+    # Check if Metal backend is available (for M1 Mac)
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    print(f"Using device: {device}")
+
     # Load model and labels
     print("Loading model...")
     model, label_map = load_model_and_labels()
+    model = model.to(device)
 
     while True:
         # Get image path from user
@@ -93,7 +97,7 @@ def main():
             break
 
         # Process the image
-        process_image(image_path, model, label_map)
+        process_image(image_path, model, label_map, device)
 
 
 if __name__ == "__main__":
