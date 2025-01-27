@@ -1,28 +1,18 @@
 import os
-import torch
-import torch.nn as nn
-from torchvision import transforms
-from PIL import Image
 import tkinter as tk
-from tkinter import filedialog, Label
-from tkinter import ttk
-
-# Configuration
-image_size = (256, 128)
-
-# Transformations
-transform = transforms.Compose([
-    transforms.Resize(image_size),
-    transforms.ToTensor(),
-])
-
-# Neural Network
+from tkinter import filedialog
+from PIL import Image, ImageTk
+import torch
+from torchvision import transforms
+import torch.nn as nn
 class SimpleNN(nn.Module):
     def __init__(self, num_classes):
         super(SimpleNN, self).__init__()
         self.network = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(3 * image_size[0] * image_size[1], 128),
+            nn.Linear(3 * image_size[0] * image_size[1], 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
             nn.ReLU(),
             nn.Linear(128, num_classes)
         )
@@ -30,47 +20,73 @@ class SimpleNN(nn.Module):
     def forward(self, x):
         return self.network(x)
 
-# Load trained model
-model_path = "model.pth"
-num_classes = 10  # Set this to match your model's number of classes
-model = SimpleNN(num_classes)
-model.load_state_dict(torch.load(model_path))
-model.eval()
+# Load the trained model
+model = torch.load("model.pth")
 
-# Label map (update according to your classes)
-label_map = {0: "Class A", 1: "Class B", 2: "Class C", 3: "Class D", 4: "Class E",
-             5: "Class F", 6: "Class G", 7: "Class H", 8: "Class I", 9: "Class J"}
+# Automatically generate the label map from the training directory structure
+train_dir = "train"  # Replace with the path to your training data
+label_map = {idx: folder for idx, folder in enumerate(sorted(os.listdir(train_dir))) if os.path.isdir(os.path.join(train_dir, folder))}
 
-def predict_image(image_path):
-    """Load an image, preprocess it, and return the model's prediction."""
-    image = Image.open(image_path).convert("RGB")
-    image = transform(image).unsqueeze(0)  # Add batch dimension
-    with torch.no_grad():
-        outputs = model(image)
-        _, predicted = torch.max(outputs, 1)
-    return label_map[predicted.item()]
+# Configuration for image size
+image_size = (256, 128)
+transform = transforms.Compose([
+    transforms.Resize(image_size),
+    transforms.ToTensor(),
+])
 
-def browse_image():
-    """Open file dialog to select an image and display the prediction."""
-    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg")])
-    if file_path:
-        prediction = predict_image(file_path)
-        result_label.config(text=f"Prediction: {prediction}")
+# GUI Application class
+class ImageClassifierApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Image Classifier")
+        self.root.geometry("400x400")
 
-# GUI Setup
-root = tk.Tk()
-root.title("Image Classification")
-root.geometry("400x200")
+        self.label = tk.Label(root, text="Drag and Drop an Image to Classify", font=("Arial", 16))
+        self.label.pack(pady=20)
 
-frame = ttk.Frame(root, padding="10")
-frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.result_label = tk.Label(root, text="", font=("Arial", 14))
+        self.result_label.pack(pady=20)
 
-# Widgets
-browse_button = ttk.Button(frame, text="Browse Image", command=browse_image)
-browse_button.grid(row=0, column=0, pady=10)
+        # Canvas to display image
+        self.canvas = tk.Canvas(root, width=256, height=128)
+        self.canvas.pack()
 
-result_label = Label(frame, text="Prediction: ", font=("Arial", 14))
-result_label.grid(row=1, column=0, pady=20)
+        # Open file dialog to select image
+        self.canvas.bind("<ButtonRelease-1>", self.open_image)
 
-# Start GUI
-root.mainloop()
+    def open_image(self, event):
+        file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.bmp")])
+        if file_path:
+            self.process_image(file_path)
+
+    def process_image(self, file_path):
+        # Open image and apply transformations
+        image = Image.open(file_path).convert("RGB")
+        image = transform(image).unsqueeze(0)  # Add batch dimension
+
+        # Predict using the model
+        model.eval()
+        with torch.no_grad():
+            outputs = model(image)
+            _, predicted = torch.max(outputs, 1)
+
+        # Get class name from label_map
+        predicted_class = label_map.get(predicted.item(), "Unknown")
+        self.display_image(file_path, predicted_class)
+
+    def display_image(self, file_path, predicted_class):
+        # Display image on canvas
+        image = Image.open(file_path)
+        image.thumbnail((256, 128))
+        img_tk = ImageTk.PhotoImage(image)
+        self.canvas.create_image(128, 64, image=img_tk)
+
+        # Update result label
+        self.result_label.config(text=f"Predicted: {predicted_class}")
+
+
+# Main Application
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = ImageClassifierApp(root)
+    root.mainloop()

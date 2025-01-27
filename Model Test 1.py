@@ -61,8 +61,8 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 num_classes = len(train_dataset.label_map)
 print(f"Number of classes: {num_classes}")
-print(f"Number of training images per class: {len(train_dataset)//num_classes}")
-print(f"Number of testing images per class: {len(test_dataset)//num_classes}")
+print(f"Number of training images per class: {len(train_dataset) // num_classes}")
+print(f"Number of testing images per class: {len(test_dataset) // num_classes}")
 
 
 # Neural Network
@@ -71,7 +71,9 @@ class SimpleNN(nn.Module):
         super(SimpleNN, self).__init__()
         self.network = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(3 * image_size[0] * image_size[1], 128),
+            nn.Linear(3 * image_size[0] * image_size[1], 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
             nn.ReLU(),
             nn.Linear(128, num_classes)
         )
@@ -136,7 +138,9 @@ def evaluate_model(dataloader):
 print("Starting training...")
 train_and_record_model()
 print("Training complete.")
-torch.save(model.state_dict(), "model.pth")
+
+torch.save(model, "model.pth")
+
 # Generate accuracy graph
 epochs_range = range(1, epochs + 1)
 plt.figure(figsize=(10, 5))

@@ -2,3 +2,6 @@ Output/
 Output
 *.png
 Fonts/
+*.pkl
+*.pth
+*.pt

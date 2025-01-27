@@ -3,11 +3,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_class = 250
+num_samples_per_class = 150
 words_list = ["apple", "bapple", "bpple"]
 
 # # Load additional words from the dictionary file
