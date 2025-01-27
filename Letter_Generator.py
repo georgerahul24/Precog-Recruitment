@@ -6,14 +6,19 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "test"
+output_dir = "letter_test"
 fonts_dir = "Fonts"
-image_size = (256, 128)
-font_size = 32
-num_samples_per_letter = 150  # Number of images per letter
+image_size = (72, 64)
+num_samples_per_letter = 100  # Number of images per letter
 num_required_fonts = 50  # Increased number of fonts
-letters_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
+letters_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
 noise_probability = 0.1
+
+# Font size and jitter configuration
+min_font_size = 20
+max_font_size = 48
+min_jitter = -5
+max_jitter = 5
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
@@ -71,7 +76,7 @@ if len(font_files) < num_required_fonts:
 print(f"Number of fonts available: {len(font_files)}")
 
 # Load fonts into memory
-fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
+fonts = [ImageFont.truetype(font_path, random.randint(min_font_size, max_font_size)) for font_path in font_files]
 
 def create_image(letter, font, size):
     """Create an image with the given letter rendered in the specified font."""
@@ -82,12 +87,14 @@ def create_image(letter, font, size):
     for x in range(size[0]):
         for y in range(size[1]):
             if random.random() < noise_probability:
-                noise_color = tuple(random.randint(0, 255) for _ in range(3))
+                noise_color = tuple(random.randint(0, 200) for _ in range(3))
                 draw.point((x, y), fill=noise_color)
 
     text_bbox = draw.textbbox((0, 0), letter, font=font)
     text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
-    position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
+    jitter_x = random.randint(min_jitter, max_jitter)
+    jitter_y = random.randint(min_jitter, max_jitter)
+    position = ((size[0] - text_width) // 2 + jitter_x, (size[1] - text_height) // 2 + jitter_y)
     random_color = tuple(random.randint(0, 200) for _ in range(3))
     draw.text(position, letter, font=font, fill=random_color)
 

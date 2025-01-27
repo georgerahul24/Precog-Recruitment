@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Configuration
 output_dir = "train"
 fonts_dir = "Fonts"
-image_size = (128, 64)
+image_size = (64, 32)
 font_size = 32
 num_samples_per_word = 450  # Number of images per word
 num_required_fonts = 20

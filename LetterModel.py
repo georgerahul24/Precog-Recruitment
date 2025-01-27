@@ -10,9 +10,9 @@ from tqdm import tqdm
 import time
 
 # Configuration
-train_dir = "train"
-test_dir = "test"
-image_size = (256, 128)
+train_dir = "letter_train"
+test_dir = "letter_test"
+image_size = (128, 64)
 batch_size = 64
 epochs = 50
 learning_rate = 0.0003
@@ -35,6 +35,7 @@ transform_test = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
+
 
 # Dataset Class
 class WordImageDataset(Dataset):
@@ -66,52 +67,28 @@ class WordImageDataset(Dataset):
             image = self.transform(image)
         return image, label
 
+
 # Improved Model Architecture
-class ImprovedWordClassifier(nn.Module):
+class LetterClassifier(nn.Module):
     def __init__(self, num_classes):
-        super(ImprovedWordClassifier, self).__init__()
+        super(LetterClassifier, self).__init__()
 
         # Feature extraction layers
         self.features = nn.Sequential(
             # First conv block
             nn.Conv2d(3, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(64, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.25),
 
             # Second conv block
             nn.Conv2d(64, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(128, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.25),
 
             # Third conv block
             nn.Conv2d(128, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(256, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.25),
-
-            # Fourth conv block
-            nn.Conv2d(256, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(512, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.25),
         )
 
         # Adaptive pooling to handle different input sizes
@@ -120,11 +97,9 @@ class ImprovedWordClassifier(nn.Module):
         # Classification layers
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(512 * 4 * 2, 1024),
-            nn.BatchNorm1d(1024),
+            nn.Linear(256 * 4 * 2, 512),
             nn.ReLU(inplace=True),
-            nn.Dropout(0.5),
-            nn.Linear(1024, num_classes)
+            nn.Linear(512, num_classes)
         )
 
     def forward(self, x):
@@ -132,6 +107,7 @@ class ImprovedWordClassifier(nn.Module):
         x = self.adaptive_pool(x)
         x = self.classifier(x)
         return x
+
 
 # Load datasets
 train_dataset = WordImageDataset(train_dir, transform=transform_train)
@@ -142,15 +118,16 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 num_classes = len(train_dataset.class_to_idx)
 print(f'Number of classes: {num_classes}')
-print(f'Number of training images: {len(train_dataset)//num_classes}')
-print(f'Number of testing images: {len(test_dataset)//num_classes}')
+print(f'Number of training images: {len(train_dataset) // num_classes}')
+print(f'Number of testing images: {len(test_dataset) // num_classes}')
 
 # Initialize model, loss, and optimizer
 device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
-model = ImprovedWordClassifier(num_classes).to(device)
+model = LetterClassifier(num_classes).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=1e-4)
 scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
+
 
 # Training function
 def train_model():
@@ -181,6 +158,7 @@ def train_model():
     train_accuracy = 100. * correct / total
     return train_loss, train_accuracy
 
+
 # Evaluation function
 def evaluate_model():
     model.eval()
@@ -197,6 +175,7 @@ def evaluate_model():
 
     test_accuracy = 100. * correct / total
     return test_accuracy
+
 
 # Training loop with early stopping
 best_accuracy = 0.0
@@ -222,7 +201,7 @@ for epoch in range(epochs):
     if test_accuracy > best_accuracy:
         best_accuracy = test_accuracy
         epochs_without_improvement = 0
-        torch.save(model.state_dict(), 'best_word_classifier.pth')
+        torch.save(model.state_dict(), 'letter_model.pth')
     else:
         epochs_without_improvement += 1
 
@@ -247,6 +226,7 @@ plt.ylabel('Accuracy (%)')
 plt.legend()
 plt.grid(True)
 plt.show()
+
 
 # Function to predict word for a single image
 def predict_word(image_path):
