@@ -6,18 +6,13 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 fonts_dir = "Fonts"
-image_size = (128, 64)
+image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 450  # Number of images per word
-num_required_fonts = 20
-words_list = []
-words_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890")
-#Load words from dictionary file
-# with open("./Approach 1/Dictionary.txt", "r") as file:
-#     words_list.extend(eval(file.read()))
-print("Number of words found in the Dictionary: ", len(words_list))
+num_samples_per_letter = 150  # Number of images per letter
+num_required_fonts = 50  # Increased number of fonts
+letters_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
 noise_probability = 0.1
 
 # Ensure output and fonts directories exist
@@ -35,7 +30,12 @@ font_families = [
     "Cabin", "Dosis", "Quicksand", "Work+Sans", "Rubik", "Varela+Round", "Dancing+Script",
     "Pacifico", "Great+Vibes", "Courgette", "Allura", "Handlee", "Lobster", "Satisfy",
     "Cookie", "Tangerine", "Sacramento", "Parisienne", "Yellowtail", "Kaushan+Script",
-    "Shadows+Into+Light", "Amatic+SC", "Indie+Flower"
+    "Shadows+Into+Light", "Amatic+SC", "Indie+Flower", "Alegreya", "Bebas+Neue", "Caveat",
+    "Cinzel", "Comfortaa", "Cormorant+Garamond", "Crimson+Text", "Fira+Sans", "Inconsolata",
+    "Josefin+Sans", "Libre+Baskerville", "Lobster+Two", "Merriweather+Sans", "Muli",
+    "Nanum+Gothic", "Nunito+Sans", "Open+Sans+Condensed", "Overpass", "PT+Mono", "Quattrocento",
+    "Quattrocento+Sans", "Raleway+Dots", "Righteous", "Roboto+Condensed", "Roboto+Mono",
+    "Source+Code+Pro", "Source+Serif+Pro", "Spectral", "Zilla+Slab"
 ]
 
 # Function to download fonts
@@ -73,14 +73,8 @@ print(f"Number of fonts available: {len(font_files)}")
 # Load fonts into memory
 fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 
-
-
-def randomize_case(word):
-    """Randomly capitalize letters in a word."""
-    return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
-
-def create_image(word, font, size):
-    """Create an image with the given word rendered in the specified font."""
+def create_image(letter, font, size):
+    """Create an image with the given letter rendered in the specified font."""
     img = Image.new("RGB", size, color="white")
     draw = ImageDraw.Draw(img)
 
@@ -91,29 +85,28 @@ def create_image(word, font, size):
                 noise_color = tuple(random.randint(0, 255) for _ in range(3))
                 draw.point((x, y), fill=noise_color)
 
-    text_bbox = draw.textbbox((0, 0), word, font=font)
+    text_bbox = draw.textbbox((0, 0), letter, font=font)
     text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
     random_color = tuple(random.randint(0, 200) for _ in range(3))
-    draw.text(position, word, font=font, fill=random_color)
+    draw.text(position, letter, font=font, fill=random_color)
 
     return img
 
-def process_word(word):
-    """Generate images for a single word."""
-    word_dir = os.path.join(output_dir, word)
-    os.makedirs(word_dir, exist_ok=True)
-    for i in range(num_samples_per_word):
-        randomized_word = randomize_case(word)
+def process_letter(letter):
+    """Generate images for a single letter."""
+    letter_dir = os.path.join(output_dir, letter)
+    os.makedirs(letter_dir, exist_ok=True)
+    for i in range(num_samples_per_letter):
         font = random.choice(fonts)
-        img = create_image(randomized_word, font, image_size)
-        img_filename = os.path.join(word_dir, f"{word}_{i:03d}.png")
+        img = create_image(letter, font, image_size)
+        img_filename = os.path.join(letter_dir, f"{letter}_{i:03d}.png")
         img.save(img_filename)
 
 # Generate images using multithreading
 with ThreadPoolExecutor() as executor:
-    futures = [executor.submit(process_word, word) for word in words_list]
-    for future in tqdm(as_completed(futures), desc="Generating Dataset", total=len(words_list)):
+    futures = [executor.submit(process_letter, letter) for letter in letters_list]
+    for future in tqdm(as_completed(futures), desc="Generating Dataset", total=len(letters_list)):
         future.result()
 
 print(f"Dataset generated in '{output_dir}'")

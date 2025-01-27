@@ -6,23 +6,28 @@ from torchvision import transforms
 from torch.utils.data import DataLoader, Dataset
 from PIL import Image
 import matplotlib.pyplot as plt
+from tqdm import tqdm
+import time
 
 # Configuration
 train_dir = "train"
 test_dir = "test"
 image_size = (256, 128)
-batch_size = 32
-epochs = 20
-learning_rate = 0.001
+batch_size = 64
+epochs = 50
+learning_rate = 0.0003
 
 # Data Augmentation
 transform_train = transforms.Compose([
     transforms.Resize(image_size),
     transforms.RandomHorizontalFlip(p=0.3),
-    transforms.RandomRotation(degrees=5),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2),
+    transforms.RandomRotation(degrees=10),
+    transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
+    transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.8, 1.2)),
+    transforms.GaussianBlur(kernel_size=3),
+    transforms.RandomPerspective(distortion_scale=0.2, p=0.5),
     transforms.ToTensor(),
-    # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) took the values form image net
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 transform_test = transforms.Compose([
@@ -31,7 +36,7 @@ transform_test = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-
+# Dataset Class
 class WordImageDataset(Dataset):
     def __init__(self, root_dir, transform=None):
         self.root_dir = root_dir
@@ -61,10 +66,10 @@ class WordImageDataset(Dataset):
             image = self.transform(image)
         return image, label
 
-
-class WordClassifier(nn.Module):
+# Improved Model Architecture
+class ImprovedWordClassifier(nn.Module):
     def __init__(self, num_classes):
-        super(WordClassifier, self).__init__()
+        super(ImprovedWordClassifier, self).__init__()
 
         # Feature extraction layers
         self.features = nn.Sequential(
@@ -97,6 +102,16 @@ class WordClassifier(nn.Module):
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2, 2),
             nn.Dropout2d(0.25),
+
+            # Fourth conv block
+            nn.Conv2d(256, 512, 3, padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(512, 512, 3, padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(inplace=True),
+            nn.MaxPool2d(2, 2),
+            nn.Dropout2d(0.25),
         )
 
         # Adaptive pooling to handle different input sizes
@@ -105,11 +120,11 @@ class WordClassifier(nn.Module):
         # Classification layers
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(256 * 4 * 2, 512),
-            nn.BatchNorm1d(512),
+            nn.Linear(512 * 4 * 2, 1024),
+            nn.BatchNorm1d(1024),
             nn.ReLU(inplace=True),
             nn.Dropout(0.5),
-            nn.Linear(512, num_classes)
+            nn.Linear(1024, num_classes)
         )
 
     def forward(self, x):
@@ -118,7 +133,6 @@ class WordClassifier(nn.Module):
         x = self.classifier(x)
         return x
 
-
 # Load datasets
 train_dataset = WordImageDataset(train_dir, transform=transform_train)
 test_dataset = WordImageDataset(test_dir, transform=transform_test)
@@ -126,117 +140,102 @@ test_dataset = WordImageDataset(test_dir, transform=transform_test)
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
-#num_classes = len(train_dataset.class_to_idx)
 num_classes = len(train_dataset.class_to_idx)
 print(f'Number of classes: {num_classes}')
-print(f'Number of training images per class: {len(train_dataset)//num_classes}')
-print(f'Number of testing images per class: {len(test_dataset)//num_classes}')
+print(f'Number of training images: {len(train_dataset)//num_classes}')
+print(f'Number of testing images: {len(test_dataset)//num_classes}')
 
 # Initialize model, loss, and optimizer
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model = WordClassifier(num_classes).to(device)
+device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
+model = ImprovedWordClassifier(num_classes).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=1e-4)
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3, verbose=True)
+scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
 
-
-from tqdm import tqdm
-import time
-
+# Training function
 def train_model():
-    best_accuracy = 0.0
-    train_accuracies = []
-    test_accuracies = []
+    model.train()
+    running_loss = 0.0
+    correct = 0
+    total = 0
 
-    total_epochs = epochs  # Total number of epochs
-    start_time = time.time()  # Record the start time
+    for images, labels in tqdm(train_loader, desc="Training", unit="batch"):
+        images, labels = images.to(device), labels.to(device)
+        optimizer.zero_grad()
 
-    for epoch in range(total_epochs):
-        # Training phase
-        model.train()
-        running_loss = 0.0
-        correct = 0
-        total = 0
+        outputs = model(images)
+        loss = criterion(outputs, labels)
+        loss.backward()
 
-        # Initialize tqdm progress bar for the training loop
-        with tqdm(train_loader, desc=f"Epoch {epoch + 1}/{epochs}", unit="batch") as pbar:
-            for images, labels in pbar:
-                images, labels = images.to(device), labels.to(device)
-                optimizer.zero_grad()
+        # Gradient clipping
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
 
-                outputs = model(images)
-                loss = criterion(outputs, labels)
-                loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
 
-                # Gradient clipping
-                torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        _, predicted = outputs.max(1)
+        total += labels.size(0)
+        correct += predicted.eq(labels).sum().item()
 
-                optimizer.step()
-                running_loss += loss.item()
+    train_loss = running_loss / len(train_loader)
+    train_accuracy = 100. * correct / total
+    return train_loss, train_accuracy
 
-                _, predicted = outputs.max(1)
-                total += labels.size(0)
-                correct += predicted.eq(labels).sum().item()
-
-                # Update tqdm progress bar with relevant information
-                pbar.set_postfix({
-                    'Train Loss': running_loss / (pbar.n + 1),
-                    'Train Accuracy': 100. * correct / total
-                })
-
-        # Calculate train accuracy
-        train_accuracy = 100. * correct / total
-        train_accuracies.append(train_accuracy)
-
-        # Evaluation phase
-        test_accuracy = evaluate_model()
-        test_accuracies.append(test_accuracy)
-
-        # Learning rate scheduling
-        scheduler.step(100 - test_accuracy)  # Use accuracy as metric
-
-        # Save best model
-        if test_accuracy > best_accuracy:
-            best_accuracy = test_accuracy
-            torch.save(model.state_dict(), 'best_word_classifier.pth')
-
-        # Calculate time elapsed and remaining time
-        elapsed_time = time.time() - start_time
-        time_per_epoch = elapsed_time / (epoch + 1)
-        remaining_time = time_per_epoch * (total_epochs - (epoch + 1))
-
-        print(f'Epoch [{epoch + 1}/{epochs}]')
-        print(f'Train Accuracy: {train_accuracy:.2f}%')
-        print(f'Test Accuracy: {test_accuracy:.2f}%')
-        print(f'Time Elapsed: {elapsed_time:.2f}s | Time Remaining: {remaining_time:.2f}s')
-        print('-' * 50)
-
-    total_time = time.time() - start_time
-    print(f"Training complete! Total time: {total_time:.2f}s")
-    return train_accuracies, test_accuracies
-
-
-
+# Evaluation function
 def evaluate_model():
     model.eval()
     correct = 0
     total = 0
 
     with torch.no_grad():
-        for images, labels in test_loader:
+        for images, labels in tqdm(test_loader, desc="Testing", unit="batch"):
             images, labels = images.to(device), labels.to(device)
             outputs = model(images)
             _, predicted = outputs.max(1)
             total += labels.size(0)
             correct += predicted.eq(labels).sum().item()
 
-    return 100. * correct / total
+    test_accuracy = 100. * correct / total
+    return test_accuracy
 
+# Training loop with early stopping
+best_accuracy = 0.0
+patience = 5
+epochs_without_improvement = 0
+train_accuracies = []
+test_accuracies = []
 
-# Train the model
-print("Starting training...")
-train_accuracies, test_accuracies = train_model()
-print("Training complete!")
+start_time = time.time()
+
+for epoch in range(epochs):
+    print(f'Epoch [{epoch + 1}/{epochs}]')
+    train_loss, train_accuracy = train_model()
+    test_accuracy = evaluate_model()
+
+    train_accuracies.append(train_accuracy)
+    test_accuracies.append(test_accuracy)
+
+    # Learning rate scheduling
+    scheduler.step()
+
+    # Save best model
+    if test_accuracy > best_accuracy:
+        best_accuracy = test_accuracy
+        epochs_without_improvement = 0
+        torch.save(model.state_dict(), 'best_word_classifier.pth')
+    else:
+        epochs_without_improvement += 1
+
+    # Early stopping
+    if epochs_without_improvement >= patience:
+        print("Early stopping!")
+        break
+
+    print(f'Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Test Accuracy: {test_accuracy:.2f}%')
+    print('-' * 50)
+
+total_time = time.time() - start_time
+print(f"Training complete! Total time: {total_time:.2f}s")
 
 # Plot results
 plt.figure(figsize=(10, 5))
@@ -249,10 +248,11 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-
 # Function to predict word for a single image
 def predict_word(image_path):
+    model.load_state_dict(torch.load('best_word_classifier.pth'))
     model.eval()
+
     # Load and preprocess the image
     image = Image.open(image_path).convert('RGB')
     image = transform_test(image).unsqueeze(0).to(device)
@@ -267,3 +267,7 @@ def predict_word(image_path):
     predicted_word = idx_to_class[predicted.item()]
 
     return predicted_word
+
+# Example usage
+# predicted_word = predict_word("path_to_image.png")
+# print(f'Predicted Word: {predicted_word}')
