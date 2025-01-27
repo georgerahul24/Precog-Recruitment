@@ -8,8 +8,8 @@ font_path = "./Fonts/roboto.ttf"
 image_size = (256, 128)
 font_size = 32
 num_samples_per_class = 100
-words_list = "Curious minds explore, seeking knowledge and finding endless possibilities together.".split()
-
+words_list = "Rudra Choudhary Aditya Peketi Vardhan George Rahul Sri Rama Venkata Dinakar Venapati Aashrith Reddy Hrishikesh Milind Gawas Akshath Puneeth Gupta".split()
+# words_list = []
 # # Load additional words from the dictionary file
 # with open("Dictionary.txt", "r") as file:
 #     words_list.extend(eval(file.read()))

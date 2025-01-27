@@ -66,12 +66,21 @@ print(f"Number of testing images per class: {len(test_dataset) // num_classes}")
 
 
 # Neural Network
-class SimpleNN(nn.Module):
+class ComplexNN(nn.Module):
     def __init__(self, num_classes):
-        super(SimpleNN, self).__init__()
+        super(ComplexNN, self).__init__()
         self.network = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Flatten(),
-            nn.Linear(3 * image_size[0] * image_size[1], 256),
+            nn.Linear(128 * (image_size[0] // 8) * (image_size[1] // 8), 256),
             nn.ReLU(),
             nn.Linear(256, 128),
             nn.ReLU(),
@@ -83,9 +92,16 @@ class SimpleNN(nn.Module):
 
 
 # Model, Loss, Optimizer
-model = SimpleNN(num_classes)
+model = ComplexNN(num_classes)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+
+# Check if Metal backend is available (for M1 Mac)
+device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+print(f"Using device: {device}")
+
+# Move model to GPU (Metal)
+model = model.to(device)
 
 # Store accuracy and loss for visualization
 train_accuracies = []
@@ -99,6 +115,7 @@ def train_and_record_model():
         model.train()
         running_loss = 0.0
         for images, labels in train_loader:
+            images, labels = images.to(device), labels.to(device)  # Move data to GPU
             optimizer.zero_grad()
             outputs = model(images)
             loss = criterion(outputs, labels)
@@ -126,6 +143,7 @@ def evaluate_model(dataloader):
     total = 0
     with torch.no_grad():
         for images, labels in dataloader:
+            images, labels = images.to(device), labels.to(device)  # Move data to GPU
             outputs = model(images)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
@@ -139,6 +157,7 @@ print("Starting training...")
 train_and_record_model()
 print("Training complete.")
 
+# Save the model
 torch.save(model, "model.pth")
 
 # Generate accuracy graph
