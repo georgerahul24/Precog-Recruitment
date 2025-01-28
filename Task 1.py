@@ -14,9 +14,9 @@ num_samples_per_word = 550  # Number of images per word
 num_required_fonts = 5
 words_list = []
 
-#Load words from dictionary file
+# Load words from dictionary file
 with open("./Approach 1/Dictionary.txt", "r") as file:
-     words_list.extend(eval(file.read()))
+    words_list.extend(eval(file.read()))
 print("Number of words found in the Dictionary: ", len(words_list))
 noise_probability = 0.1
 
@@ -29,8 +29,12 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Roboto", "Smooch+Sans","Lexend+Giga","Playwrite+India","Inter"
+    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
+    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
+    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
+    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One'
 ]
+
 
 # Function to download fonts
 def download_fonts():
@@ -44,7 +48,8 @@ def download_fonts():
             continue
 
         # Parse CSS to find .ttf or .woff2 URLs
-        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if "url(" in line]
+        font_urls = [line.split("url(")[-1].split(")")[0].strip('\'"') for line in response.text.splitlines() if
+                     "url(" in line]
         for url in font_urls:
             try:
                 font_response = requests.get(url)
@@ -55,6 +60,7 @@ def download_fonts():
                 break  # Download only one variant per font
             except Exception as e:
                 print(f"Failed to download font from {url}: {e}")
+
 
 # Ensure there are at least `num_required_fonts` fonts in the folder
 font_files = [os.path.join(fonts_dir, f) for f in os.listdir(fonts_dir) if f.endswith(".ttf")]
@@ -68,10 +74,10 @@ print(f"Number of fonts available: {len(font_files)}")
 fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 
 
-
 def randomize_case(word):
     """Randomly capitalize letters in a word."""
     return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
+
 
 def create_image(word, font, size):
     """Create an image with the given word rendered in the specified font."""
@@ -93,17 +99,18 @@ def create_image(word, font, size):
 
     return img
 
+
 def process_word(word):
     """Generate images for a single word."""
     word_dir = os.path.join(output_dir, word)
     os.makedirs(word_dir, exist_ok=True)
     for i in range(num_samples_per_word):
-
         randomized_word = randomize_case(word)
         font = random.choice(fonts)
         img = create_image(randomized_word, font, image_size)
         img_filename = os.path.join(word_dir, f"{word}_{i:03d}.png")
         img.save(img_filename)
+
 
 # Generate images using multithreading
 with ThreadPoolExecutor() as executor:

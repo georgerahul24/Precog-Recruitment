@@ -66,7 +66,7 @@ class WordClassifier(nn.Module):
 
 def load_model_and_labels():
     try:
-        model = torch.load("Models/MC1.pth")
+        model = torch.load("Models/MC2.pth")
         model.eval()
 
         train_dir = "train"

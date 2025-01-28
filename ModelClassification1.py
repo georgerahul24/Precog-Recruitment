@@ -143,11 +143,12 @@ epoch_losses = []
 # Training Loop
 from tqdm import tqdm
 import shutil
-shutil.rmtree('Model1', ignore_errors=True)
-os.makedirs('Model1', exist_ok=True)
+shutil.rmtree('ModelClassification1', ignore_errors=True)
+os.makedirs('ModelClassification1', exist_ok=True)
 
 model_number = 0
 def train_and_record_model():
+    global model_number
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
