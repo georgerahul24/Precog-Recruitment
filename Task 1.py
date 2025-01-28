@@ -8,15 +8,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Configuration
 output_dir = "train"
 fonts_dir = "Fonts"
-image_size = (64, 32)
+image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 450  # Number of images per word
-num_required_fonts = 20
+num_samples_per_word = 550  # Number of images per word
+num_required_fonts = 5
 words_list = []
-words_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890")
+
 #Load words from dictionary file
-# with open("./Approach 1/Dictionary.txt", "r") as file:
-#     words_list.extend(eval(file.read()))
+with open("./Approach 1/Dictionary.txt", "r") as file:
+     words_list.extend(eval(file.read()))
 print("Number of words found in the Dictionary: ", len(words_list))
 noise_probability = 0.1
 
@@ -29,13 +29,7 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Roboto", "Open+Sans", "Lato", "Montserrat", "Poppins", "Raleway", "Oswald",
-    "Merriweather", "Nunito", "Ubuntu", "Playfair+Display", "Noto+Sans", "Noto+Serif",
-    "Titillium+Web", "Source+Sans+Pro", "PT+Sans", "PT+Serif", "Bitter", "Arimo",
-    "Cabin", "Dosis", "Quicksand", "Work+Sans", "Rubik", "Varela+Round", "Dancing+Script",
-    "Pacifico", "Great+Vibes", "Courgette", "Allura", "Handlee", "Lobster", "Satisfy",
-    "Cookie", "Tangerine", "Sacramento", "Parisienne", "Yellowtail", "Kaushan+Script",
-    "Shadows+Into+Light", "Amatic+SC", "Indie+Flower"
+    "Roboto", "Smooch+Sans","Lexend+Giga","Playwrite+India","Inter"
 ]
 
 # Function to download fonts
@@ -104,6 +98,7 @@ def process_word(word):
     word_dir = os.path.join(output_dir, word)
     os.makedirs(word_dir, exist_ok=True)
     for i in range(num_samples_per_word):
+
         randomized_word = randomize_case(word)
         font = random.choice(fonts)
         img = create_image(randomized_word, font, image_size)
