@@ -6,19 +6,19 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "letter_test"
+output_dir = "letter_train"
 fonts_dir = "Fonts"
-image_size = (72, 64)
-num_samples_per_letter = 100  # Number of images per letter
+image_size = (64,128)
+num_samples_per_letter = 2000  # Number of images per letter
 num_required_fonts = 50  # Increased number of fonts
 letters_list = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
-noise_probability = 0.1
+noise_probability = 0.03
 
 # Font size and jitter configuration
 min_font_size = 20
-max_font_size = 48
-min_jitter = -5
-max_jitter = 5
+max_font_size = 25
+min_jitter = -6
+max_jitter = 6
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
@@ -87,7 +87,7 @@ def create_image(letter, font, size):
     for x in range(size[0]):
         for y in range(size[1]):
             if random.random() < noise_probability:
-                noise_color = tuple(random.randint(0, 200) for _ in range(3))
+                noise_color = tuple(random.randint(0, 150) for _ in range(3))
                 draw.point((x, y), fill=noise_color)
 
     text_bbox = draw.textbbox((0, 0), letter, font=font)

@@ -14,7 +14,7 @@ train_dir = "letter_train"
 test_dir = "letter_test"
 image_size = (128, 64)
 batch_size = 64
-epochs = 50
+epochs = 75
 learning_rate = 0.0003
 
 # Data Augmentation
@@ -23,9 +23,6 @@ transform_train = transforms.Compose([
     transforms.RandomHorizontalFlip(p=0.3),
     transforms.RandomRotation(degrees=10),
     transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
-    transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.8, 1.2)),
-    transforms.GaussianBlur(kernel_size=3),
-    transforms.RandomPerspective(distortion_scale=0.2, p=0.5),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -115,7 +112,6 @@ test_dataset = WordImageDataset(test_dir, transform=transform_test)
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
 num_classes = len(train_dataset.class_to_idx)
 print(f'Number of classes: {num_classes}')
 print(f'Number of training images: {len(train_dataset) // num_classes}')
@@ -201,7 +197,7 @@ for epoch in range(epochs):
     if test_accuracy > best_accuracy:
         best_accuracy = test_accuracy
         epochs_without_improvement = 0
-        torch.save(model.state_dict(), 'letter_model.pth')
+        # torch.save(model.state_dict(), 'letter_modelV1.pth')
     else:
         epochs_without_improvement += 1
 
