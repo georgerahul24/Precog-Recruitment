@@ -6,19 +6,19 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 550  # Number of images per word
-num_required_fonts = 5
+num_samples_per_word = 10  # Number of images per word
+num_required_fonts = 30
 words_list = []
 
 # Load words from dictionary file
 with open("./Approach 1/Dictionary.txt", "r") as file:
     words_list.extend(eval(file.read()))
 print("Number of words found in the Dictionary: ", len(words_list))
-noise_probability = 0.1
+noise_probability = 0.25
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
@@ -29,10 +29,7 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
-    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
-    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
-    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One'
+    "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia"
 ]
 
 

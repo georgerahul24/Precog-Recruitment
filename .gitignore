@@ -3,5 +3,7 @@ Output
 *.png
 Fonts/
 *.pkl
-!Model1/*.pth
-!Model1/*.pt
+*pth
+*pt
+!Models/*.pth
+!Models/*.pt

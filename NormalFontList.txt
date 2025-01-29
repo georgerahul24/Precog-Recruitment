@@ -1,0 +1,6 @@
+font_families = [
+    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
+    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
+    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
+    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One'
+]

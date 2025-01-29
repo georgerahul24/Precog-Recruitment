@@ -170,7 +170,7 @@ def train_and_record_model():
         train_accuracies.append(train_acc)
         test_accuracies.append(test_acc)
 
-        torch.save(model, f"ModelClassification1/model_{model_number}_{int(test_acc)}.pth")
+        torch.save(model, f"ModelClassification1/model_{model_number}_{test_acc}.pth")
         model_number+=1
         print(f"Epoch [{epoch + 1}/{epochs}], Loss: {epoch_loss:.4f}, "
               f"Train Accuracy: {train_acc:.2f}%, Test Accuracy: {test_acc:.2f}%")
