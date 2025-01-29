@@ -71,7 +71,7 @@ model = None
 def load_model_and_labels():
     try:
         global model
-        model = torch.load("Models/MC4.pth")
+        model = torch.load("Models/MC6.pth")
         model.eval()
 
         train_dir = "train"

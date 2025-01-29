@@ -1,0 +1,7 @@
+font_families = [
+    "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia", 'Lavishly+Yours', 'Tangerine',
+    'Hurricane', 'Luxurious+Script', 'Meddon', 'MonteCarlo', 'Niconne', 'Over+the+Rainbow', 'Parisienne',
+    'Pinyon+Script', 'Playwrite+IN', 'Playwrite+VN', 'Indie+Flower', 'Monsieur+La+Doulaise', 'Mr+Dafoe',
+    'Mr+De+Haviland', 'Mr+Bedfort', 'Petemoss', 'Puppies+Play', 'Cookie', 'Dancing+Script', 'Great+Vibes', 'Ballet',
+    'Grey+Qo', 'Imperial+Script'
+]

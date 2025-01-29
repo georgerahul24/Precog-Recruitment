@@ -10,15 +10,15 @@ output_dir = "test"
 fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 10  # Number of images per word
-num_required_fonts = 30
+num_samples_per_word = 40  # Number of images per word
+num_required_fonts = 20
 words_list = []
 
 # Load words from dictionary file
 with open("./Approach 1/Dictionary.txt", "r") as file:
     words_list.extend(eval(file.read()))
 print("Number of words found in the Dictionary: ", len(words_list))
-noise_probability = 0.25
+noise_probability = 0.1
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
@@ -29,7 +29,14 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia"
+      "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
+    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
+    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
+    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One', "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia", 'Lavishly+Yours', 'Tangerine',
+    'Hurricane', 'Luxurious+Script', 'Meddon', 'MonteCarlo', 'Niconne', 'Over+the+Rainbow', 'Parisienne',
+    'Pinyon+Script', 'Playwrite+IN', 'Playwrite+VN', 'Indie+Flower', 'Monsieur+La+Doulaise', 'Mr+Dafoe',
+    'Mr+De+Haviland', 'Mr+Bedfort', 'Petemoss', 'Puppies+Play', 'Cookie', 'Dancing+Script', 'Great+Vibes', 'Ballet',
+    'Grey+Qo', 'Imperial+Script'
 ]
 
 
