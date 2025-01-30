@@ -6,12 +6,12 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 350  # Number of images per word
-num_required_fonts = 20
+num_samples_per_word = 100  # Number of images per word
+num_required_fonts = 600
 words_list = []
 
 # Load words from dictionary file
@@ -29,10 +29,15 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Pacifico", "Meow+Script", "Ruge+Boogie", 'Cookie', 'Dancing+Script', 'Great+Vibes', 'Ballet',
-    'Grey+Qo', 'Imperial+Script', 'Meddon',
-    'Varela+Round', 'Barrio', 'Lora', 'Quicksand', 'Fira+Sans', 'Fjalla+One'
-    , 'Asap', 'Zilla+Slab', 'Poppins', 'Raleway'
+    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
+    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
+    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
+    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One', "Pacifico", "Meow+Script",
+    "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia", 'Lavishly+Yours', 'Tangerine',
+    'Hurricane', 'Luxurious+Script', 'Meddon', 'MonteCarlo', 'Niconne', 'Over+the+Rainbow', 'Parisienne',
+    'Pinyon+Script', 'Playwrite+IN', 'Playwrite+VN', 'Indie+Flower', 'Monsieur+La+Doulaise', 'Mr+Dafoe',
+    'Mr+De+Haviland', 'Mr+Bedfort', 'Petemoss', 'Puppies+Play', 'Cookie', 'Dancing+Script', 'Great+Vibes', 'Ballet',
+    'Grey+Qo', 'Imperial+Script'
 ]
 
 
