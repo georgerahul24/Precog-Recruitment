@@ -7,11 +7,11 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 fonts_dir = "Fonts"
 image_size = (256,64)
 font_size = 32
-num_samples = 20000  # Total number of images to generate
+num_samples = 1000  # Total number of images to generate
 num_required_fonts = 10
 noise_probability = 0.1
 

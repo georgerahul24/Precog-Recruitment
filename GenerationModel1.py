@@ -7,9 +7,14 @@ from torchvision import transforms
 import numpy as np
 from tqdm import tqdm
 from collections import defaultdict
+
 # Training loop
 num_epochs = 1000
 # Collect all unique characters from training data
+train_folder = 'train'
+test_folder = 'test'
+
+
 def collect_characters(train_folder):
     chars = set()
     for filename in os.listdir(train_folder):
@@ -18,8 +23,10 @@ def collect_characters(train_folder):
             chars.update(label)
     return sorted(chars)
 
+
 # Custom Dataset
 class CaptchaDataset(Dataset):
+
     def __init__(self, folder, char_to_idx, transform=None):
         self.folder = folder
         self.transform = transform
@@ -36,6 +43,9 @@ class CaptchaDataset(Dataset):
     def __len__(self):
         return len(self.image_paths)
 
+    def print_summary(self):
+        print(f"Loaded {len(self.image_paths)} images from {self.folder}")
+
     def __getitem__(self, idx):
         image = Image.open(self.image_paths[idx]).convert('RGB')
         label = self.labels[idx]
@@ -45,6 +55,7 @@ class CaptchaDataset(Dataset):
 
         target = torch.tensor([self.char_to_idx[c] for c in label], dtype=torch.long)
         return image, target
+
 
 def collate_fn(batch):
     images = []
@@ -61,6 +72,7 @@ def collate_fn(batch):
     target_lengths = torch.tensor(target_lengths, dtype=torch.long)
 
     return images, targets, target_lengths
+
 
 # CNN + LSTM Model
 class CRNN(nn.Module):
@@ -116,7 +128,7 @@ class CRNN(nn.Module):
             input_size=512,  # Increased to match CNN output
             hidden_size=256,
             bidirectional=True,
-            num_layers=3,  # Increased from 2
+            num_layers=3,
             dropout=0.3,
             batch_first=False
         )
@@ -159,6 +171,8 @@ class CRNN(nn.Module):
         x = nn.functional.log_softmax(x, dim=2)
 
         return x
+
+
 # Decode predictions
 def decode(output, idx_to_char):
     output = output.permute(1, 0, 2)  # (N, T, C)
@@ -176,9 +190,10 @@ def decode(output, idx_to_char):
         decoded.append(''.join(chars))
     return decoded
 
+
 # Configuration
 device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
-train_folder = 'train'
+
 chars = collect_characters(train_folder)
 char_to_idx = {c: i + 1 for i, c in enumerate(chars)}  # 0 is blank
 idx_to_char = {i + 1: c for i, c in enumerate(chars)}
@@ -192,7 +207,12 @@ transform = transforms.Compose([
 
 # Dataset and DataLoader
 dataset = CaptchaDataset(train_folder, char_to_idx, transform)
+dataset.print_summary()
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
+test_dataset = CaptchaDataset(test_folder, char_to_idx, transform)
+
+test_dataset.print_summary()
+test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
 
 # Model setup
 model = CRNN(num_chars).to(device)
@@ -233,20 +253,40 @@ for epoch in range(num_epochs):
         # Print sample predictions after each epoch
     model.eval()
     with torch.no_grad():
-        indices = np.random.choice(len(dataset), 2)
-        samples = [dataset[i] for i in indices]
-        images = torch.stack([s[0] for s in samples]).to(device)
-        actuals = [''.join([idx_to_char[i.item()] for i in s[1]]) for s in samples]
+        all_predictions = []
+        all_actuals = []
 
-        outputs = model(images)
-        predictions = decode(outputs, idx_to_char)
+        for images, targets, _ in tqdm(test_dataloader, desc='Testing', leave=False):
+            images = images.to(device)
+            outputs = model(images)
+            predictions = decode(outputs, idx_to_char)
+            actuals = [''.join([idx_to_char[i.item()] for i in tgt]) for tgt in targets]
 
-        print(f"\nSample Predictions after Epoch {epoch + 1}:")
-        print(f"Actual: {actuals[0]} → Predicted: {predictions[0]}")
-        print(f"Actual: {actuals[1]} → Predicted: {predictions[1]}\n")
+            all_predictions.extend(predictions)
+            all_actuals.extend(actuals)
 
-# Save the model
-accuracy = (sum([1 for a, p in zip(actuals, predictions) if a == p]) / len(actuals)) * 100
-model_path = f"GenerationModel/model_epoch_{epoch + 1}_acc_{accuracy:.2f}.pth"
-torch.save(model.state_dict(), model_path)
-print(f"Model saved to {model_path}")
+        test_accuracy = (sum([1 for a, p in zip(all_actuals, all_predictions) if a == p]) / len(all_actuals)) * 100
+        print(f"Test Accuracy: {test_accuracy:.2f}%")
+
+        # Print any two predictions and their actual outputs
+        for i in range(2):
+            print(f"Prediction: {all_predictions[i]}, Actual: {all_actuals[i]}")
+
+        all_predictions = []
+        all_actuals = []
+
+        for images, targets, _ in tqdm(dataloader, desc='Training', leave=False):
+            images = images.to(device)
+            outputs = model(images)
+            predictions = decode(outputs, idx_to_char)
+            actuals = [''.join([idx_to_char[i.item()] for i in tgt]) for tgt in targets]
+
+            all_predictions.extend(predictions)
+            all_actuals.extend(actuals)
+
+        train_accuracy = (sum([1 for a, p in zip(all_actuals, all_predictions) if a == p]) / len(all_actuals)) * 100
+        print(f"Train Accuracy: {train_accuracy:.2f}%")
+
+        model_path = f"GenerationModel/model_epoch_{epoch + 1}_train_acc_{train_accuracy:.2f}_test_acc_{test_accuracy:.2f}.pth"
+        torch.save(model.state_dict(), model_path)
+        print(f"Model saved to {model_path}")
