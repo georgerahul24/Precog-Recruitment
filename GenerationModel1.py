@@ -230,20 +230,20 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-    # Print sample predictions after each epoch
-model.eval()
-with torch.no_grad():
-    indices = np.random.choice(len(dataset), 2)
-    samples = [dataset[i] for i in indices]
-    images = torch.stack([s[0] for s in samples]).to(device)
-    actuals = [''.join([idx_to_char[i.item()] for i in s[1]]) for s in samples]
+        # Print sample predictions after each epoch
+    model.eval()
+    with torch.no_grad():
+        indices = np.random.choice(len(dataset), 2)
+        samples = [dataset[i] for i in indices]
+        images = torch.stack([s[0] for s in samples]).to(device)
+        actuals = [''.join([idx_to_char[i.item()] for i in s[1]]) for s in samples]
 
-    outputs = model(images)
-    predictions = decode(outputs, idx_to_char)
+        outputs = model(images)
+        predictions = decode(outputs, idx_to_char)
 
-    print(f"\nSample Predictions after Epoch {epoch + 1}:")
-    print(f"Actual: {actuals[0]} → Predicted: {predictions[0]}")
-    print(f"Actual: {actuals[1]} → Predicted: {predictions[1]}\n")
+        print(f"\nSample Predictions after Epoch {epoch + 1}:")
+        print(f"Actual: {actuals[0]} → Predicted: {predictions[0]}")
+        print(f"Actual: {actuals[1]} → Predicted: {predictions[1]}\n")
 
 # Save the model
 accuracy = (sum([1 for a, p in zip(actuals, predictions) if a == p]) / len(actuals)) * 100
