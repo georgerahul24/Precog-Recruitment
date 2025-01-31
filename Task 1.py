@@ -1,43 +1,31 @@
 import os
 import random
 import requests
+import string
 from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "test"
+output_dir = "train"
 fonts_dir = "Fonts"
-image_size = (256, 128)
+image_size = (256,64)
 font_size = 32
-num_samples_per_word = 100  # Number of images per word
-num_required_fonts = 600
-words_list = []
-
-# Load words from dictionary file
-with open("./Approach 1/Dictionary.txt", "r") as file:
-    words_list.extend(eval(file.read()))
-print("Number of words found in the Dictionary: ", len(words_list))
+num_samples = 20000  # Total number of images to generate
+num_required_fonts = 10
 noise_probability = 0.1
 
 # Ensure output and fonts directories exist
 if os.path.exists(output_dir):
     os.system(f"rm -rf {output_dir}")
 os.makedirs(output_dir, exist_ok=True)
-
 os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
     "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
     'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
-    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
-    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One', "Pacifico", "Meow+Script",
-    "Ruge+Boogie", "Ms+Madi", "Ole", "Princess+Sofia", 'Lavishly+Yours', 'Tangerine',
-    'Hurricane', 'Luxurious+Script', 'Meddon', 'MonteCarlo', 'Niconne', 'Over+the+Rainbow', 'Parisienne',
-    'Pinyon+Script', 'Playwrite+IN', 'Playwrite+VN', 'Indie+Flower', 'Monsieur+La+Doulaise', 'Mr+Dafoe',
-    'Mr+De+Haviland', 'Mr+Bedfort', 'Petemoss', 'Puppies+Play', 'Cookie', 'Dancing+Script', 'Great+Vibes', 'Ballet',
-    'Grey+Qo', 'Imperial+Script'
+
 ]
 
 
@@ -79,9 +67,10 @@ print(f"Number of fonts available: {len(font_files)}")
 fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 
 
-def randomize_case(word):
-    """Randomly capitalize letters in a word."""
-    return ''.join(random.choice([char.upper(), char.lower()]) for char in word)
+def generate_random_word():
+    """Generate a random word with a length between 3 and 10 characters."""
+    length = random.randint(3, 10)
+    return ''.join(random.choice(string.ascii_letters) for _ in range(length))
 
 
 def create_image(word, font, size):
@@ -105,22 +94,17 @@ def create_image(word, font, size):
     return img
 
 
-def process_word(word):
-    """Generate images for a single word."""
-    word_dir = os.path.join(output_dir, word)
-    os.makedirs(word_dir, exist_ok=True)
-    for i in range(num_samples_per_word):
-        randomized_word = randomize_case(word)
-        font = random.choice(fonts)
-        img = create_image(randomized_word, font, image_size)
-        img_filename = os.path.join(word_dir, f"{word}_{i:03d}.png")
-        img.save(img_filename)
+def process_image(index):
+    """Generate a single image with a random word and font."""
+    word = generate_random_word()
+    font = random.choice(fonts)
+    img = create_image(word, font, image_size)
+    img_filename = os.path.join(output_dir, f"{word}_{index:04d}.png")
+    img.save(img_filename)
 
 
 # Generate images using multithreading
 with ThreadPoolExecutor() as executor:
-    futures = [executor.submit(process_word, word) for word in words_list]
-    for future in tqdm(as_completed(futures), desc="Generating Dataset", total=len(words_list)):
-        future.result()
+    list(tqdm(executor.map(process_image, range(num_samples)), total=num_samples, desc="Generating Dataset"))
 
 print(f"Dataset generated in '{output_dir}'")
