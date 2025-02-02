@@ -4590,3 +4590,231 @@ Sample Predictions:
 Sample Predictions:
   Prediction: ieq | Actual: ieq
   Prediction: wuqtmwubmy | Actual: wuqtmwubmy
+ 1738534887.7097511 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738534932.041901 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738534976.387837 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535021.019592 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535065.7872589 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535109.941173 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535154.1237812 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535198.3294988 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535242.457453 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535286.721504 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535331.092727 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: dgcm4
+  Prediction:  | Actual: cndmc
+ 1738535375.2023768 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: b8u3b | Actual: dgcm4
+  Prediction: kchc | Actual: cndmc
+ 1738535419.429536 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: ilr1fflth1i1 | Actual: dgcm4
+  Prediction: 1h4n1l4l | Actual: cndmc
+ 1738535463.772376 Epoch [14/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: fuqsfnr4mn | Actual: dgcm4
+  Prediction: f1hfsh6mn | Actual: cndmc
+ 1738535508.18781 Epoch [15/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 1uonr1 | Actual: dgcm4
+  Prediction: hus1pr0 | Actual: cndmc
+ 1738535552.153475 Epoch [16/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55c01nraxs | Actual: dgcm4
+  Prediction: 5505s19a | Actual: cndmc
+ 1738535596.175968 Epoch [17/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 5sphdq5ns2hn | Actual: dgcm4
+  Prediction: squhqnqm | Actual: cndmc
+ 1738535640.190015 Epoch [18/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 5950q49x | Actual: dgcm4
+  Prediction: 559u999q9 | Actual: cndmc
+ 1738535684.19821 Epoch [19/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: j5pjhbat | Actual: dgcm4
+  Prediction: jk9u1phq | Actual: cndmc
+ 1738535728.181828 Epoch [20/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 59p0dfhv4 | Actual: dgcm4
+  Prediction: 5b9bp15qs | Actual: cndmc
+ 1738535772.184993 Epoch [21/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jj9cfdhppypb33 | Actual: dgcm4
+  Prediction: jjreuqhspc933 | Actual: cndmc
+ 1738535816.177783 Epoch [22/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjyjdufxrax | Actual: dgcm4
+  Prediction: 5hgbfjbi6x | Actual: cndmc
+ 1738535860.188638 Epoch [23/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jfjduf11a | Actual: dgcm4
+  Prediction: h5bifjfi1qx | Actual: cndmc
+ 1738535904.007613 Epoch [24/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 53gjdcfy1au | Actual: dgcm4
+  Prediction: 5hgyqph6j | Actual: cndmc
+ 1738535947.764528 Epoch [25/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55fjjjfjf114js | Actual: dgcm4
+  Prediction: hbbfjfj16jjs | Actual: cndmc
+ 1738535991.52721 Epoch [26/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 571jdcjf1r4 | Actual: dgcm4
+  Prediction: 5ppbdp116s | Actual: cndmc
+ 1738536035.375378 Epoch [27/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55cjuuftt4 | Actual: dgcm4
+  Prediction: 5npbjp16s | Actual: cndmc
+ 1738536079.243946 Epoch [28/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 53cjjcftr4 | Actual: dgcm4
+  Prediction: 5jgjg4jbzcz | Actual: cndmc
+ 1738536123.123273 Epoch [29/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 53tjjdtjftx4 | Actual: dgcm4
+  Prediction: 5ysjdjifjac3 | Actual: cndmc
+ 1738536167.137575 Epoch [30/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55fjjbjjttzl5 | Actual: dgcm4
+  Prediction: 5tpjdrj55365 | Actual: cndmc
+ 1738536211.230709 Epoch [31/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55fjjjcfttz | Actual: dgcm4
+  Prediction: 5ypjbj5jjc3 | Actual: cndmc
+ 1738536255.236347 Epoch [32/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjjpjbjf5ftt4 | Actual: dgcm4
+  Prediction: jjb9bjjbp6j | Actual: cndmc
+ 1738536299.230866 Epoch [33/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55tjgjfsftr4 | Actual: dgcm4
+  Prediction: 5bgbfbfke | Actual: cndmc
+ 1738536343.238663 Epoch [34/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 5jjjjjjjjf5ftta | Actual: dgcm4
+  Prediction: 5bpdfjpjfj6 | Actual: cndmc
+ 1738536387.232658 Epoch [35/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: ji5pjdjppk14 | Actual: dgcm4
+  Prediction: 5pgdpjpp | Actual: cndmc
+ 1738536431.2339442 Epoch [36/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjjjjjjufkr4x | Actual: dgcm4
+  Prediction: jjhgd4pp | Actual: cndmc
+ 1738536475.2350311 Epoch [37/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjcjejdfttj | Actual: dgcm4
+  Prediction: 5hgdfjffj6j | Actual: cndmc
+ 1738536519.2293918 Epoch [38/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 55gjgjpfkr4 | Actual: dgcm4
+  Prediction: 5ygycjpp6 | Actual: cndmc
+ 1738536563.249634 Epoch [39/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 5jpicjdfkt4v | Actual: dgcm4
+  Prediction: 5fgdcpp6j | Actual: cndmc
+ 1738536607.310017 Epoch [40/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjjrjejgftt4j | Actual: dgcm4
+  Prediction: j5ggpiffje3 | Actual: cndmc
+ 1738536651.311775 Epoch [41/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jijjjejrrtr4 | Actual: dgcm4
+  Prediction: jfysb4fr16z | Actual: cndmc
+ 1738536695.325137 Epoch [42/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jbjrjfjrrtt4 | Actual: dgcm4
+  Prediction: jtgycpr1c | Actual: cndmc
+ 1738536739.2847428 Epoch [43/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jje1ejfjftt4j3 | Actual: dgcm4
+  Prediction: jjbsjpfifti63j3 | Actual: cndmc
+ 1738536783.163253 Epoch [44/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjpagfjfyxavj | Actual: dgcm4
+  Prediction: jjysjpr4py1f3 | Actual: cndmc
+ 1738536827.069806 Epoch [45/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jiicjejfjrt14r | Actual: dgcm4
+  Prediction: jitgefn6s | Actual: cndmc
+ 1738536870.950907 Epoch [46/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjjfjljtjt1jkjjjj | Actual: dgcm4
+  Prediction: jjbpbfflf1j6jjj7 | Actual: cndmc
+ 1738536914.808733 Epoch [47/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jj5efjfjfys | Actual: dgcm4
+  Prediction: jbgjpslfb1c | Actual: cndmc
+ 1738536958.7033339 Epoch [48/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: j5cjgjjgfrrsu | Actual: dgcm4
+  Prediction: jkspcpp6j | Actual: cndmc
+ 1738537002.598439 Epoch [49/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jrclgcrk | Actual: dgcm4
+  Prediction: jrgqclrmcv | Actual: cndmc
+ 1738537046.511903 Epoch [50/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jj1jjjsj114 | Actual: dgcm4
+  Prediction: jyjjj9jjj116 | Actual: cndmc
+ 1738537090.413876 Epoch [51/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: uscjgrjrn14 | Actual: dgcm4
+  Prediction: jyppcjfn16j | Actual: cndmc
+ 1738537134.2933109 Epoch [52/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: bj1fjujytt14m | Actual: dgcm4
+  Prediction: jygbcjft16 | Actual: cndmc
+ 1738537262.344574 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537308.156491 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537354.430685 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537400.871731 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537447.274327 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh

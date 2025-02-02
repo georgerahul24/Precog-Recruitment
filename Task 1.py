@@ -7,11 +7,11 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "train"
+output_dir = "test"
 fonts_dir = "Fonts"
-image_size = (256, 64)
+image_size = (200, 50)
 font_size = 32
-num_samples = 5000  # Total number of images to generate
+num_samples = 100  # Total number of images to generate
 num_required_fonts = 60
 noise_probability = 0.1
 
@@ -23,7 +23,10 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole",
+    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
+    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
+    'Merriweather', 'Nunito', 'Open+Sans', 'Oswald', 'Poppins', 'Raleway', 'Roboto', 'Rubik', 'Rubik+Gemstones',
+    'Ubuntu', 'Varela+Round', 'Barrio', 'Bangers', 'Atma', 'Henny+Penny', 'Joti+One'
    ]
 
 
@@ -69,7 +72,7 @@ def generate_random_word():
     """Generate a random word with a length between 3 and 10 characters."""
     length = random.randint(3, 10)
     # TODO: Change this to do for lower case
-    return ''.join(random.choice(string.ascii_lowercase) for _ in range(length))
+    return ''.join(random.choice('abcdefghijklmnopqrstuvwxyz1234567890') for _ in range(length))
 
 
 def create_image(word, font, size):
