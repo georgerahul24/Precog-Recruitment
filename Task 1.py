@@ -7,12 +7,12 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "test"
+output_dir = "train"
 fonts_dir = "Fonts"
-image_size = (256,64)
+image_size = (256, 64)
 font_size = 32
-num_samples = 1000  # Total number of images to generate
-num_required_fonts = 10
+num_samples = 5000  # Total number of images to generate
+num_required_fonts = 60
 noise_probability = 0.1
 
 # Ensure output and fonts directories exist
@@ -23,10 +23,8 @@ os.makedirs(fonts_dir, exist_ok=True)
 
 # Expanded list of font families with cursive and variety
 font_families = [
-    "Roboto", "Smooch+Sans", "Lexend+Giga", "Inter", 'Lora', 'Quicksand', 'Fira+Sans',
-    'Source+Code+Pro', 'Fjalla+One', 'Asap', 'Zilla+Slab', 'Cabin', 'Cormorant+Garamond', 'Crimson+Text',
-
-]
+    "Pacifico", "Meow+Script", "Ruge+Boogie", "Ms+Madi", "Ole",
+   ]
 
 
 # Function to download fonts
@@ -70,7 +68,8 @@ fonts = [ImageFont.truetype(font_path, font_size) for font_path in font_files]
 def generate_random_word():
     """Generate a random word with a length between 3 and 10 characters."""
     length = random.randint(3, 10)
-    return ''.join(random.choice(string.ascii_letters) for _ in range(length))
+    # TODO: Change this to do for lower case
+    return ''.join(random.choice(string.ascii_lowercase) for _ in range(length))
 
 
 def create_image(word, font, size):

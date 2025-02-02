@@ -64,29 +64,14 @@ def collate_fn(batch):
     target_lengths = torch.tensor(target_lengths, dtype=torch.long)
 
     return images, targets, target_lengths
-def collate_fn(batch):
-    images = []
-    targets = []
-    target_lengths = []
 
-    for img, tgt in batch:
-        images.append(img)
-        targets.append(tgt)
-        target_lengths.append(len(tgt))
 
-    images = torch.stack(images)
-    targets = torch.cat(targets)
-    target_lengths = torch.tensor(target_lengths, dtype=torch.long)
-
-    return images, targets, target_lengths
-
-# CNN + LSTM Model
 class CRNN(nn.Module):
     def __init__(self, num_chars):
         super().__init__()
         self.num_chars = num_chars
 
-        # Enhanced CNN with residual connections
+        # Enhanced CNN with dropout and batch normalization
         self.cnn = nn.Sequential(
             # Block 1
             nn.Conv2d(3, 64, 3, padding=1),
@@ -129,22 +114,16 @@ class CRNN(nn.Module):
             nn.Dropout2d(0.4),
         )
 
-        # Enhanced LSTM with depth-wise processing
+        # LSTM for sequence modeling
         self.lstm = nn.LSTM(
-            input_size=512,  # Increased to match CNN output
+            input_size=512,  # This matches the CNN output channels
             hidden_size=256,
             bidirectional=True,
-            num_layers=3,
+            num_layers=4,
             dropout=0.3,
             batch_first=False
         )
 
-        # Attention layer
-        self.attention = nn.MultiheadAttention(
-            embed_dim=512,  # 256*2 for bidirectional
-            num_heads=8,
-            dropout=0.2
-        )
 
         # Final classifier with layer normalization
         self.fc = nn.Sequential(
@@ -152,31 +131,44 @@ class CRNN(nn.Module):
             nn.Linear(512, 512),
             nn.GELU(),
             nn.Dropout(0.4),
-            nn.Linear(512, num_chars + 1)
+            nn.Linear(512, num_chars + 1)  # +1 for the blank token used in CTC
         )
 
     def forward(self, x):
         batch_size = x.size(0)
+        # Debug: print input shape
+        # print("Input shape:", x.shape)
 
         # CNN Feature Extraction
-        x = self.cnn(x)  # (N, 512, H, W)
+        x = self.cnn(x)  # shape: (N, 512, H, W)
+        # Debug: print CNN output shape
+        # print("After CNN:", x.shape)
 
-        # Prepare for LSTM
+        # Prepare for LSTM: collapse height dimension while keeping width as sequence length
         x = x.permute(0, 3, 2, 1)  # (N, W, H, C)
-        x = x.reshape(batch_size, -1, 512)  # (N, W*H, C)
+        b, w, h, c = x.size()
+        x = x.reshape(batch_size, w * h, c)  # (N, T, C) where T = W*H
         x = x.permute(1, 0, 2)  # (T, N, C)
+        # Debug: print reshaped feature shape
+        # print("After reshaping for LSTM:", x.shape)
 
         # Bidirectional LSTM
         x, _ = self.lstm(x)
+        # Debug: print LSTM output shape
+        # print("After LSTM:", x.shape)
 
-        # Attention
-        x, _ = self.attention(x, x, x)
+        # Attention mechanism
+        # Debug: print attention output shape
+        # print("After Attention:", x.shape)
 
-        # Classifier
+        # Final classifier
         x = self.fc(x)
+        # Use log softmax for CTC loss
         x = nn.functional.log_softmax(x, dim=2)
-
+        # Debug: print classifier output shape
+        # print("After classifier:", x.shape)
         return x
+
 # Decode predictions
 def decode(output, idx_to_char):
     output = output.permute(1, 0, 2)  # (N, T, C)

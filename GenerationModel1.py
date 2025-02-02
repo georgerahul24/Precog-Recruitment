@@ -1,4 +1,6 @@
 import os
+import time
+
 from PIL import Image
 import torch
 from torch import nn, optim
@@ -134,17 +136,11 @@ class CRNN(nn.Module):
             input_size=512,  # This matches the CNN output channels
             hidden_size=256,
             bidirectional=True,
-            num_layers=3,
+            num_layers=4,
             dropout=0.3,
             batch_first=False
         )
 
-        # Attention layer
-        self.attention = nn.MultiheadAttention(
-            embed_dim=512,  # 256 * 2 (bidirectional)
-            num_heads=8,
-            dropout=0.2
-        )
 
         # Final classifier with layer normalization
         self.fc = nn.Sequential(
@@ -179,7 +175,6 @@ class CRNN(nn.Module):
         # print("After LSTM:", x.shape)
 
         # Attention mechanism
-        x, _ = self.attention(x, x, x)
         # Debug: print attention output shape
         # print("After Attention:", x.shape)
 
@@ -355,12 +350,15 @@ for epoch in range(num_epochs):
     print("Sample Predictions:")
     for i in range(min(2, len(test_predictions))):
         print(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}")
+    with open('log.txt', 'a') as f:
+        f.write(f" {time.time()} Epoch [{epoch + 1}/{num_epochs}] - Test Accuracy: {test_accuracy:.5f}%\n")
+        f.write("Sample Predictions:\n")
+        for i in range(min(2, len(test_predictions))):
+            f.write(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}\n")
+        f.close()
 
-    # --------------------------
-    # Evaluation on Training Data (optional)
-    # --------------------------
 
     # Save model checkpoint
     model_path = save_model(model, epoch, test_accuracy)
-    print(f"Model saved to {model_path}\n")
+    print(f"\nModel saved to {model_path}\n")
     print()
