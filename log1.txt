@@ -1,0 +1,616 @@
+ 1738537624.585637 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537734.5209112 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738537837.344529 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738538313.8040252 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738538480.997068 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738538650.8968241 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738538821.5175831 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738538992.5016 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738539164.52194 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: k | Actual: 10si
+  Prediction: k | Actual: 7uae1itihh
+ 1738539337.196542 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 10si
+  Prediction:  | Actual: 7uae1itihh
+ 1738539509.9180312 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 9 | Actual: 10si
+  Prediction: 9 | Actual: 7uae1itihh
+ 1738539683.866797 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: c | Actual: 10si
+  Prediction: c | Actual: 7uae1itihh
+ 1738539858.205284 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: m | Actual: 10si
+  Prediction: m | Actual: 7uae1itihh
+ 1738540032.789979 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: osn4 | Actual: 10si
+  Prediction: o9d19dqa | Actual: 7uae1itihh
+ 1738540203.0267022 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 4eelilj | Actual: 10si
+  Prediction: tf6h658w4 | Actual: 7uae1itihh
+ 1738540372.1916192 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: soei | Actual: 10si
+  Prediction: sux8isxx | Actual: 7uae1itihh
+ 1738540541.373644 Epoch [14/1000] - Test Accuracy: 1.00000%
+Sample Predictions:
+  Prediction: kcsl | Actual: 10si
+  Prediction: kuk81lzlxx | Actual: 7uae1itihh
+ 1738540709.946595 Epoch [15/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 2csi | Actual: 10si
+  Prediction: 2uxs1lzlhx | Actual: 7uae1itihh
+ 1738540877.715848 Epoch [16/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 1osij | Actual: 10si
+  Prediction: luk81ls1kk | Actual: 7uae1itihh
+ 1738541046.915956 Epoch [17/1000] - Test Accuracy: 1.00000%
+Sample Predictions:
+  Prediction: xosi | Actual: 10si
+  Prediction: 7uxa11z1hh | Actual: 7uae1itihh
+ 1738541215.987146 Epoch [18/1000] - Test Accuracy: 4.00000%
+Sample Predictions:
+  Prediction: osl | Actual: 10si
+  Prediction: uke1izlhh | Actual: 7uae1itihh
+ 1738541387.020054 Epoch [19/1000] - Test Accuracy: 49.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1izlhh | Actual: 7uae1itihh
+ 1738541558.897471 Epoch [20/1000] - Test Accuracy: 50.00000%
+Sample Predictions:
+  Prediction: zosi | Actual: 10si
+  Prediction: 7ua81izlhh | Actual: 7uae1itihh
+ 1738541730.27857 Epoch [21/1000] - Test Accuracy: 47.00000%
+Sample Predictions:
+  Prediction: 1osi5 | Actual: 10si
+  Prediction: 7ua61i1lkk | Actual: 7uae1itihh
+ 1738541902.299673 Epoch [22/1000] - Test Accuracy: 58.00000%
+Sample Predictions:
+  Prediction: osi | Actual: 10si
+  Prediction: 7uae1lzlnh | Actual: 7uae1itihh
+ 1738542075.777733 Epoch [23/1000] - Test Accuracy: 70.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhm | Actual: 7uae1itihh
+ 1738542249.158566 Epoch [24/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: jjjjjji8jljjjj5 | Actual: 10si
+  Prediction: jfybjljbjhb5 | Actual: 7uae1itihh
+ 1738542423.9287071 Epoch [25/1000] - Test Accuracy: 51.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uhe1ltlhh | Actual: 7uae1itihh
+ 1738542598.550281 Epoch [26/1000] - Test Accuracy: 53.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uwe1itlhk | Actual: 7uae1itihh
+ 1738542772.4137669 Epoch [27/1000] - Test Accuracy: 74.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lalnh | Actual: 7uae1itihh
+ 1738542941.051017 Epoch [28/1000] - Test Accuracy: 69.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uke1lzlhh | Actual: 7uae1itihh
+ 1738543110.7351391 Epoch [29/1000] - Test Accuracy: 73.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lxlhn | Actual: 7uae1itihh
+ 1738543279.60065 Epoch [30/1000] - Test Accuracy: 66.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738543447.334313 Epoch [31/1000] - Test Accuracy: 78.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738543616.3072078 Epoch [32/1000] - Test Accuracy: 73.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738543786.5404558 Epoch [33/1000] - Test Accuracy: 73.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738543956.780921 Epoch [34/1000] - Test Accuracy: 75.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhm | Actual: 7uae1itihh
+ 1738544127.333408 Epoch [35/1000] - Test Accuracy: 74.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738544298.582011 Epoch [36/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738544469.7349792 Epoch [37/1000] - Test Accuracy: 73.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lalhh | Actual: 7uae1itihh
+ 1738544640.9076521 Epoch [38/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738544813.371583 Epoch [39/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738544986.1022348 Epoch [40/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738545160.7693062 Epoch [41/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738545335.81461 Epoch [42/1000] - Test Accuracy: 75.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7u4e1lzlhh | Actual: 7uae1itihh
+ 1738545508.9243698 Epoch [43/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738545676.5419679 Epoch [44/1000] - Test Accuracy: 78.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738545844.054707 Epoch [45/1000] - Test Accuracy: 79.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ixihh | Actual: 7uae1itihh
+ 1738546011.961355 Epoch [46/1000] - Test Accuracy: 76.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lrlhh | Actual: 7uae1itihh
+ 1738546180.471554 Epoch [47/1000] - Test Accuracy: 79.00000%
+Sample Predictions:
+  Prediction: s1osi | Actual: 10si
+  Prediction: 7uae1ltlhn | Actual: 7uae1itihh
+ 1738546350.731644 Epoch [48/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738546519.8428319 Epoch [49/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1laihh | Actual: 7uae1itihh
+ 1738546689.035885 Epoch [50/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738546859.760045 Epoch [51/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738547030.594764 Epoch [52/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae11itvhh | Actual: 7uae1itihh
+ 1738547202.97615 Epoch [53/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738547375.304461 Epoch [54/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lthh | Actual: 7uae1itihh
+ 1738547548.509229 Epoch [55/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lrlhh | Actual: 7uae1itihh
+ 1738547722.1201448 Epoch [56/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738547896.5486562 Epoch [57/1000] - Test Accuracy: 84.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738548071.146438 Epoch [58/1000] - Test Accuracy: 66.00000%
+Sample Predictions:
+  Prediction: 1osi7x | Actual: 10si
+  Prediction: z7uae1ltlhh | Actual: 7uae1itihh
+ 1738548243.183588 Epoch [59/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738548412.065632 Epoch [60/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738548580.887012 Epoch [61/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738548749.1784399 Epoch [62/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738548917.306745 Epoch [63/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738549086.8365061 Epoch [64/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738549255.226125 Epoch [65/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738549425.495199 Epoch [66/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738549596.004233 Epoch [67/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738549767.24088 Epoch [68/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738549939.310954 Epoch [69/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738550112.460156 Epoch [70/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738550285.11327 Epoch [71/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7u4e1ltlhh | Actual: 7uae1itihh
+ 1738550459.741549 Epoch [72/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738550634.101075 Epoch [73/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738550809.417624 Epoch [74/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738550979.978844 Epoch [75/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738551148.688395 Epoch [76/1000] - Test Accuracy: 73.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7ua61ltlhh | Actual: 7uae1itihh
+ 1738551317.083989 Epoch [77/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae11t1hh | Actual: 7uae1itihh
+ 1738551484.803822 Epoch [78/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738551652.5254989 Epoch [79/1000] - Test Accuracy: 84.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738551823.306762 Epoch [80/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738551992.916626 Epoch [81/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738552162.452152 Epoch [82/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738552332.859948 Epoch [83/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738552503.8502479 Epoch [84/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738552675.724719 Epoch [85/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738552847.752198 Epoch [86/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738553022.185277 Epoch [87/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738553196.0613492 Epoch [88/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 11osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738553372.655746 Epoch [89/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738553547.472265 Epoch [90/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738553717.373641 Epoch [91/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738553886.2920341 Epoch [92/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738554053.996806 Epoch [93/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738554223.330704 Epoch [94/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738554392.451535 Epoch [95/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738554561.59537 Epoch [96/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738554731.8857138 Epoch [97/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738554903.283108 Epoch [98/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738555075.396084 Epoch [99/1000] - Test Accuracy: 90.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738555248.60847 Epoch [100/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihm | Actual: 7uae1itihh
+ 1738555421.983592 Epoch [101/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738555596.151428 Epoch [102/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738555769.7941492 Epoch [103/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738555944.925879 Epoch [104/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738556120.596381 Epoch [105/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihm | Actual: 7uae1itihh
+ 1738556295.3243258 Epoch [106/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738556459.8960378 Epoch [107/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738556611.984336 Epoch [108/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltvhh | Actual: 7uae1itihh
+ 1738556765.193571 Epoch [109/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738556916.196806 Epoch [110/1000] - Test Accuracy: 80.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738557066.287172 Epoch [111/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1lrlhh | Actual: 7uae1itihh
+ 1738557216.7548318 Epoch [112/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738557367.158392 Epoch [113/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae11tihh | Actual: 7uae1itihh
+ 1738557518.186251 Epoch [114/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738557670.2814012 Epoch [115/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738557822.664595 Epoch [116/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738557975.8142998 Epoch [117/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738558130.437502 Epoch [118/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738558285.60765 Epoch [119/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738558440.986774 Epoch [120/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738558597.3315861 Epoch [121/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1asi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738558749.2454212 Epoch [122/1000] - Test Accuracy: 90.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738558899.098926 Epoch [123/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae11tihh | Actual: 7uae1itihh
+ 1738559047.647773 Epoch [124/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738559196.966219 Epoch [125/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738559346.534855 Epoch [126/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738559497.368095 Epoch [127/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738559648.545533 Epoch [128/1000] - Test Accuracy: 90.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738559800.392991 Epoch [129/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itlhh | Actual: 7uae1itihh
+ 1738559953.1452742 Epoch [130/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738560106.182623 Epoch [131/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738560261.222789 Epoch [132/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738560417.0494149 Epoch [133/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738560572.915173 Epoch [134/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738560730.599713 Epoch [135/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738560888.1980538 Epoch [136/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738561045.68496 Epoch [137/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738561196.5757902 Epoch [138/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738561343.825183 Epoch [139/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738561491.7206452 Epoch [140/1000] - Test Accuracy: 83.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltlhh | Actual: 7uae1itihh
+ 1738561640.356786 Epoch [141/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738561791.238317 Epoch [142/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738561942.086889 Epoch [143/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738562094.066019 Epoch [144/1000] - Test Accuracy: 7.00000%
+Sample Predictions:
+  Prediction: 4j3ffl1osiljjjij2 | Actual: 10si
+  Prediction: l7uke1itihh | Actual: 7uae1itihh
+ 1738562246.747211 Epoch [145/1000] - Test Accuracy: 77.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738562400.919735 Epoch [146/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738562555.363065 Epoch [147/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7une1itihh | Actual: 7uae1itihh
+ 1738562709.01843 Epoch [148/1000] - Test Accuracy: 84.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1itihh | Actual: 7uae1itihh
+ 1738562864.062273 Epoch [149/1000] - Test Accuracy: 82.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738563018.444633 Epoch [150/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh
+ 1738563174.109668 Epoch [151/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: 1osi | Actual: 10si
+  Prediction: 7uae1ltihh | Actual: 7uae1itihh

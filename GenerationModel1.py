@@ -81,110 +81,102 @@ def collate_fn(batch):
 
     return images, targets, target_lengths
 
+import torch.nn.functional as F
+class SeparableConv2d(nn.Module):
+    """
+    Implements a depthwise separable convolution.
+    This splits a standard convolution into a depthwise convolution followed by a pointwise convolution.
+    """
 
-# CRNN Model with CNN, LSTM, and Attention
-class CRNN(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
+        super().__init__()
+        # Depthwise convolution: each input channel is convolved separately.
+        self.depthwise = nn.Conv2d(
+            in_channels, in_channels, kernel_size=kernel_size,
+            stride=stride, padding=padding, groups=in_channels, bias=bias
+        )
+        # Pointwise convolution: combines outputs from depthwise convolution.
+        self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=bias)
+        self.bn = nn.BatchNorm2d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+
+    def forward(self, x):
+        x = self.depthwise(x)
+        x = self.pointwise(x)
+        x = self.bn(x)
+        return self.relu(x)
+
+
+class GenLSTM(nn.Module):
     def __init__(self, num_chars):
         super().__init__()
         self.num_chars = num_chars
 
-        # Enhanced CNN with dropout and batch normalization
+        # Optimized CNN using separable convolutions with halved filter sizes.
         self.cnn = nn.Sequential(
             # Block 1
-            nn.Conv2d(3, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(64, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.25),
+            SeparableConv2d(3, 32, kernel_size=3, padding=1),
+            SeparableConv2d(32, 32, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Dropout2d(0.2),
 
             # Block 2
-            nn.Conv2d(64, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(128, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(2, 2),
-            nn.Dropout2d(0.3),
+            SeparableConv2d(32, 64, kernel_size=3, padding=1),
+            SeparableConv2d(64, 64, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Dropout2d(0.25),
 
             # Block 3
-            nn.Conv2d(128, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(256, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d((2, 1)),  # Maintain width for sequence
+            SeparableConv2d(64, 128, kernel_size=3, padding=1),
+            SeparableConv2d(128, 128, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=(2, 1)),  # Maintain width for sequence modeling
             nn.Dropout2d(0.3),
-
-            # Additional block
-            nn.Conv2d(256, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(512, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.GELU(),
-            nn.MaxPool2d((2, 1)),
-            nn.Dropout2d(0.4),
         )
 
-        # LSTM for sequence modeling
+        # LSTM for sequence modeling.
+        # Note that the CNN now outputs 128 channels.
         self.lstm = nn.LSTM(
-            input_size=512,  # This matches the CNN output channels
+            input_size=128,
             hidden_size=256,
+            num_layers=2,
             bidirectional=True,
-            num_layers=4,
             dropout=0.3,
             batch_first=False
         )
 
-
-        # Final classifier with layer normalization
+        # Final classifier (the bidirectional LSTM produces outputs of size 2*256 = 512)
         self.fc = nn.Sequential(
             nn.LayerNorm(512),
             nn.Linear(512, 512),
             nn.GELU(),
-            nn.Dropout(0.4),
-            nn.Linear(512, num_chars + 1)  # +1 for the blank token used in CTC
+            nn.Dropout(0.3),
+            nn.Linear(512, num_chars + 1)  # +1 for the CTC blank token
         )
 
     def forward(self, x):
         batch_size = x.size(0)
-        # Debug: print input shape
-        # print("Input shape:", x.shape)
+        # CNN feature extraction.
+        x = self.cnn(x)  # Expected shape: (N, 128, H, W)
 
-        # CNN Feature Extraction
-        x = self.cnn(x)  # shape: (N, 512, H, W)
-        # Debug: print CNN output shape
-        # print("After CNN:", x.shape)
-
-        # Prepare for LSTM: collapse height dimension while keeping width as sequence length
+        # Prepare for LSTM:
+        # Permute to (batch, width, height, channels)
         x = x.permute(0, 3, 2, 1)  # (N, W, H, C)
         b, w, h, c = x.size()
-        x = x.reshape(batch_size, w * h, c)  # (N, T, C) where T = W*H
-        x = x.permute(1, 0, 2)  # (T, N, C)
-        # Debug: print reshaped feature shape
-        # print("After reshaping for LSTM:", x.shape)
+        # Collapse the height dimension with the width dimension:
+        x = x.reshape(batch_size, w * h, c)  # (N, T, C) with T = W * H
+        # LSTM expects (T, batch, features)
+        x = x.permute(1, 0, 2)
 
-        # Bidirectional LSTM
+        # Bidirectional LSTM.
         x, _ = self.lstm(x)
-        # Debug: print LSTM output shape
-        # print("After LSTM:", x.shape)
 
-        # Attention mechanism
-        # Debug: print attention output shape
-        # print("After Attention:", x.shape)
-
-        # Final classifier
+        # Final classifier.
         x = self.fc(x)
-        # Use log softmax for CTC loss
-        x = nn.functional.log_softmax(x, dim=2)
-        # Debug: print classifier output shape
-        # print("After classifier:", x.shape)
+        # Use log softmax (typically for CTC loss)
+        x = F.log_softmax(x, dim=2)
         return x
+
+
 
 
 def decode(output, idx_to_char):
@@ -291,7 +283,7 @@ test_dataset.print_summary()
 test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
 
 # Initialize the model, optimizer, and loss criterion (CTC Loss)
-model = CRNN(num_chars).to(device)
+model = GenLSTM(num_chars).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CTCLoss(blank=0)
 
