@@ -81,95 +81,93 @@ def collate_fn(batch):
 
     return images, targets, target_lengths
 
-
+import torch.nn.functional as F
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class CRNN(nn.Module):
+
+class SeparableConv2d(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
+        super().__init__()
+        self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size=kernel_size,
+                                   stride=stride, padding=padding, groups=in_channels, bias=bias)
+        self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=bias)
+        self.bn = nn.BatchNorm2d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+
+    def forward(self, x):
+        x = self.depthwise(x)
+        x = self.pointwise(x)
+        x = self.bn(x)
+        return self.relu(x)
+
+
+class GenLSTM(nn.Module):
     def __init__(self, num_chars):
         super().__init__()
         self.num_chars = num_chars
 
-        # Enhanced CNN with dropout and batch normalization
         self.cnn = nn.Sequential(
-            # Block 1
-            nn.Conv2d(3, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(64, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(2, 2),
+            SeparableConv2d(3, 32, kernel_size=3, padding=1),
+            SeparableConv2d(32, 32, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Dropout2d(0.2),
+            SeparableConv2d(32, 64, kernel_size=3, padding=1),
+            SeparableConv2d(64, 64, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Dropout2d(0.25),
-
-            # Block 2
-            nn.Conv2d(64, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(128, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d(2, 2),
+            SeparableConv2d(64, 128, kernel_size=3, padding=1),
+            SeparableConv2d(128, 128, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=(2, 1)),
             nn.Dropout2d(0.3),
-
-            # Block 3
-            nn.Conv2d(128, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(256, 256, 3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(inplace=True),
-            nn.MaxPool2d((2, 1)),  # Maintain width for sequence
-            nn.Dropout2d(0.3),
-
-            # Additional block
-            nn.Conv2d(256, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(512, 512, 3, padding=1),
-            nn.BatchNorm2d(512),
-            nn.GELU(),
-            nn.MaxPool2d((2, 1)),
-            nn.Dropout2d(0.4),
         )
 
-        # RNN for sequence modeling (replacing LSTM with vanilla RNN)
-        self.rnn = nn.RNN(
-            input_size=512,     # This matches the CNN output channels
+        self.lstm = nn.LSTM(
+            input_size=128,
             hidden_size=256,
-            num_layers=4,
-            dropout=0.3,
+            num_layers=2,
             bidirectional=True,
+            dropout=0.3,
             batch_first=False
         )
 
-        # Final classifier with layer normalization
         self.fc = nn.Sequential(
             nn.LayerNorm(512),
             nn.Linear(512, 512),
             nn.GELU(),
-            nn.Dropout(0.4),
-            nn.Linear(512, num_chars + 1)  # +1 for the blank token used in CTC
+            nn.Dropout(0.3),
+            nn.Linear(512, num_chars + 1)  # +1 for CTC blank token
+        )
+
+        self.bg_classifier = nn.Sequential(
+            nn.AdaptiveAvgPool2d(1),  # Global pooling
+            nn.Conv2d(128, 64, kernel_size=1),
+            nn.ReLU(),
+            nn.Conv2d(64, 1, kernel_size=1),
+            nn.Flatten(),
+            nn.Sigmoid()  # Output probability of red background
         )
 
     def forward(self, x):
         batch_size = x.size(0)
-        # CNN Feature Extraction
-        x = self.cnn(x)  # shape: (N, 512, H, W)
-        # Prepare for RNN: collapse height dimension while keeping width as sequence length
+        x = self.cnn(x)
+
+        bg_pred = self.bg_classifier(x).round()  # 1 if red, 0 otherwise
+
         x = x.permute(0, 3, 2, 1)  # (N, W, H, C)
         b, w, h, c = x.size()
-        x = x.reshape(batch_size, w * h, c)  # (N, T, C) where T = W*H
-        x = x.permute(1, 0, 2)  # (T, N, C)
+        x = x.reshape(batch_size, w * h, c)
+        x = x.permute(1, 0, 2)
 
-        # Bidirectional RNN
-        # Note: The vanilla RNN returns (output, hidden_state)
-        x, _ = self.rnn(x)
+        x, _ = self.lstm(x)
 
-        # Final classifier
+        if bg_pred.any():  # Reverse if any background is red
+            for i in range(batch_size):
+                if bg_pred[i] == 1:
+                    x[:, i, :] = x.flip(0)[:, i, :]
+
         x = self.fc(x)
-        # Use log softmax for CTC loss (if applicable)
         x = F.log_softmax(x, dim=2)
         return x
 
@@ -239,7 +237,7 @@ def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     return all_predictions, all_actuals, accuracy
 
 
-def save_model(model, epoch, test_accuracy, base_path="GenerationModelRNN"):
+def save_model(model, epoch, test_accuracy, base_path="GenerationModel"):
     """
     Save model with metrics in filename.
     """
@@ -278,14 +276,14 @@ test_dataset.print_summary()
 test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
 
 # Initialize the model, optimizer, and loss criterion (CTC Loss)
-model = CRNN(num_chars).to(device)
+model = GenLSTM(num_chars).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CTCLoss(blank=0)
 
 # Create directory for saving models
-if os.path.exists('GenerationModelRNN'):
-    os.system('rm -rf GenerationModelRNN')
-os.makedirs('GenerationModelRNN', exist_ok=True)
+if os.path.exists('GenerationModel'):
+    os.system('rm -rf GenerationModel')
+os.makedirs('GenerationModel', exist_ok=True)
 
 # --------------------------
 # Training and Evaluation Loop
@@ -337,12 +335,13 @@ for epoch in range(num_epochs):
     print("Sample Predictions:")
     for i in range(min(2, len(test_predictions))):
         print(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}")
-    with open('log1.txt', 'a') as f:
+    with open('log.txt', 'a') as f:
         f.write(f" {time.time()} Epoch [{epoch + 1}/{num_epochs}] - Test Accuracy: {test_accuracy:.5f}%\n")
         f.write("Sample Predictions:\n")
         for i in range(min(2, len(test_predictions))):
             f.write(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}\n")
         f.close()
+
 
     # Save model checkpoint
     model_path = save_model(model, epoch, test_accuracy)
