@@ -1,0 +1,8 @@
+ 1738607500.6859882 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738607617.099025 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268

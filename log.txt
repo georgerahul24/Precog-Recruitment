@@ -2190,3 +2190,655 @@ Sample Predictions:
 Sample Predictions:
   Prediction:  | Actual: 5gbu
   Prediction:  | Actual: grf268
+ 1738607484.356647 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738607639.731298 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738607865.2607071 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738607881.319637 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738607985.4970639 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608023.5541701 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608093.4492521 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608154.555486 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608197.162899 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608288.364046 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608312.2687402 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608438.0477598 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608443.980545 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608576.147905 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608589.866505 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608698.840812 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608729.863467 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608809.2863061 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608855.906572 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608907.549381 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738608981.379036 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609014.042699 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609114.065297 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609133.517729 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609267.7417312 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609270.668718 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609407.860874 Epoch [14/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609421.514386 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609529.937995 Epoch [15/1000] - Test Accuracy: 0.10000%
+Sample Predictions:
+  Prediction: u5q | Actual: 5gbu
+  Prediction: srf255 | Actual: grf268
+ 1738609562.506366 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738609640.898719 Epoch [16/1000] - Test Accuracy: 1.20000%
+Sample Predictions:
+  Prediction: 8a | Actual: 5gbu
+  Prediction: 8rf288 | Actual: grf268
+ 1738609694.2892458 Epoch [14/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 64a | Actual: 5gbu
+  Prediction: 7y6 | Actual: grf268
+ 1738609743.1995661 Epoch [17/1000] - Test Accuracy: 1.50000%
+Sample Predictions:
+  Prediction: o8qs | Actual: 5gbu
+  Prediction: srf258 | Actual: grf268
+ 1738609822.4444401 Epoch [15/1000] - Test Accuracy: 5.10000%
+Sample Predictions:
+  Prediction: 589u | Actual: 5gbu
+  Prediction: 5rr2s8 | Actual: grf268
+ 1738609853.627622 Epoch [18/1000] - Test Accuracy: 2.60000%
+Sample Predictions:
+  Prediction: 98gg | Actual: 5gbu
+  Prediction: 882frg | Actual: grf268
+ 1738609963.831155 Epoch [16/1000] - Test Accuracy: 16.30000%
+Sample Predictions:
+  Prediction: 568u | Actual: 5gbu
+  Prediction: 6ff2e8 | Actual: grf268
+ 1738609978.27548 Epoch [19/1000] - Test Accuracy: 6.60000%
+Sample Predictions:
+  Prediction: 3v | Actual: 5gbu
+  Prediction: 8rf258 | Actual: grf268
+ 1738610112.3923619 Epoch [20/1000] - Test Accuracy: 11.40000%
+Sample Predictions:
+  Prediction: s8qw | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738610116.193999 Epoch [17/1000] - Test Accuracy: 28.70000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738610241.385472 Epoch [21/1000] - Test Accuracy: 12.40000%
+Sample Predictions:
+  Prediction: z8dw | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738610264.423578 Epoch [18/1000] - Test Accuracy: 37.10000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf288 | Actual: grf268
+ 1738610358.533565 Epoch [22/1000] - Test Accuracy: 0.40000%
+Sample Predictions:
+  Prediction: v8oo | Actual: 5gbu
+  Prediction: 882fr9 | Actual: grf268
+ 1738610400.956137 Epoch [19/1000] - Test Accuracy: 45.80000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf2s8 | Actual: grf268
+ 1738610460.597624 Epoch [23/1000] - Test Accuracy: 12.00000%
+Sample Predictions:
+  Prediction: v8u | Actual: 5gbu
+  Prediction: 8rf288 | Actual: grf268
+ 1738610530.1549618 Epoch [20/1000] - Test Accuracy: 46.80000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: 5rf268 | Actual: grf268
+ 1738610565.95269 Epoch [24/1000] - Test Accuracy: 14.30000%
+Sample Predictions:
+  Prediction: y80b | Actual: 5gbu
+  Prediction: 8ff268 | Actual: grf268
+ 1738610665.2362082 Epoch [21/1000] - Test Accuracy: 45.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: 5rf268 | Actual: grf268
+ 1738610685.300076 Epoch [25/1000] - Test Accuracy: 14.60000%
+Sample Predictions:
+  Prediction: ogu | Actual: 5gbu
+  Prediction: 8ff268 | Actual: grf268
+ 1738610809.990834 Epoch [22/1000] - Test Accuracy: 54.90000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738610813.7515268 Epoch [26/1000] - Test Accuracy: 15.80000%
+Sample Predictions:
+  Prediction: ogg | Actual: 5gbu
+  Prediction: 8rf268 | Actual: grf268
+ 1738610941.911752 Epoch [27/1000] - Test Accuracy: 17.40000%
+Sample Predictions:
+  Prediction: ou | Actual: 5gbu
+  Prediction: 8ff268 | Actual: grf268
+ 1738610954.436787 Epoch [23/1000] - Test Accuracy: 59.80000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611060.061919 Epoch [28/1000] - Test Accuracy: 18.10000%
+Sample Predictions:
+  Prediction: aq5 | Actual: 5gbu
+  Prediction: 8rf268 | Actual: grf268
+ 1738611091.025899 Epoch [24/1000] - Test Accuracy: 59.10000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611166.3396878 Epoch [29/1000] - Test Accuracy: 19.40000%
+Sample Predictions:
+  Prediction: v5q | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611219.361671 Epoch [25/1000] - Test Accuracy: 61.50000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611261.9947891 Epoch [30/1000] - Test Accuracy: 17.70000%
+Sample Predictions:
+  Prediction: vq | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611342.228283 Epoch [26/1000] - Test Accuracy: 61.00000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611370.480077 Epoch [31/1000] - Test Accuracy: 18.30000%
+Sample Predictions:
+  Prediction: ug | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611478.030026 Epoch [27/1000] - Test Accuracy: 62.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: srf268 | Actual: grf268
+ 1738611491.094333 Epoch [32/1000] - Test Accuracy: 18.60000%
+Sample Predictions:
+  Prediction: 5gq | Actual: 5gbu
+  Prediction: gff268 | Actual: grf268
+ 1738611621.133714 Epoch [33/1000] - Test Accuracy: 22.10000%
+Sample Predictions:
+  Prediction: 5qq | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611623.2692108 Epoch [28/1000] - Test Accuracy: 52.80000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611746.514729 Epoch [34/1000] - Test Accuracy: 20.80000%
+Sample Predictions:
+  Prediction: sg5q | Actual: 5gbu
+  Prediction: gff268 | Actual: grf268
+ 1738611766.848503 Epoch [29/1000] - Test Accuracy: 64.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611857.7822132 Epoch [35/1000] - Test Accuracy: 22.50000%
+Sample Predictions:
+  Prediction: 55b | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611896.96668 Epoch [30/1000] - Test Accuracy: 61.00000%
+Sample Predictions:
+  Prediction: 5t8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738611956.7834072 Epoch [36/1000] - Test Accuracy: 21.40000%
+Sample Predictions:
+  Prediction: 9gd | Actual: 5gbu
+  Prediction: gff268 | Actual: grf268
+ 1738612019.736468 Epoch [31/1000] - Test Accuracy: 63.50000%
+Sample Predictions:
+  Prediction: 50bu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612056.839703 Epoch [37/1000] - Test Accuracy: 24.40000%
+Sample Predictions:
+  Prediction: 3gu | Actual: 5gbu
+  Prediction: gff268 | Actual: grf268
+ 1738612149.120333 Epoch [32/1000] - Test Accuracy: 68.30000%
+Sample Predictions:
+  Prediction: 5j0bu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612169.9113002 Epoch [38/1000] - Test Accuracy: 25.10000%
+Sample Predictions:
+  Prediction: 8gu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612291.7137978 Epoch [33/1000] - Test Accuracy: 68.90000%
+Sample Predictions:
+  Prediction: 5j0bu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612295.67626 Epoch [39/1000] - Test Accuracy: 26.10000%
+Sample Predictions:
+  Prediction: 5gu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612425.310783 Epoch [40/1000] - Test Accuracy: 37.60000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612437.62112 Epoch [34/1000] - Test Accuracy: 62.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612547.3157508 Epoch [41/1000] - Test Accuracy: 22.40000%
+Sample Predictions:
+  Prediction: 5g6c | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612577.2449331 Epoch [35/1000] - Test Accuracy: 67.70000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612656.601863 Epoch [42/1000] - Test Accuracy: 24.20000%
+Sample Predictions:
+  Prediction: sg5c | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612703.384799 Epoch [36/1000] - Test Accuracy: 71.60000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612753.8825548 Epoch [43/1000] - Test Accuracy: 27.80000%
+Sample Predictions:
+  Prediction: 9g5 | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612828.634819 Epoch [37/1000] - Test Accuracy: 68.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612860.530766 Epoch [44/1000] - Test Accuracy: 25.40000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612962.557641 Epoch [38/1000] - Test Accuracy: 70.30000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738612981.937185 Epoch [45/1000] - Test Accuracy: 27.30000%
+Sample Predictions:
+  Prediction: sg5u | Actual: 5gbu
+  Prediction: grf248 | Actual: grf268
+ 1738613108.8485582 Epoch [39/1000] - Test Accuracy: 72.10000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613112.1065001 Epoch [46/1000] - Test Accuracy: 26.60000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613242.004996 Epoch [47/1000] - Test Accuracy: 41.70000%
+Sample Predictions:
+  Prediction: 5g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613254.943074 Epoch [40/1000] - Test Accuracy: 71.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613362.2288058 Epoch [48/1000] - Test Accuracy: 27.20000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: 8rf268 | Actual: grf268
+ 1738613393.55932 Epoch [41/1000] - Test Accuracy: 75.00000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613471.901341 Epoch [49/1000] - Test Accuracy: 27.80000%
+Sample Predictions:
+  Prediction: u5g9 | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613517.91216 Epoch [42/1000] - Test Accuracy: 72.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613571.225292 Epoch [50/1000] - Test Accuracy: 34.30000%
+Sample Predictions:
+  Prediction: 5g3 | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613643.273429 Epoch [43/1000] - Test Accuracy: 68.60000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613677.702406 Epoch [51/1000] - Test Accuracy: 44.50000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613774.685038 Epoch [44/1000] - Test Accuracy: 74.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613794.3870249 Epoch [52/1000] - Test Accuracy: 39.40000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613917.3279731 Epoch [45/1000] - Test Accuracy: 65.40000%
+Sample Predictions:
+  Prediction: g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738613923.836569 Epoch [53/1000] - Test Accuracy: 34.30000%
+Sample Predictions:
+  Prediction: 98g5 | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614053.733693 Epoch [54/1000] - Test Accuracy: 29.30000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: gf268 | Actual: grf268
+ 1738614062.347695 Epoch [46/1000] - Test Accuracy: 73.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614176.233556 Epoch [55/1000] - Test Accuracy: 30.10000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614199.932629 Epoch [47/1000] - Test Accuracy: 75.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614288.26021 Epoch [56/1000] - Test Accuracy: 28.50000%
+Sample Predictions:
+  Prediction: sg5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614328.625057 Epoch [48/1000] - Test Accuracy: 75.90000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614389.5899441 Epoch [57/1000] - Test Accuracy: 31.10000%
+Sample Predictions:
+  Prediction: 9g5p | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614460.0253491 Epoch [49/1000] - Test Accuracy: 72.50000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614497.280437 Epoch [58/1000] - Test Accuracy: 31.00000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614589.829228 Epoch [50/1000] - Test Accuracy: 72.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614612.7092538 Epoch [59/1000] - Test Accuracy: 51.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614731.0909572 Epoch [51/1000] - Test Accuracy: 74.00000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614738.238196 Epoch [60/1000] - Test Accuracy: 31.10000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614866.2856362 Epoch [61/1000] - Test Accuracy: 28.70000%
+Sample Predictions:
+  Prediction: 3g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614875.362224 Epoch [52/1000] - Test Accuracy: 74.70000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738614987.2723432 Epoch [62/1000] - Test Accuracy: 30.30000%
+Sample Predictions:
+  Prediction: sg5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615012.4950452 Epoch [53/1000] - Test Accuracy: 71.70000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615096.907802 Epoch [63/1000] - Test Accuracy: 31.60000%
+Sample Predictions:
+  Prediction: sg3u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615140.237099 Epoch [54/1000] - Test Accuracy: 76.80000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615194.961699 Epoch [64/1000] - Test Accuracy: 30.60000%
+Sample Predictions:
+  Prediction: sg5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615264.6366699 Epoch [55/1000] - Test Accuracy: 77.10000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615298.749838 Epoch [65/1000] - Test Accuracy: 30.60000%
+Sample Predictions:
+  Prediction: 9g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615395.073361 Epoch [56/1000] - Test Accuracy: 78.30000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615414.6151512 Epoch [66/1000] - Test Accuracy: 32.20000%
+Sample Predictions:
+  Prediction: 5g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615540.2162821 Epoch [57/1000] - Test Accuracy: 71.60000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615542.949028 Epoch [67/1000] - Test Accuracy: 33.60000%
+Sample Predictions:
+  Prediction: 3gsu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615670.976743 Epoch [68/1000] - Test Accuracy: 32.10000%
+Sample Predictions:
+  Prediction: 5g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615685.0951931 Epoch [58/1000] - Test Accuracy: 74.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615789.800213 Epoch [69/1000] - Test Accuracy: 33.80000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615820.853677 Epoch [59/1000] - Test Accuracy: 78.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615896.407624 Epoch [70/1000] - Test Accuracy: 29.10000%
+Sample Predictions:
+  Prediction: 3g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615944.972744 Epoch [60/1000] - Test Accuracy: 76.50000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738615994.0598772 Epoch [71/1000] - Test Accuracy: 32.70000%
+Sample Predictions:
+  Prediction: 5g59u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616068.886276 Epoch [61/1000] - Test Accuracy: 79.40000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616099.441041 Epoch [72/1000] - Test Accuracy: 32.60000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616202.817303 Epoch [62/1000] - Test Accuracy: 75.40000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616217.1674418 Epoch [73/1000] - Test Accuracy: 33.20000%
+Sample Predictions:
+  Prediction: 5gu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616345.607279 Epoch [74/1000] - Test Accuracy: 34.00000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616348.0429041 Epoch [63/1000] - Test Accuracy: 76.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616470.511209 Epoch [75/1000] - Test Accuracy: 28.60000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616489.9520159 Epoch [64/1000] - Test Accuracy: 77.90000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616584.8369029 Epoch [76/1000] - Test Accuracy: 34.00000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616621.3510249 Epoch [65/1000] - Test Accuracy: 74.80000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616687.3589041 Epoch [77/1000] - Test Accuracy: 33.70000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616745.6922848 Epoch [66/1000] - Test Accuracy: 77.10000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616786.415827 Epoch [78/1000] - Test Accuracy: 34.00000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616872.542679 Epoch [67/1000] - Test Accuracy: 78.50000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738616897.631389 Epoch [79/1000] - Test Accuracy: 33.80000%
+Sample Predictions:
+  Prediction: 5g9u | Actual: 5gbu
+  Prediction: grf248 | Actual: grf268
+ 1738617012.0138922 Epoch [68/1000] - Test Accuracy: 76.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617020.653426 Epoch [80/1000] - Test Accuracy: 36.20000%
+Sample Predictions:
+  Prediction: 3g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617145.888061 Epoch [81/1000] - Test Accuracy: 35.60000%
+Sample Predictions:
+  Prediction: 5g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617154.014262 Epoch [69/1000] - Test Accuracy: 73.60000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617267.398473 Epoch [82/1000] - Test Accuracy: 34.10000%
+Sample Predictions:
+  Prediction: g9u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617292.918972 Epoch [70/1000] - Test Accuracy: 75.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617377.163092 Epoch [83/1000] - Test Accuracy: 34.20000%
+Sample Predictions:
+  Prediction: 5g9u | Actual: 5gbu
+  Prediction: grf2668 | Actual: grf268
+ 1738617421.101593 Epoch [71/1000] - Test Accuracy: 78.20000%
+Sample Predictions:
+  Prediction: 5gbu | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617475.777937 Epoch [84/1000] - Test Accuracy: 33.20000%
+Sample Predictions:
+  Prediction: 6g5u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617549.46716 Epoch [72/1000] - Test Accuracy: 80.80000%
+Sample Predictions:
+  Prediction: 5g8u | Actual: 5gbu
+  Prediction: grf268 | Actual: grf268
+ 1738617764.150163 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738617767.790421 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738617909.564109 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738617923.284041 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268
+ 1738618052.0148532 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: 5gbu
+  Prediction:  | Actual: grf268

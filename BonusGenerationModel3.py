@@ -9,10 +9,12 @@ import numpy as np
 from tqdm import tqdm
 from collections import defaultdict
 import torch.nn.functional as F
+
 # Training loop parameters
 num_epochs = 1000
 train_folder = 'train'
 test_folder = 'test'
+
 
 def collect_characters(folder):
     chars = set()
@@ -21,6 +23,7 @@ def collect_characters(folder):
             label = filename.split('_')[0]
             chars.update(label)
     return sorted(chars)
+
 
 # Custom Dataset
 class CaptchaDataset(Dataset):
@@ -60,6 +63,7 @@ class CaptchaDataset(Dataset):
         background_label = 1 if background == 'red' else 0
         return image, target, background_label
 
+
 def collate_fn(batch):
     """
     Expects a list of (image, target, background_label) tuples.
@@ -87,6 +91,7 @@ def collate_fn(batch):
 
     return images, targets, target_lengths, background_labels
 
+
 class SeparableConv2d(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
         super().__init__()
@@ -101,6 +106,7 @@ class SeparableConv2d(nn.Module):
         x = self.pointwise(x)
         x = self.bn(x)
         return self.relu(x)
+
 
 class GenLSTM(nn.Module):
     def __init__(self, num_chars):
@@ -140,12 +146,12 @@ class GenLSTM(nn.Module):
         )
 
         self.bg_classifier = nn.Sequential(
-            nn.AdaptiveAvgPool2d(1),  # Global pooling
-            nn.Conv2d(128, 64, kernel_size=1),
+            nn.Conv2d(128, 8, kernel_size=3, stride=1, padding=1),  # Light convolution
             nn.ReLU(),
-            nn.Conv2d(64, 1, kernel_size=1),
+            nn.AdaptiveAvgPool2d(1),  # Global pooling
             nn.Flatten(),
-            nn.Sigmoid()  # Output probability of red background
+            nn.Linear(8, 1),
+            nn.Sigmoid()
         )
 
     def forward(self, x):
@@ -169,6 +175,7 @@ class GenLSTM(nn.Module):
         x = self.fc(x)
         x = F.log_softmax(x, dim=2)
         return x, bg_pred
+
 
 def decode(output, idx_to_char):
     """
@@ -194,7 +201,9 @@ def decode(output, idx_to_char):
         decoded.append(''.join(chars))
     return decoded
 
+
 import concurrent.futures
+
 
 def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     """
@@ -243,6 +252,8 @@ def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     accuracy = (correct / len(all_actuals)) * 100 if all_actuals else 0
 
     return all_predictions, all_actuals, all_bg_predictions, all_bg_actuals, accuracy
+
+
 def save_model(model, epoch, test_accuracy, base_path="GenerationModel2"):
     """
     Save model with metrics in filename.
@@ -250,6 +261,7 @@ def save_model(model, epoch, test_accuracy, base_path="GenerationModel2"):
     model_path = f"{base_path}/model_epoch_{epoch + 1}_test_acc_{test_accuracy:.5f}.pth"
     torch.save(model.state_dict(), model_path)
     return model_path
+
 
 # --------------------------
 # Main Script Starts Here
@@ -339,7 +351,7 @@ for epoch in range(num_epochs):
     # --------------------------
     # Evaluation on Test Data
     # --------------------------
-    test_predictions, test_actuals, test_bg_prediction,test_bg_actuals,test_accuracy = evaluate_model(
+    test_predictions, test_actuals, test_bg_prediction, test_bg_actuals, test_accuracy = evaluate_model(
         model, test_dataloader, idx_to_char, device, desc='Testing'
     )
     print(f"Test Accuracy: {test_accuracy:.2f}%")
@@ -347,7 +359,8 @@ for epoch in range(num_epochs):
     # Print a couple of sample predictions for debugging
     print("Sample Predictions:")
     for i in range(min(6, len(test_predictions))):
-        print(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]} | Predicted Color: {'Red' if test_bg_prediction[i] > 0.5 else 'Green'} | Actual Color: {'Red' if test_bg_actuals[i] > 0.5 else 'Green'}")
+        print(
+            f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]} | Predicted Color: {'Red' if test_bg_prediction[i] > 0.5 else 'Green'} | Actual Color: {'Red' if test_bg_actuals[i] > 0.5 else 'Green'}")
     with open('log.txt', 'a') as f:
         f.write(f" {time.time()} Epoch [{epoch + 1}/{num_epochs}] - Test Accuracy: {test_accuracy:.5f}%\n")
         f.write("Sample Predictions:\n")
