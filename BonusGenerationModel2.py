@@ -1,6 +1,5 @@
 import os
 import time
-
 from PIL import Image
 import torch
 from torch import nn, optim
@@ -9,12 +8,11 @@ from torchvision import transforms
 import numpy as np
 from tqdm import tqdm
 from collections import defaultdict
-
+import torch.nn.functional as F
 # Training loop parameters
 num_epochs = 1000
-train_folder = '../train'
-test_folder = '../test'
-
+train_folder = 'train'
+test_folder = 'test'
 
 def collect_characters(folder):
     chars = set()
@@ -24,7 +22,6 @@ def collect_characters(folder):
             chars.update(label)
     return sorted(chars)
 
-
 # Custom Dataset
 class CaptchaDataset(Dataset):
     def __init__(self, folder, char_to_idx, transform=None):
@@ -32,13 +29,16 @@ class CaptchaDataset(Dataset):
         self.transform = transform
         self.image_paths = []
         self.labels = []
+        self.backgrounds = []  # Store background color (red/green)
         self.char_to_idx = char_to_idx
         self.idx_to_char = {v: k for k, v in char_to_idx.items()}
 
         for filename in os.listdir(folder):
             if filename.endswith('.png'):
                 self.image_paths.append(os.path.join(folder, filename))
-                self.labels.append(filename.split('_')[0])
+                label, _, background = filename.split('_')  # Extract label and background
+                self.labels.append(label)
+                self.backgrounds.append(background.split('.')[0])  # Remove .png
 
     def __len__(self):
         return len(self.image_paths)
@@ -49,53 +49,49 @@ class CaptchaDataset(Dataset):
     def __getitem__(self, idx):
         image = Image.open(self.image_paths[idx]).convert('RGB')
         label = self.labels[idx]
+        background = self.backgrounds[idx]  # Get background color
 
         if self.transform:
             image = self.transform(image)
 
         # Convert label characters to indices
         target = torch.tensor([self.char_to_idx[c] for c in label], dtype=torch.long)
-        return image, target
-
+        # Convert background to binary: 1 for red, 0 for green
+        background_label = 1 if background == 'red' else 0
+        return image, target, background_label
 
 def collate_fn(batch):
     """
-    Expects a list of (image, target) tuples.
+    Expects a list of (image, target, background_label) tuples.
     Returns:
         images: (B, C, H, W) tensor,
         targets: concatenated target tensor,
-        target_lengths: tensor of each target length.
+        target_lengths: tensor of each target length,
+        background_labels: tensor of background labels.
     """
     images = []
     targets = []
     target_lengths = []
+    background_labels = []
 
-    for img, tgt in batch:
+    for img, tgt, bg in batch:
         images.append(img)
         targets.append(tgt)
         target_lengths.append(len(tgt))
+        background_labels.append(bg)
 
     images = torch.stack(images)
     targets = torch.cat(targets)
     target_lengths = torch.tensor(target_lengths, dtype=torch.long)
+    background_labels = torch.tensor(background_labels, dtype=torch.float32)
 
-    return images, targets, target_lengths
+    return images, targets, target_lengths, background_labels
 
-import torch.nn.functional as F
 class SeparableConv2d(nn.Module):
-    """
-    Implements a depthwise separable convolution.
-    This splits a standard convolution into a depthwise convolution followed by a pointwise convolution.
-    """
-
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
         super().__init__()
-        # Depthwise convolution: each input channel is convolved separately.
-        self.depthwise = nn.Conv2d(
-            in_channels, in_channels, kernel_size=kernel_size,
-            stride=stride, padding=padding, groups=in_channels, bias=bias
-        )
-        # Pointwise convolution: combines outputs from depthwise convolution.
+        self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size=kernel_size,
+                                   stride=stride, padding=padding, groups=in_channels, bias=bias)
         self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=bias)
         self.bn = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU(inplace=True)
@@ -106,35 +102,26 @@ class SeparableConv2d(nn.Module):
         x = self.bn(x)
         return self.relu(x)
 
-
 class GenLSTM(nn.Module):
     def __init__(self, num_chars):
         super().__init__()
         self.num_chars = num_chars
 
-        # Optimized CNN using separable convolutions with halved filter sizes.
         self.cnn = nn.Sequential(
-            # Block 1
             SeparableConv2d(3, 32, kernel_size=3, padding=1),
             SeparableConv2d(32, 32, kernel_size=3, padding=1),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Dropout2d(0.2),
-
-            # Block 2
             SeparableConv2d(32, 64, kernel_size=3, padding=1),
             SeparableConv2d(64, 64, kernel_size=3, padding=1),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Dropout2d(0.25),
-
-            # Block 3
             SeparableConv2d(64, 128, kernel_size=3, padding=1),
             SeparableConv2d(128, 128, kernel_size=3, padding=1),
-            nn.MaxPool2d(kernel_size=(2, 1)),  # Maintain width for sequence modeling
+            nn.MaxPool2d(kernel_size=(2, 1)),
             nn.Dropout2d(0.3),
         )
 
-        # LSTM for sequence modeling.
-        # Note that the CNN now outputs 128 channels.
         self.lstm = nn.LSTM(
             input_size=128,
             hidden_size=256,
@@ -144,40 +131,44 @@ class GenLSTM(nn.Module):
             batch_first=False
         )
 
-        # Final classifier (the bidirectional LSTM produces outputs of size 2*256 = 512)
         self.fc = nn.Sequential(
             nn.LayerNorm(512),
             nn.Linear(512, 512),
             nn.GELU(),
             nn.Dropout(0.3),
-            nn.Linear(512, num_chars + 1)  # +1 for the CTC blank token
+            nn.Linear(512, num_chars + 1)  # +1 for CTC blank token
+        )
+
+        self.bg_classifier = nn.Sequential(
+            nn.AdaptiveAvgPool2d(1),  # Global pooling
+            nn.Conv2d(128, 64, kernel_size=1),
+            nn.ReLU(),
+            nn.Conv2d(64, 1, kernel_size=1),
+            nn.Flatten(),
+            nn.Sigmoid()  # Output probability of red background
         )
 
     def forward(self, x):
         batch_size = x.size(0)
-        # CNN feature extraction.
-        x = self.cnn(x)  # Expected shape: (N, 128, H, W)
+        x = self.cnn(x)
 
-        # Prepare for LSTM:
-        # Permute to (batch, width, height, channels)
+        bg_pred = self.bg_classifier(x)  # Probability of red background
+
         x = x.permute(0, 3, 2, 1)  # (N, W, H, C)
         b, w, h, c = x.size()
-        # Collapse the height dimension with the width dimension:
-        x = x.reshape(batch_size, w * h, c)  # (N, T, C) with T = W * H
-        # LSTM expects (T, batch, features)
+        x = x.reshape(batch_size, w * h, c)
         x = x.permute(1, 0, 2)
 
-        # Bidirectional LSTM.
         x, _ = self.lstm(x)
 
-        # Final classifier.
+        # Reverse sequences if background is red
+        for i in range(batch_size):
+            if bg_pred[i] > 0.5:  # Red background
+                x[:, i, :] = x.flip(0)[:, i, :]
+
         x = self.fc(x)
-        # Use log softmax (typically for CTC loss)
         x = F.log_softmax(x, dim=2)
-        return x
-
-
-
+        return x, bg_pred
 
 def decode(output, idx_to_char):
     """
@@ -203,6 +194,7 @@ def decode(output, idx_to_char):
         decoded.append(''.join(chars))
     return decoded
 
+import concurrent.futures
 
 def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     """
@@ -210,22 +202,21 @@ def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     Returns:
         predictions: List of predicted strings.
         actuals: List of actual strings.
+        bg_predictions: List of predicted background labels.
+        bg_actuals: List of actual background labels.
         accuracy: Overall accuracy in percentage.
     """
     model.eval()
     all_predictions = []
     all_actuals = []
+    all_bg_predictions = []
+    all_bg_actuals = []
 
-    # Loop over the dataloader with tqdm
-    for images, targets, target_lengths in tqdm(dataloader, desc=desc, leave=False):
+    def process_batch(images, targets, target_lengths, bg_labels):
         images = images.to(device)
-
         with torch.no_grad():
-            outputs = model(images)
-
+            outputs, bg_preds = model(images)
         predictions = decode(outputs, idx_to_char)
-
-        # Reconstruct the ground truth labels from the concatenated targets.
         actuals = []
         start = 0
         for length in target_lengths:
@@ -234,16 +225,25 @@ def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
             text = ''.join([idx_to_char.get(i.item(), '') for i in target_seq])
             actuals.append(text)
             start += length
+        bg_predictions = (bg_preds > 0.5).int().squeeze().tolist()
+        bg_actuals = bg_labels.int().tolist()
+        print(predictions,bg_predictions)
+        return predictions, actuals, bg_predictions, bg_actuals
 
-        all_predictions.extend(predictions)
-        all_actuals.extend(actuals)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(process_batch, images, targets, target_lengths, bg_labels)
+                   for images, targets, target_lengths, bg_labels in tqdm(dataloader, desc=desc, leave=False)]
+        for future in concurrent.futures.as_completed(futures):
+            predictions, actuals, bg_predictions, bg_actuals = future.result()
+            all_predictions.extend(predictions)
+            all_actuals.extend(actuals)
+            all_bg_predictions.extend(bg_predictions)
+            all_bg_actuals.extend(bg_actuals)
 
-    # Calculate accuracy
     correct = sum([p == a for p, a in zip(all_predictions, all_actuals)])
     accuracy = (correct / len(all_actuals)) * 100 if all_actuals else 0
-    return all_predictions, all_actuals, accuracy
 
-
+    return all_predictions, all_actuals, all_bg_predictions, all_bg_actuals, accuracy
 def save_model(model, epoch, test_accuracy, base_path="GenerationModel"):
     """
     Save model with metrics in filename.
@@ -251,7 +251,6 @@ def save_model(model, epoch, test_accuracy, base_path="GenerationModel"):
     model_path = f"{base_path}/model_epoch_{epoch + 1}_test_acc_{test_accuracy:.5f}.pth"
     torch.save(model.state_dict(), model_path)
     return model_path
-
 
 # --------------------------
 # Main Script Starts Here
@@ -282,10 +281,11 @@ test_dataset = CaptchaDataset(test_folder, char_to_idx, transform)
 test_dataset.print_summary()
 test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
 
-# Initialize the model, optimizer, and loss criterion (CTC Loss)
+# Initialize the model, optimizer, and loss criterion (CTC Loss and BCE Loss)
 model = GenLSTM(num_chars).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
-criterion = nn.CTCLoss(blank=0)
+ctc_criterion = nn.CTCLoss(blank=0)
+bce_criterion = nn.BCELoss()
 
 # Create directory for saving models
 if os.path.exists('GenerationModel'):
@@ -301,31 +301,38 @@ for epoch in range(num_epochs):
 
     # Training loop with progress bar
     train_loop = tqdm(train_dataloader, desc=f'Epoch {epoch + 1}/{num_epochs}', leave=False)
-    for images, targets, target_lengths in train_loop:
+    for images, targets, target_lengths, background_labels in train_loop:
         images = images.to(device)
         targets = targets.to(device)
         target_lengths = target_lengths.to(device)
+        background_labels = background_labels.to(device)
 
         optimizer.zero_grad()
-        output = model(images)  # output shape: (T, N, C)
+        output, bg_pred = model(images)  # output shape: (T, N, C), bg_pred shape: (N, 1)
 
         T, N = output.size(0), output.size(1)
         # Create input lengths: all sequences have length T
         input_lengths = torch.full((N,), T, dtype=torch.long)
 
-        # For CTC loss, move tensors to CPU (helps with MPS backend)
-        loss = criterion(
+        # Compute CTC loss
+        ctc_loss = ctc_criterion(
             output.cpu().float(),  # cast to float if necessary
             targets.cpu(),
             input_lengths,
             target_lengths.cpu()
         )
 
-        loss.backward()
+        # Compute BCE loss for background classifier
+        bce_loss = bce_criterion(bg_pred.squeeze(), background_labels)
+
+        # Total loss
+        total_loss = ctc_loss + bce_loss
+
+        total_loss.backward()
         optimizer.step()
 
-        running_loss += loss.item()
-        train_loop.set_postfix(loss=f"{loss.item():.4f}")
+        running_loss += total_loss.item()
+        train_loop.set_postfix(loss=f"{total_loss.item():.4f}")
 
     avg_loss = running_loss / len(train_dataloader)
     print(f"Epoch [{epoch + 1}/{num_epochs}] - Average Loss: {avg_loss:.4f}")
@@ -333,22 +340,21 @@ for epoch in range(num_epochs):
     # --------------------------
     # Evaluation on Test Data
     # --------------------------
-    test_predictions, test_actuals, test_accuracy = evaluate_model(
+    test_predictions, test_actuals, test_bg_prediction,test_bg_actuals,test_accuracy = evaluate_model(
         model, test_dataloader, idx_to_char, device, desc='Testing'
     )
     print(f"Test Accuracy: {test_accuracy:.2f}%")
 
     # Print a couple of sample predictions for debugging
     print("Sample Predictions:")
-    for i in range(min(2, len(test_predictions))):
-        print(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}")
+    for i in range(min(6, len(test_predictions))):
+        print(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]} | Predicted Color: {'Red' if test_bg_prediction[i] > 0.5 else 'Green'} | Actual Color: {'Red' if test_bg_actuals[i] > 0.5 else 'Green'}")
     with open('log.txt', 'a') as f:
         f.write(f" {time.time()} Epoch [{epoch + 1}/{num_epochs}] - Test Accuracy: {test_accuracy:.5f}%\n")
         f.write("Sample Predictions:\n")
         for i in range(min(2, len(test_predictions))):
             f.write(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}\n")
         f.close()
-
 
     # Save model checkpoint
     model_path = save_model(model, epoch, test_accuracy)

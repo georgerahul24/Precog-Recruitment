@@ -12,8 +12,8 @@ from collections import defaultdict
 
 # Training loop parameters
 num_epochs = 1000
-train_folder = '../train'
-test_folder = '../test'
+train_folder = 'trainGreen'
+test_folder = 'testGreen'
 
 
 def collect_characters(folder):
@@ -82,20 +82,16 @@ def collate_fn(batch):
     return images, targets, target_lengths
 
 import torch.nn.functional as F
-class SeparableConv2d(nn.Module):
-    """
-    Implements a depthwise separable convolution.
-    This splits a standard convolution into a depthwise convolution followed by a pointwise convolution.
-    """
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
+
+class SeparableConv2d(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
         super().__init__()
-        # Depthwise convolution: each input channel is convolved separately.
-        self.depthwise = nn.Conv2d(
-            in_channels, in_channels, kernel_size=kernel_size,
-            stride=stride, padding=padding, groups=in_channels, bias=bias
-        )
-        # Pointwise convolution: combines outputs from depthwise convolution.
+        self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size=kernel_size,
+                                   stride=stride, padding=padding, groups=in_channels, bias=bias)
         self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=bias)
         self.bn = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU(inplace=True)
@@ -112,29 +108,21 @@ class GenLSTM(nn.Module):
         super().__init__()
         self.num_chars = num_chars
 
-        # Optimized CNN using separable convolutions with halved filter sizes.
         self.cnn = nn.Sequential(
-            # Block 1
             SeparableConv2d(3, 32, kernel_size=3, padding=1),
             SeparableConv2d(32, 32, kernel_size=3, padding=1),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Dropout2d(0.2),
-
-            # Block 2
             SeparableConv2d(32, 64, kernel_size=3, padding=1),
             SeparableConv2d(64, 64, kernel_size=3, padding=1),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Dropout2d(0.25),
-
-            # Block 3
             SeparableConv2d(64, 128, kernel_size=3, padding=1),
             SeparableConv2d(128, 128, kernel_size=3, padding=1),
-            nn.MaxPool2d(kernel_size=(2, 1)),  # Maintain width for sequence modeling
+            nn.MaxPool2d(kernel_size=(2, 1)),
             nn.Dropout2d(0.3),
         )
 
-        # LSTM for sequence modeling.
-        # Note that the CNN now outputs 128 channels.
         self.lstm = nn.LSTM(
             input_size=128,
             hidden_size=256,
@@ -144,39 +132,44 @@ class GenLSTM(nn.Module):
             batch_first=False
         )
 
-        # Final classifier (the bidirectional LSTM produces outputs of size 2*256 = 512)
         self.fc = nn.Sequential(
             nn.LayerNorm(512),
             nn.Linear(512, 512),
             nn.GELU(),
             nn.Dropout(0.3),
-            nn.Linear(512, num_chars + 1)  # +1 for the CTC blank token
+            nn.Linear(512, num_chars + 1)  # +1 for CTC blank token
+        )
+
+        self.bg_classifier = nn.Sequential(
+            nn.AdaptiveAvgPool2d(1),  # Global pooling
+            nn.Conv2d(128, 64, kernel_size=1),
+            nn.ReLU(),
+            nn.Conv2d(64, 1, kernel_size=1),
+            nn.Flatten(),
+            nn.Sigmoid()  # Output probability of red background
         )
 
     def forward(self, x):
         batch_size = x.size(0)
-        # CNN feature extraction.
-        x = self.cnn(x)  # Expected shape: (N, 128, H, W)
+        x = self.cnn(x)
 
-        # Prepare for LSTM:
-        # Permute to (batch, width, height, channels)
+        bg_pred = self.bg_classifier(x).round()  # 1 if red, 0 otherwise
+
         x = x.permute(0, 3, 2, 1)  # (N, W, H, C)
         b, w, h, c = x.size()
-        # Collapse the height dimension with the width dimension:
-        x = x.reshape(batch_size, w * h, c)  # (N, T, C) with T = W * H
-        # LSTM expects (T, batch, features)
+        x = x.reshape(batch_size, w * h, c)
         x = x.permute(1, 0, 2)
 
-        # Bidirectional LSTM.
         x, _ = self.lstm(x)
 
-        # Final classifier.
+        if bg_pred.any():  # Reverse if any background is red
+            for i in range(batch_size):
+                if bg_pred[i] == 1:
+                    x[:, i, :] = x.flip(0)[:, i, :]
+
         x = self.fc(x)
-        # Use log softmax (typically for CTC loss)
         x = F.log_softmax(x, dim=2)
         return x
-
-
 
 
 def decode(output, idx_to_char):
