@@ -146,11 +146,9 @@ class GenLSTM(nn.Module):
         )
 
         self.bg_classifier = nn.Sequential(
-            nn.Conv2d(128, 8, kernel_size=3, stride=1, padding=1),  # Light convolution
-            nn.ReLU(),
-            nn.AdaptiveAvgPool2d(1),  # Global pooling
-            nn.Flatten(),
-            nn.Linear(8, 1),
+            nn.AdaptiveAvgPool2d((1, 1)),  # Output will be (batch, 128, 1, 1)
+            nn.Flatten(),  # Now (batch, 128)
+            nn.Linear(128, 1),
             nn.Sigmoid()
         )
 
@@ -254,7 +252,7 @@ def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     return all_predictions, all_actuals, all_bg_predictions, all_bg_actuals, accuracy
 
 
-def save_model(model, epoch, test_accuracy, base_path="GenerationModel2"):
+def save_model(model, epoch, test_accuracy, base_path="GenerationModel3"):
     """
     Save model with metrics in filename.
     """
@@ -299,9 +297,9 @@ ctc_criterion = nn.CTCLoss(blank=0)
 bce_criterion = nn.BCELoss()
 
 # Create directory for saving models
-if os.path.exists('GenerationModel2'):
-    os.system('rm -rf GenerationModel2')
-os.makedirs('GenerationModel2', exist_ok=True)
+if os.path.exists('GenerationModel3'):
+    os.system('rm -rf GenerationModel3')
+os.makedirs('GenerationModel3', exist_ok=True)
 
 # --------------------------
 # Training and Evaluation Loop
