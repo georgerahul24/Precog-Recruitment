@@ -1,22 +1,21 @@
-#!/usr/bin/env python3
-""" For Bonus Generation 2.py model i.e. the non optimised one"""
 import os
-import torch
+import time
 from PIL import Image
-from torch import nn
+import torch
+from torch import nn, optim
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
-import torch.nn.functional as F
-from tqdm import tqdm
 import numpy as np
+from tqdm import tqdm
+from collections import defaultdict
+import torch.nn.functional as F
 
-input_folder = 'testRed'  # Folder containing test images
-model_path = 'Models/GM5.pth'  # Change to your desired model checkpoint file
+# Training loop parameters
+num_epochs = 1000
+train_folder = 'train'
+test_folder = 'test'
 
 
-# ---------------------------
-# Helper Functions & Classes
-# ---------------------------
 def collect_characters(folder):
     chars = set()
     for filename in os.listdir(folder):
@@ -26,6 +25,7 @@ def collect_characters(folder):
     return sorted(chars)
 
 
+# Custom Dataset
 class CaptchaDataset(Dataset):
     def __init__(self, folder, char_to_idx, transform=None):
         self.folder = folder
@@ -131,7 +131,7 @@ class GenLSTM(nn.Module):
         self.lstm = nn.LSTM(
             input_size=128,
             hidden_size=256,
-            num_layers=2,
+            num_layers=1,
             bidirectional=True,
             dropout=0.3,
             batch_first=False
@@ -146,12 +146,10 @@ class GenLSTM(nn.Module):
         )
 
         self.bg_classifier = nn.Sequential(
-            nn.AdaptiveAvgPool2d(1),  # Global pooling
-            nn.Conv2d(128, 64, kernel_size=1),
-            nn.ReLU(),
-            nn.Conv2d(64, 1, kernel_size=1),
+            nn.AdaptiveAvgPool2d(1),
+            nn.Conv2d(128, 1, kernel_size=1),
             nn.Flatten(),
-            nn.Sigmoid()  # Output probability of red background
+            nn.Sigmoid()
         )
 
     def forward(self, x):
@@ -202,28 +200,18 @@ def decode(output, idx_to_char):
     return decoded
 
 
-def char_level_accuracy(actual, predicted):
-    """
-    Computes the character-level accuracy between two strings.
-    """
-    if max(len(actual), len(predicted)) == 0:
-        return 0.0
-    match_count = sum(1 for ac, pr in zip(actual, predicted) if ac == pr)
-    return match_count / max(len(actual), len(predicted))
+import concurrent.futures
 
 
-def evaluate_model(model, dataloader, idx_to_char, device):
+def evaluate_model(model, dataloader, idx_to_char, device, desc='Evaluating'):
     """
-    Evaluates the model on the provided dataloader.
+    Evaluate model on the given dataloader.
     Returns:
-        A tuple of:
-          - predictions: List of predicted strings.
-          - actuals: List of ground-truth strings.
-          - bg_predictions: List of predicted background labels.
-          - bg_actuals: List of ground-truth background labels.
-          - overall_accuracy: Overall text accuracy (%).
-          - acc_90: Percentage of samples with >= 90% char-level accuracy.
-          - acc_95: Percentage of samples with >= 95% char-level accuracy.
+        predictions: List of predicted strings.
+        actuals: List of actual strings.
+        bg_predictions: List of predicted background labels.
+        bg_actuals: List of actual background labels.
+        accuracy: Overall accuracy in percentage.
     """
     model.eval()
     all_predictions = []
@@ -231,99 +219,154 @@ def evaluate_model(model, dataloader, idx_to_char, device):
     all_bg_predictions = []
     all_bg_actuals = []
 
-    with torch.no_grad():
-        for images, targets, target_lengths, bg_labels in tqdm(dataloader, desc="Evaluating"):
-            images = images.to(device)
+    def process_batch(images, targets, target_lengths, bg_labels):
+        images = images.to(device)
+        with torch.no_grad():
             outputs, bg_preds = model(images)
-            predictions = decode(outputs, idx_to_char)
-            # Reconstruct ground truth texts from targets
-            actuals = []
-            start = 0
-            for length in target_lengths:
-                length = length.item()
-                target_seq = targets[start: start + length]
-                text = ''.join([idx_to_char.get(i.item(), '') for i in target_seq])
-                actuals.append(text)
-                start += length
-            # Convert background predictions to binary values
-            bg_predictions = (bg_preds > 0.5).int().squeeze().tolist()
-            if isinstance(bg_predictions, int):
-                bg_predictions = [bg_predictions]
-            bg_actuals = bg_labels.int().tolist()
+        predictions = decode(outputs, idx_to_char)
+        actuals = []
+        start = 0
+        for length in target_lengths:
+            length = length.item()
+            target_seq = targets[start: start + length]
+            text = ''.join([idx_to_char.get(i.item(), '') for i in target_seq])
+            actuals.append(text)
+            start += length
+        bg_predictions = (bg_preds > 0.5).int().squeeze().tolist()
+        bg_actuals = bg_labels.int().tolist()
+        return predictions, actuals, bg_predictions, bg_actuals
 
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(process_batch, images, targets, target_lengths, bg_labels)
+                   for images, targets, target_lengths, bg_labels in tqdm(dataloader, desc=desc, leave=False)]
+        for future in concurrent.futures.as_completed(futures):
+            predictions, actuals, bg_predictions, bg_actuals = future.result()
             all_predictions.extend(predictions)
             all_actuals.extend(actuals)
             all_bg_predictions.extend(bg_predictions)
             all_bg_actuals.extend(bg_actuals)
 
-    # Overall text accuracy (exact match)
     correct = sum([p == a for p, a in zip(all_predictions, all_actuals)])
-    overall_accuracy = (correct / len(all_actuals)) * 100 if all_actuals else 0
+    accuracy = (correct / len(all_actuals)) * 100 if all_actuals else 0
 
-    # Compute character-level accuracy for each sample
-    acc_90_count = sum(1 for a, p in zip(all_actuals, all_predictions) if char_level_accuracy(a, p) >= 0.90)
-    acc_95_count = sum(1 for a, p in zip(all_actuals, all_predictions) if char_level_accuracy(a, p) >= 0.95)
-    acc_60_count = sum(1 for a, p in zip(all_actuals, all_predictions) if char_level_accuracy(a, p) >= 0.60)
-    acc_90 = (acc_90_count / len(all_actuals)) * 100 if all_actuals else 0
-    acc_95 = (acc_95_count / len(all_actuals)) * 100 if all_actuals else 0
-    acc_60 = (acc_60_count / len(all_actuals)) * 100 if all_actuals else 0
-    return all_predictions, all_actuals, all_bg_predictions, all_bg_actuals, overall_accuracy, acc_90, acc_95, acc_60
+    return all_predictions, all_actuals, all_bg_predictions, all_bg_actuals, accuracy
 
 
-# ---------------------------
-# Main Testing Script
-# ---------------------------
-if __name__ == '__main__':
-    # Explicit variables for input folder and model checkpoint path
+def save_model(model, epoch, test_accuracy, base_path="GenerationModel5"):
+    """
+    Save model with metrics in filename.
+    """
+    model_path = f"{base_path}/model_epoch_{epoch + 1}_test_acc_{test_accuracy:.5f}.pth"
+    torch.save(model.state_dict(), model_path)
+    return model_path
 
-    print(f"Loading model checkpoint from: {model_path}")
 
-    # Device configuration
-    device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
-    print("Using device:", device)
+# --------------------------
+# Main Script Starts Here
+# --------------------------
 
-    # For character collection, we assume training characters are the same as test characters.
-    # Adjust the folder if needed.
-    train_folder = 'train'
-    chars = collect_characters(train_folder)
-    char_to_idx = {c: i + 1 for i, c in enumerate(chars)}  # Reserve index 0 for CTC blank token
-    idx_to_char = {i + 1: c for i, c in enumerate(chars)}
-    num_chars = len(chars)
+# Device configuration
+device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
+print("Using device:", device)
 
-    # Transformations for the images
-    transform = transforms.Compose([
-        transforms.Resize((50, 150)),
-        transforms.ToTensor(),
-    ])
+# Collect characters and prepare mappings
+chars = collect_characters(train_folder)
+char_to_idx = {c: i + 1 for i, c in enumerate(chars)}  # Reserve 0 for blank
+idx_to_char = {i + 1: c for i, c in enumerate(chars)}
+num_chars = len(chars)
 
-    # Prepare the test dataset and dataloader
-    test_dataset = CaptchaDataset(input_folder, char_to_idx, transform)
-    test_dataset.print_summary()
-    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
+# Transformations for the images
+transform = transforms.Compose([
+    transforms.Resize((50, 150)),
+    transforms.ToTensor(),
+])
 
-    # Initialize the model and load the checkpoint
-    model = GenLSTM(num_chars).to(device)
-    state_dict = torch.load(model_path, map_location=device)
-    model.load_state_dict(state_dict, strict=False)
-    model.eval()
+# Prepare datasets and dataloaders
+train_dataset = CaptchaDataset(train_folder, char_to_idx, transform)
+train_dataset.print_summary()
+train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
 
-    # Evaluate the model on the test dataset
-    predictions, actuals, bg_predictions, bg_actuals, overall_accuracy, acc_90, acc_95, acc_60 = evaluate_model(
-        model, test_dataloader, idx_to_char, device
+test_dataset = CaptchaDataset(test_folder, char_to_idx, transform)
+test_dataset.print_summary()
+test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
+
+# Initialize the model, optimizer, and loss criterion (CTC Loss and BCE Loss)
+model = GenLSTM(num_chars).to(device)
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+ctc_criterion = nn.CTCLoss(blank=0)
+bce_criterion = nn.BCELoss()
+
+# Create directory for saving models
+if os.path.exists('GenerationModel5'):
+    os.system('rm -rf GenerationModel5')
+os.makedirs('GenerationModel5', exist_ok=True)
+
+# --------------------------
+# Training and Evaluation Loop
+# --------------------------
+for epoch in range(num_epochs):
+    model.train()
+    running_loss = 0.0
+
+    # Training loop with progress bar
+    train_loop = tqdm(train_dataloader, desc=f'Epoch {epoch + 1}/{num_epochs}', leave=False)
+    for images, targets, target_lengths, background_labels in train_loop:
+        images = images.to(device)
+        targets = targets.to(device)
+        target_lengths = target_lengths.to(device)
+        background_labels = background_labels.to(device)
+
+        optimizer.zero_grad()
+        output, bg_pred = model(images)  # output shape: (T, N, C), bg_pred shape: (N, 1)
+
+        T, N = output.size(0), output.size(1)
+        # Create input lengths: all sequences have length T
+        input_lengths = torch.full((N,), T, dtype=torch.long)
+
+        # Compute CTC loss
+        ctc_loss = ctc_criterion(
+            output.cpu().float(),  # cast to float if necessary
+            targets.cpu(),
+            input_lengths,
+            target_lengths.cpu()
+        )
+
+        # Compute BCE loss for background classifier
+        bce_loss = bce_criterion(bg_pred.squeeze(), background_labels)
+
+        # Total loss
+        total_loss = ctc_loss + bce_loss
+
+        total_loss.backward()
+        optimizer.step()
+
+        running_loss += total_loss.item()
+        train_loop.set_postfix(loss=f"{total_loss.item():.4f}")
+
+    avg_loss = running_loss / len(train_dataloader)
+    print(f"Epoch [{epoch + 1}/{num_epochs}] - Average Loss: {avg_loss:.4f}")
+
+    # --------------------------
+    # Evaluation on Test Data
+    # --------------------------
+    test_predictions, test_actuals, test_bg_prediction, test_bg_actuals, test_accuracy = evaluate_model(
+        model, test_dataloader, idx_to_char, device, desc='Testing'
     )
+    print(f"Test Accuracy: {test_accuracy:.2f}%")
 
-    # Print evaluation results
-    print("\nEvaluation Results:")
-    print(f"Overall Text Accuracy: {overall_accuracy:.2f}%")
-    print(f"60%+ Character-Level Accuracy: {acc_60:.2f}%\n")
-    print(f"90%+ Character-Level Accuracy: {acc_90:.2f}%")
-    print(f"95%+ Character-Level Accuracy: {acc_95:.2f}%\n")
-
-    # Print a few sample predictions
+    # Print a couple of sample predictions for debugging
     print("Sample Predictions:")
-    for i in range(min(6, len(predictions))):
-        pred_text = predictions[i]
-        true_text = actuals[i]
-        pred_bg = "Red" if bg_predictions[i] == 1 else "Green"
-        true_bg = "Red" if bg_actuals[i] == 1 else "Green"
-        print(f"  Prediction: {pred_text} | Actual: {true_text} | Predicted BG: {pred_bg} | Actual BG: {true_bg}")
+    for i in range(min(6, len(test_predictions))):
+        print(
+            f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]} | Predicted Color: {'Red' if test_bg_prediction[i] > 0.5 else 'Green'} | Actual Color: {'Red' if test_bg_actuals[i] > 0.5 else 'Green'}")
+    with open('log.txt', 'a') as f:
+        f.write(f" {time.time()} Epoch [{epoch + 1}/{num_epochs}] - Test Accuracy: {test_accuracy:.5f}%\n")
+        f.write("Sample Predictions:\n")
+        for i in range(min(2, len(test_predictions))):
+            f.write(f"  Prediction: {test_predictions[i]} | Actual: {test_actuals[i]}\n")
+        f.close()
+
+    # Save model checkpoint
+    model_path = save_model(model, epoch, test_accuracy)
+    print(f"\nModel saved to {model_path}\n")
+    print()

@@ -1,5 +1,6 @@
 import os
 import random
+import shutil
 import string
 import requests
 from PIL import Image, ImageDraw, ImageFont
@@ -7,11 +8,11 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "trainGreen"
+output_dir = "train"
 fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 40
-num_samples = 10000 # Total number of images to generate
+num_samples = 20000  # Total number of images to generate
 max_length = 8  # Maximum length of the random string
 noise_probability = 0.1
 line_probability = 0.1
@@ -19,6 +20,8 @@ jitter_range = 2
 num_required_fonts = 29
 
 # Ensure output and fonts directories exist
+if (os.path.exists(output_dir)):
+    shutil.rmtree(output_dir)
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(fonts_dir, exist_ok=True)
 
@@ -116,14 +119,14 @@ def create_image(word, fonts, size):
         draw.text((x + jitter_x, y + jitter_y), letter, font=font, fill=letter_color)
         x += text_width
 
-    return img
+    return img,background_color
 
 
 # Generate dataset
 def process_image(i):
     word = generate_random_string()
-    img = create_image(word, fonts, image_size)
-    img_filename = os.path.join(output_dir, f"{word}_{i:05d}.png")
+    img,bg_color = create_image(word, fonts, image_size)
+    img_filename = os.path.join(output_dir, f"{word}_{i:05d}_{bg_color}.png")
     img.save(img_filename)
 
 
