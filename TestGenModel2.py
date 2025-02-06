@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 import numpy as np
 
-input_folder = 'testRed'  # Folder containing test images
+input_folder = 'test'  # Folder containing test images
 model_path = 'Models/GM5.pth'  # Change to your desired model checkpoint file
 
 

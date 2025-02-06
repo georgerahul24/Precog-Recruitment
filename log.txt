@@ -4950,3 +4950,2051 @@ Sample Predictions:
 Sample Predictions:
   Prediction: 5gbu | Actual: 5gbu
   Prediction: grf268 | Actual: grf268
+ 1738660524.328584 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738660654.928231 Epoch [2/1000] - Test Accuracy: 0.10000%
+Sample Predictions:
+  Prediction: be | Actual: fxd
+  Prediction: r3sksko | Actual: r2s2sf0l
+ 1738660680.085676 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738660788.023678 Epoch [3/1000] - Test Accuracy: 37.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2sfsf00l | Actual: r2s2sf0l
+ 1738660812.7897239 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738660917.716171 Epoch [4/1000] - Test Accuracy: 57.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2sbsf0l | Actual: r2s2sf0l
+ 1738660941.97632 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661048.990996 Epoch [5/1000] - Test Accuracy: 66.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf00l | Actual: r2s2sf0l
+ 1738661072.890343 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661179.8552 Epoch [6/1000] - Test Accuracy: 73.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661202.290313 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661313.104814 Epoch [7/1000] - Test Accuracy: 75.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661334.6582432 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661448.3724911 Epoch [8/1000] - Test Accuracy: 81.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661468.749686 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661581.9914382 Epoch [9/1000] - Test Accuracy: 78.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661601.951346 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661715.895821 Epoch [10/1000] - Test Accuracy: 81.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661735.6592839 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661848.587857 Epoch [11/1000] - Test Accuracy: 83.50000%
+Sample Predictions:
+  Prediction: lxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738661867.881561 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738661983.1523452 Epoch [12/1000] - Test Accuracy: 84.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662002.0585651 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662114.8611221 Epoch [13/1000] - Test Accuracy: 85.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662133.1200671 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662247.825332 Epoch [14/1000] - Test Accuracy: 86.40000%
+Sample Predictions:
+  Prediction: pxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662265.752387 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662380.5488079 Epoch [15/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662401.514814 Epoch [14/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662517.3167932 Epoch [16/1000] - Test Accuracy: 85.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662536.072104 Epoch [15/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662651.5151858 Epoch [17/1000] - Test Accuracy: 84.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662670.564843 Epoch [16/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662785.817097 Epoch [18/1000] - Test Accuracy: 82.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662803.693839 Epoch [17/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738662917.7202392 Epoch [19/1000] - Test Accuracy: 87.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738662935.2133188 Epoch [18/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738663051.77167 Epoch [20/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738663068.607886 Epoch [19/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738663697.3677099 Epoch [21/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738663717.479542 Epoch [20/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738663835.111368 Epoch [22/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738663861.5018828 Epoch [21/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738663976.53745 Epoch [23/1000] - Test Accuracy: 88.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738663995.606443 Epoch [22/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664111.842562 Epoch [24/1000] - Test Accuracy: 88.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664129.451723 Epoch [23/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664248.015469 Epoch [25/1000] - Test Accuracy: 87.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664265.579867 Epoch [24/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664381.3009222 Epoch [26/1000] - Test Accuracy: 84.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664398.004 Epoch [25/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664515.5011451 Epoch [27/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664532.811476 Epoch [26/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664650.9173 Epoch [28/1000] - Test Accuracy: 88.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664667.888248 Epoch [27/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664789.292466 Epoch [29/1000] - Test Accuracy: 90.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664805.690372 Epoch [28/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738664925.501459 Epoch [30/1000] - Test Accuracy: 90.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738664941.463454 Epoch [29/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665063.382398 Epoch [31/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665078.8603892 Epoch [30/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665198.0579698 Epoch [32/1000] - Test Accuracy: 85.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665213.047758 Epoch [31/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665334.101892 Epoch [33/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665348.7004008 Epoch [32/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665664.20494 Epoch [34/1000] - Test Accuracy: 90.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665678.61294 Epoch [33/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665800.559784 Epoch [35/1000] - Test Accuracy: 90.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665814.407122 Epoch [34/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738665936.7521012 Epoch [36/1000] - Test Accuracy: 90.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738665950.817203 Epoch [35/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666071.566488 Epoch [37/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666084.8499782 Epoch [36/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666207.603814 Epoch [38/1000] - Test Accuracy: 90.20000%
+Sample Predictions:
+  Prediction: fxdd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666220.613276 Epoch [37/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666343.316843 Epoch [39/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666356.482107 Epoch [38/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666479.001058 Epoch [40/1000] - Test Accuracy: 87.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666491.2550778 Epoch [39/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666616.5023758 Epoch [41/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666631.178467 Epoch [40/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666753.346147 Epoch [42/1000] - Test Accuracy: 89.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666768.9946811 Epoch [41/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738666892.999348 Epoch [43/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738666907.591605 Epoch [42/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738667033.0097458 Epoch [44/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738667047.227059 Epoch [43/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738667173.249293 Epoch [45/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738667186.850817 Epoch [44/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738667311.040065 Epoch [46/1000] - Test Accuracy: 91.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738667324.082158 Epoch [45/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738667448.7587142 Epoch [47/1000] - Test Accuracy: 89.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738667461.826153 Epoch [46/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738667587.793112 Epoch [48/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738667601.6909099 Epoch [47/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668206.2788448 Epoch [49/1000] - Test Accuracy: 90.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668219.690262 Epoch [48/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668343.281215 Epoch [50/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668355.9550238 Epoch [49/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668483.732446 Epoch [51/1000] - Test Accuracy: 90.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668496.717994 Epoch [50/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668621.5332649 Epoch [52/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668634.159659 Epoch [51/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668756.9222 Epoch [53/1000] - Test Accuracy: 91.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668769.880218 Epoch [52/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738668893.183083 Epoch [54/1000] - Test Accuracy: 92.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738668906.144924 Epoch [53/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738669031.365654 Epoch [55/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738669043.935782 Epoch [54/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738672947.293934 Epoch [56/1000] - Test Accuracy: 89.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738673965.655383 Epoch [55/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738678214.859265 Epoch [57/1000] - Test Accuracy: 91.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738678249.372132 Epoch [56/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738681308.255886 Epoch [58/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738682244.410402 Epoch [57/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738686894.97242 Epoch [59/1000] - Test Accuracy: 92.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738686955.8290849 Epoch [58/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738687405.0065558 Epoch [60/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738687419.297906 Epoch [59/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738687546.770273 Epoch [61/1000] - Test Accuracy: 91.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738687560.1045408 Epoch [60/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738687683.791444 Epoch [62/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738687696.566623 Epoch [61/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738687822.167455 Epoch [63/1000] - Test Accuracy: 92.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738687834.376986 Epoch [62/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738687959.535983 Epoch [64/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738687971.271606 Epoch [63/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688098.098113 Epoch [65/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688110.017662 Epoch [64/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688233.37746 Epoch [66/1000] - Test Accuracy: 92.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688245.060939 Epoch [65/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688370.085993 Epoch [67/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688381.5774589 Epoch [66/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688507.232401 Epoch [68/1000] - Test Accuracy: 91.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688518.000156 Epoch [67/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688643.648005 Epoch [69/1000] - Test Accuracy: 92.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688654.533429 Epoch [68/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688781.362476 Epoch [70/1000] - Test Accuracy: 92.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688793.352923 Epoch [69/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738688921.649725 Epoch [71/1000] - Test Accuracy: 91.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738688932.5244129 Epoch [70/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689058.4867158 Epoch [72/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689069.154222 Epoch [71/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689192.6435041 Epoch [73/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689203.1292381 Epoch [72/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689327.997796 Epoch [74/1000] - Test Accuracy: 93.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689338.111978 Epoch [73/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689463.471101 Epoch [75/1000] - Test Accuracy: 92.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689473.538584 Epoch [74/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689602.152965 Epoch [76/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689612.040271 Epoch [75/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689737.965552 Epoch [77/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689747.838623 Epoch [76/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738689874.704072 Epoch [78/1000] - Test Accuracy: 92.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738689884.441775 Epoch [77/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690011.3113549 Epoch [79/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690020.9430091 Epoch [78/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690149.508437 Epoch [80/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690159.2018182 Epoch [79/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690287.8082619 Epoch [81/1000] - Test Accuracy: 89.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690297.082326 Epoch [80/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690422.4177952 Epoch [82/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690431.5147488 Epoch [81/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690555.399679 Epoch [83/1000] - Test Accuracy: 90.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690564.4913049 Epoch [82/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690697.756638 Epoch [84/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0ll | Actual: r2s2sf0l
+ 1738690706.7877812 Epoch [83/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690838.6506162 Epoch [85/1000] - Test Accuracy: 89.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690847.591449 Epoch [84/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738690974.181302 Epoch [86/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738690983.0416782 Epoch [85/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691113.560278 Epoch [87/1000] - Test Accuracy: 91.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738691121.83875 Epoch [86/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691250.268964 Epoch [88/1000] - Test Accuracy: 92.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738691258.387637 Epoch [87/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691387.2968278 Epoch [89/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0ll | Actual: r2s2sf0l
+ 1738691395.190602 Epoch [88/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691524.537836 Epoch [90/1000] - Test Accuracy: 92.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0ll | Actual: r2s2sf0l
+ 1738691532.3100522 Epoch [89/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691658.119054 Epoch [91/1000] - Test Accuracy: 91.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0 | Actual: r2s2sf0l
+ 1738691665.710618 Epoch [90/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691793.954452 Epoch [92/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738691801.550996 Epoch [91/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738691928.125162 Epoch [93/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738691935.663216 Epoch [92/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692063.420054 Epoch [94/1000] - Test Accuracy: 93.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692070.7490208 Epoch [93/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692202.236883 Epoch [95/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692210.188388 Epoch [94/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692343.139482 Epoch [96/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692349.6913211 Epoch [95/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692484.859808 Epoch [97/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692491.491477 Epoch [96/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692625.6664371 Epoch [98/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692632.240947 Epoch [97/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738692766.0653062 Epoch [99/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738692772.361084 Epoch [98/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738693315.265752 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738693475.37862 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738693635.391994 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738693796.917978 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738693958.443275 Epoch [5/1000] - Test Accuracy: 22.60000%
+Sample Predictions:
+  Prediction: fyd | Actual: fxd
+  Prediction: r2s7sf0i | Actual: r2s2sf0l
+ 1738694117.3870878 Epoch [6/1000] - Test Accuracy: 52.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738694278.0504892 Epoch [7/1000] - Test Accuracy: 56.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738694437.683805 Epoch [8/1000] - Test Accuracy: 68.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738694598.202688 Epoch [9/1000] - Test Accuracy: 68.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738694759.026739 Epoch [10/1000] - Test Accuracy: 73.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738694919.7697148 Epoch [11/1000] - Test Accuracy: 75.10000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695083.099817 Epoch [12/1000] - Test Accuracy: 77.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695244.44477 Epoch [13/1000] - Test Accuracy: 76.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695406.0615418 Epoch [14/1000] - Test Accuracy: 79.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695566.1165252 Epoch [15/1000] - Test Accuracy: 79.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695727.2857652 Epoch [16/1000] - Test Accuracy: 82.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738695888.101587 Epoch [17/1000] - Test Accuracy: 79.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738696048.376989 Epoch [18/1000] - Test Accuracy: 82.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738696210.543222 Epoch [19/1000] - Test Accuracy: 82.20000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: t2s2sf0l | Actual: r2s2sf0l
+ 1738696370.0628211 Epoch [20/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738696528.127347 Epoch [21/1000] - Test Accuracy: 80.60000%
+Sample Predictions:
+  Prediction: lxd | Actual: fxd
+  Prediction: r2s22sf0l | Actual: r2s2sf0l
+ 1738696690.210312 Epoch [22/1000] - Test Accuracy: 84.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738696850.29136 Epoch [23/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697010.72972 Epoch [24/1000] - Test Accuracy: 83.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697171.3133829 Epoch [25/1000] - Test Accuracy: 80.10000%
+Sample Predictions:
+  Prediction: rxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697330.204868 Epoch [26/1000] - Test Accuracy: 83.60000%
+Sample Predictions:
+  Prediction: fd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697491.0614662 Epoch [27/1000] - Test Accuracy: 84.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697653.254588 Epoch [28/1000] - Test Accuracy: 82.40000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697816.262483 Epoch [29/1000] - Test Accuracy: 84.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738697977.844498 Epoch [30/1000] - Test Accuracy: 82.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738698138.878219 Epoch [31/1000] - Test Accuracy: 85.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: t2s2sf0l | Actual: r2s2sf0l
+ 1738698301.031147 Epoch [32/1000] - Test Accuracy: 81.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738698464.0368938 Epoch [33/1000] - Test Accuracy: 83.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738698626.5353138 Epoch [34/1000] - Test Accuracy: 84.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738698787.394249 Epoch [35/1000] - Test Accuracy: 85.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738698957.2424388 Epoch [36/1000] - Test Accuracy: 83.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699121.154866 Epoch [37/1000] - Test Accuracy: 85.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699282.0418801 Epoch [38/1000] - Test Accuracy: 86.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699441.448593 Epoch [39/1000] - Test Accuracy: 84.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699602.769891 Epoch [40/1000] - Test Accuracy: 84.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699761.597779 Epoch [41/1000] - Test Accuracy: 84.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738699920.779009 Epoch [42/1000] - Test Accuracy: 86.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700078.239588 Epoch [43/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700341.114756 Epoch [44/1000] - Test Accuracy: 87.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700501.786459 Epoch [45/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700664.411741 Epoch [46/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700824.966509 Epoch [47/1000] - Test Accuracy: 87.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738700987.084259 Epoch [48/1000] - Test Accuracy: 84.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701149.092198 Epoch [49/1000] - Test Accuracy: 86.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701313.034487 Epoch [50/1000] - Test Accuracy: 87.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701475.651597 Epoch [51/1000] - Test Accuracy: 86.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701638.608831 Epoch [52/1000] - Test Accuracy: 84.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701798.97924 Epoch [53/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738701960.5317461 Epoch [54/1000] - Test Accuracy: 88.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738702123.355061 Epoch [55/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738702286.339328 Epoch [56/1000] - Test Accuracy: 89.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738702448.869885 Epoch [57/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738702750.268288 Epoch [58/1000] - Test Accuracy: 81.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s25f0l | Actual: r2s2sf0l
+ 1738703306.04405 Epoch [59/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738703460.703168 Epoch [60/1000] - Test Accuracy: 86.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738703612.32227 Epoch [61/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738703761.7425568 Epoch [62/1000] - Test Accuracy: 87.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738703911.125807 Epoch [63/1000] - Test Accuracy: 86.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704060.322768 Epoch [64/1000] - Test Accuracy: 87.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704209.284117 Epoch [65/1000] - Test Accuracy: 85.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704356.067635 Epoch [66/1000] - Test Accuracy: 87.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704504.475082 Epoch [67/1000] - Test Accuracy: 88.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704653.8448699 Epoch [68/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704789.075673 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738704826.283515 Epoch [69/1000] - Test Accuracy: 85.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738704919.129924 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: fxd
+  Prediction:  | Actual: r2s2sf0l
+ 1738704998.017287 Epoch [70/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705046.949535 Epoch [3/1000] - Test Accuracy: 20.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r3s3sf01 | Actual: r2s2sf0l
+ 1738705170.6693351 Epoch [71/1000] - Test Accuracy: 87.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705180.498473 Epoch [4/1000] - Test Accuracy: 55.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705313.047787 Epoch [5/1000] - Test Accuracy: 65.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705341.619099 Epoch [72/1000] - Test Accuracy: 84.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705442.1391869 Epoch [6/1000] - Test Accuracy: 71.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705511.285125 Epoch [73/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705569.3573089 Epoch [7/1000] - Test Accuracy: 78.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705683.067311 Epoch [74/1000] - Test Accuracy: 86.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705700.464436 Epoch [8/1000] - Test Accuracy: 79.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705834.9966028 Epoch [9/1000] - Test Accuracy: 80.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705854.9106061 Epoch [75/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738705965.588981 Epoch [10/1000] - Test Accuracy: 80.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: t2s2sf0l | Actual: r2s2sf0l
+ 1738706025.401313 Epoch [76/1000] - Test Accuracy: 89.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706094.4670389 Epoch [11/1000] - Test Accuracy: 85.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf01 | Actual: r2s2sf0l
+ 1738706196.295601 Epoch [77/1000] - Test Accuracy: 85.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706224.503896 Epoch [12/1000] - Test Accuracy: 82.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2ss2sf0l | Actual: r2s2sf0l
+ 1738706359.763926 Epoch [13/1000] - Test Accuracy: 84.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706368.663906 Epoch [78/1000] - Test Accuracy: 88.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706491.831244 Epoch [14/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706538.31267 Epoch [79/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706619.7554 Epoch [15/1000] - Test Accuracy: 86.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706709.220012 Epoch [80/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706746.788327 Epoch [16/1000] - Test Accuracy: 86.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706881.295678 Epoch [17/1000] - Test Accuracy: 85.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738706881.894752 Epoch [81/1000] - Test Accuracy: 86.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707013.2506518 Epoch [18/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s22sf0l | Actual: r2s2sf0l
+ 1738707052.5617878 Epoch [82/1000] - Test Accuracy: 87.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707140.024471 Epoch [19/1000] - Test Accuracy: 84.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707221.550619 Epoch [83/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707266.143561 Epoch [20/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707394.281239 Epoch [84/1000] - Test Accuracy: 89.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707400.3006122 Epoch [21/1000] - Test Accuracy: 88.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707532.148486 Epoch [22/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707564.7478652 Epoch [85/1000] - Test Accuracy: 85.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707660.6251929 Epoch [23/1000] - Test Accuracy: 89.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707735.2341278 Epoch [86/1000] - Test Accuracy: 87.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707787.8129501 Epoch [24/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707906.032649 Epoch [87/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738707918.5575402 Epoch [25/1000] - Test Accuracy: 87.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708049.715096 Epoch [26/1000] - Test Accuracy: 89.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708076.175564 Epoch [88/1000] - Test Accuracy: 88.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708176.8488672 Epoch [27/1000] - Test Accuracy: 87.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708243.396457 Epoch [89/1000] - Test Accuracy: 89.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708303.016588 Epoch [28/1000] - Test Accuracy: 89.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708414.4319181 Epoch [90/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708433.1493602 Epoch [29/1000] - Test Accuracy: 89.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708570.350731 Epoch [30/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708590.028855 Epoch [91/1000] - Test Accuracy: 83.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708700.899967 Epoch [31/1000] - Test Accuracy: 88.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708761.627936 Epoch [92/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708830.1994371 Epoch [32/1000] - Test Accuracy: 90.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708933.352793 Epoch [93/1000] - Test Accuracy: 86.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738708960.947178 Epoch [33/1000] - Test Accuracy: 91.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709098.157814 Epoch [34/1000] - Test Accuracy: 90.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709109.222524 Epoch [94/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709232.320747 Epoch [35/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709280.64946 Epoch [95/1000] - Test Accuracy: 87.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709361.905231 Epoch [36/1000] - Test Accuracy: 91.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709449.09879 Epoch [96/1000] - Test Accuracy: 88.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709488.637428 Epoch [37/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709624.598594 Epoch [97/1000] - Test Accuracy: 86.00000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709625.4459991 Epoch [38/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709761.93034 Epoch [39/1000] - Test Accuracy: 90.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709798.004761 Epoch [98/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709892.2803369 Epoch [40/1000] - Test Accuracy: 88.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738709967.380191 Epoch [99/1000] - Test Accuracy: 87.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710020.3614762 Epoch [41/1000] - Test Accuracy: 90.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710139.737855 Epoch [100/1000] - Test Accuracy: 87.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710154.401213 Epoch [42/1000] - Test Accuracy: 87.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710291.103947 Epoch [43/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710314.6055229 Epoch [101/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710422.9919 Epoch [44/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710486.8984451 Epoch [102/1000] - Test Accuracy: 86.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710552.826847 Epoch [45/1000] - Test Accuracy: 91.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710660.9903932 Epoch [103/1000] - Test Accuracy: 85.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710685.426034 Epoch [46/1000] - Test Accuracy: 90.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710823.944573 Epoch [47/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710837.931593 Epoch [104/1000] - Test Accuracy: 84.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738710956.9412348 Epoch [48/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711008.8095858 Epoch [105/1000] - Test Accuracy: 85.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711086.094563 Epoch [49/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711178.825419 Epoch [106/1000] - Test Accuracy: 85.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711214.2376478 Epoch [50/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: xd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711352.02402 Epoch [51/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711355.093119 Epoch [107/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711485.347828 Epoch [52/1000] - Test Accuracy: 91.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711524.9871502 Epoch [108/1000] - Test Accuracy: 88.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711614.031569 Epoch [53/1000] - Test Accuracy: 90.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711696.551339 Epoch [109/1000] - Test Accuracy: 90.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711743.3876212 Epoch [54/1000] - Test Accuracy: 92.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711874.036293 Epoch [110/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738711881.608164 Epoch [55/1000] - Test Accuracy: 90.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712018.267391 Epoch [56/1000] - Test Accuracy: 90.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712048.4228249 Epoch [111/1000] - Test Accuracy: 90.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712149.4339688 Epoch [57/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712218.867286 Epoch [112/1000] - Test Accuracy: 88.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712278.274106 Epoch [58/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712392.682295 Epoch [113/1000] - Test Accuracy: 90.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712411.940806 Epoch [59/1000] - Test Accuracy: 92.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712548.738998 Epoch [60/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712567.8208508 Epoch [114/1000] - Test Accuracy: 89.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712681.509799 Epoch [61/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712738.969204 Epoch [115/1000] - Test Accuracy: 89.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712810.31774 Epoch [62/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712912.064319 Epoch [116/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738712941.2958632 Epoch [63/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713078.3610392 Epoch [64/1000] - Test Accuracy: 93.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713088.104235 Epoch [117/1000] - Test Accuracy: 89.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713210.82301 Epoch [65/1000] - Test Accuracy: 93.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713259.6708128 Epoch [118/1000] - Test Accuracy: 87.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713340.680203 Epoch [66/1000] - Test Accuracy: 93.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf00l | Actual: r2s2sf0l
+ 1738713429.404754 Epoch [119/1000] - Test Accuracy: 86.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713467.8662882 Epoch [67/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713605.65553 Epoch [120/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713605.696648 Epoch [68/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713741.9859369 Epoch [69/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713778.498213 Epoch [121/1000] - Test Accuracy: 84.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713872.519496 Epoch [70/1000] - Test Accuracy: 93.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738713949.492843 Epoch [122/1000] - Test Accuracy: 87.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714001.0375638 Epoch [71/1000] - Test Accuracy: 93.40000%
+Sample Predictions:
+  Prediction: fd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714126.137249 Epoch [123/1000] - Test Accuracy: 87.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714137.778275 Epoch [72/1000] - Test Accuracy: 90.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714273.037163 Epoch [73/1000] - Test Accuracy: 93.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714300.380215 Epoch [124/1000] - Test Accuracy: 87.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714403.552295 Epoch [74/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714470.187191 Epoch [125/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714532.592345 Epoch [75/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714643.482732 Epoch [126/1000] - Test Accuracy: 88.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714665.190003 Epoch [76/1000] - Test Accuracy: 92.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714804.9238951 Epoch [77/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714820.568696 Epoch [127/1000] - Test Accuracy: 87.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714938.6559958 Epoch [78/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738714992.206476 Epoch [128/1000] - Test Accuracy: 85.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715068.003934 Epoch [79/1000] - Test Accuracy: 92.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715163.8107378 Epoch [129/1000] - Test Accuracy: 88.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715197.198263 Epoch [80/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715334.706775 Epoch [81/1000] - Test Accuracy: 91.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715340.079303 Epoch [130/1000] - Test Accuracy: 88.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715465.894309 Epoch [82/1000] - Test Accuracy: 92.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715510.229407 Epoch [131/1000] - Test Accuracy: 79.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715595.565038 Epoch [83/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715678.4259672 Epoch [132/1000] - Test Accuracy: 87.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715722.834095 Epoch [84/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715854.135164 Epoch [133/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715859.33101 Epoch [85/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738715992.000614 Epoch [86/1000] - Test Accuracy: 92.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716025.1273868 Epoch [134/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716120.869259 Epoch [87/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716196.454997 Epoch [135/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716250.1923132 Epoch [88/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716371.196578 Epoch [136/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716385.05696 Epoch [89/1000] - Test Accuracy: 93.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716522.757576 Epoch [90/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716546.3736682 Epoch [137/1000] - Test Accuracy: 83.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716654.548621 Epoch [91/1000] - Test Accuracy: 91.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716716.645068 Epoch [138/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716783.512922 Epoch [92/1000] - Test Accuracy: 93.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716890.337468 Epoch [139/1000] - Test Accuracy: 90.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738716917.309178 Epoch [93/1000] - Test Accuracy: 91.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717059.3228319 Epoch [94/1000] - Test Accuracy: 92.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717068.94783 Epoch [140/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717193.676373 Epoch [95/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717240.455554 Epoch [141/1000] - Test Accuracy: 88.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717323.181348 Epoch [96/1000] - Test Accuracy: 92.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717410.146345 Epoch [142/1000] - Test Accuracy: 89.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717450.896035 Epoch [97/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717587.866977 Epoch [143/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717590.4575858 Epoch [98/1000] - Test Accuracy: 93.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717723.935977 Epoch [99/1000] - Test Accuracy: 91.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717760.0064378 Epoch [144/1000] - Test Accuracy: 89.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717854.007458 Epoch [100/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717931.488099 Epoch [145/1000] - Test Accuracy: 89.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738717982.741465 Epoch [101/1000] - Test Accuracy: 91.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718106.99922 Epoch [146/1000] - Test Accuracy: 89.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf00 | Actual: r2s2sf0l
+ 1738718118.7318132 Epoch [102/1000] - Test Accuracy: 92.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718254.400146 Epoch [103/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718281.348843 Epoch [147/1000] - Test Accuracy: 90.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718385.9453099 Epoch [104/1000] - Test Accuracy: 94.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718453.411432 Epoch [148/1000] - Test Accuracy: 88.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718516.178804 Epoch [105/1000] - Test Accuracy: 93.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718625.8291788 Epoch [149/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718648.116601 Epoch [106/1000] - Test Accuracy: 94.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718784.415596 Epoch [107/1000] - Test Accuracy: 93.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718800.358222 Epoch [150/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718917.181396 Epoch [108/1000] - Test Accuracy: 93.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738718971.8242629 Epoch [151/1000] - Test Accuracy: 88.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719046.990222 Epoch [109/1000] - Test Accuracy: 92.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719142.324842 Epoch [152/1000] - Test Accuracy: 88.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719176.259278 Epoch [110/1000] - Test Accuracy: 93.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719318.409844 Epoch [111/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719321.583037 Epoch [153/1000] - Test Accuracy: 83.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719452.8244212 Epoch [112/1000] - Test Accuracy: 92.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719492.781683 Epoch [154/1000] - Test Accuracy: 85.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719582.2486389 Epoch [113/1000] - Test Accuracy: 93.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719664.7538822 Epoch [155/1000] - Test Accuracy: 87.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719710.617097 Epoch [114/1000] - Test Accuracy: 92.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719840.870175 Epoch [156/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719847.541048 Epoch [115/1000] - Test Accuracy: 92.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738719983.792543 Epoch [116/1000] - Test Accuracy: 94.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720014.3858051 Epoch [157/1000] - Test Accuracy: 89.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720115.830176 Epoch [117/1000] - Test Accuracy: 92.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720182.334507 Epoch [158/1000] - Test Accuracy: 89.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720243.66024 Epoch [118/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720357.9600341 Epoch [159/1000] - Test Accuracy: 87.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720378.2901409 Epoch [119/1000] - Test Accuracy: 93.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720514.057406 Epoch [120/1000] - Test Accuracy: 93.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720532.3054998 Epoch [160/1000] - Test Accuracy: 87.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720647.3084211 Epoch [121/1000] - Test Accuracy: 92.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720704.6693 Epoch [161/1000] - Test Accuracy: 89.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720777.245344 Epoch [122/1000] - Test Accuracy: 93.90000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720878.144711 Epoch [162/1000] - Test Accuracy: 87.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738720908.584814 Epoch [123/1000] - Test Accuracy: 92.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721051.2212448 Epoch [124/1000] - Test Accuracy: 94.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721056.9694998 Epoch [163/1000] - Test Accuracy: 88.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721184.844817 Epoch [125/1000] - Test Accuracy: 93.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721228.73331 Epoch [164/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721313.94114 Epoch [126/1000] - Test Accuracy: 94.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721400.792259 Epoch [165/1000] - Test Accuracy: 86.20000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721443.0272791 Epoch [127/1000] - Test Accuracy: 93.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721577.65267 Epoch [166/1000] - Test Accuracy: 87.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721581.45209 Epoch [128/1000] - Test Accuracy: 92.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf00l | Actual: r2s2sf0l
+ 1738721716.6922932 Epoch [129/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721750.5648808 Epoch [167/1000] - Test Accuracy: 87.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721847.144871 Epoch [130/1000] - Test Accuracy: 92.40000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721922.208158 Epoch [168/1000] - Test Accuracy: 87.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738721976.779697 Epoch [131/1000] - Test Accuracy: 93.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722094.677711 Epoch [169/1000] - Test Accuracy: 90.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722110.082762 Epoch [132/1000] - Test Accuracy: 93.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722245.658133 Epoch [133/1000] - Test Accuracy: 93.60000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722268.691005 Epoch [170/1000] - Test Accuracy: 87.00000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722375.486451 Epoch [134/1000] - Test Accuracy: 92.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722439.738969 Epoch [171/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722504.006301 Epoch [135/1000] - Test Accuracy: 94.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722609.755998 Epoch [172/1000] - Test Accuracy: 88.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722634.5575109 Epoch [136/1000] - Test Accuracy: 89.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722770.4956238 Epoch [137/1000] - Test Accuracy: 93.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0 | Actual: r2s2sf0l
+ 1738722784.460568 Epoch [173/1000] - Test Accuracy: 89.30000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722903.259291 Epoch [138/1000] - Test Accuracy: 93.70000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738722954.914622 Epoch [174/1000] - Test Accuracy: 86.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738723033.0204642 Epoch [139/1000] - Test Accuracy: 93.80000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0ll | Actual: r2s2sf0l
+ 1738723127.169748 Epoch [175/1000] - Test Accuracy: 83.10000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
+ 1738723163.2571929 Epoch [140/1000] - Test Accuracy: 93.50000%
+Sample Predictions:
+  Prediction: fxd | Actual: fxd
+  Prediction: r2s2sf0l | Actual: r2s2sf0l
