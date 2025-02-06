@@ -11,7 +11,7 @@ from tqdm import tqdm
 import numpy as np
 
 input_folder = 'test'  # Folder containing test images
-model_path = 'Models/GM5.pth'  # Change to your desired model checkpoint file
+model_path = '../Models/GM6.pth'  # Change to your desired model checkpoint file
 
 
 # ---------------------------
@@ -131,7 +131,7 @@ class GenLSTM(nn.Module):
         self.lstm = nn.LSTM(
             input_size=128,
             hidden_size=256,
-            num_layers=2,
+            num_layers=1,
             bidirectional=True,
             dropout=0.3,
             batch_first=False
@@ -146,12 +146,10 @@ class GenLSTM(nn.Module):
         )
 
         self.bg_classifier = nn.Sequential(
-            nn.AdaptiveAvgPool2d(1),  # Global pooling
-            nn.Conv2d(128, 64, kernel_size=1),
-            nn.ReLU(),
-            nn.Conv2d(64, 1, kernel_size=1),
+            nn.AdaptiveAvgPool2d(1),
+            nn.Conv2d(128, 1, kernel_size=1),
             nn.Flatten(),
-            nn.Sigmoid()  # Output probability of red background
+            nn.Sigmoid()
         )
 
     def forward(self, x):

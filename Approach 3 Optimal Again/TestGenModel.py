@@ -203,7 +203,7 @@ transform = transforms.Compose([
 dataset = CaptchaDataset(input_folder, char_to_idx, transform)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
 model = CRNN(num_chars).to(device)
-model.load_state_dict(torch.load('Models/GM1.pth', map_location=device))
+model.load_state_dict(torch.load('../Models/GM1.pth', map_location=device))
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CTCLoss(blank=0)
 
