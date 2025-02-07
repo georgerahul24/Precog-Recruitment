@@ -6,11 +6,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "test"
+output_dir = "trainWord"
 font_path = "Fonts/Roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_class = 100
+num_samples_per_class = 1000
 min_word_length = 3
 max_word_length = 11
 

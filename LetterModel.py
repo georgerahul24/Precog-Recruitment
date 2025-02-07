@@ -8,9 +8,9 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Configuration
-train_dir = "trainWord"
-test_dir = "testWord"
-image_size = (256, 128)
+train_dir = "trainLetter"
+test_dir = "testLetter"
+image_size = (64, 64)
 batch_size = 32
 epochs = 70
 learning_rate = 0.001
@@ -141,8 +141,8 @@ epoch_losses = []
 # Training Loop
 from tqdm import tqdm
 import shutil
-shutil.rmtree('LetterModelClassification', ignore_errors=True)
-os.makedirs('LetterModelClassification', exist_ok=True)
+shutil.rmtree('../ModelClassification1', ignore_errors=True)
+os.makedirs('../ModelClassification1', exist_ok=True)
 
 model_number = 0
 def train_and_record_model():
@@ -168,7 +168,7 @@ def train_and_record_model():
         train_accuracies.append(train_acc)
         test_accuracies.append(test_acc)
 
-        torch.save(model, f"LetterModelClassification/model_{model_number}_{test_acc}.pth")
+        torch.save(model, f"ModelClassification1/model_{model_number}_{test_acc}.pth")
         model_number+=1
         print(f"Epoch [{epoch + 1}/{epochs}], Loss: {epoch_loss:.4f}, "
               f"Train Accuracy: {train_acc:.2f}%, Test Accuracy: {test_acc:.2f}%")
