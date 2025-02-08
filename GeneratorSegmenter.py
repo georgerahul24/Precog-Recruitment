@@ -6,11 +6,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "testSeg"  # Flat folder with all images
+output_dir = "trainSeg"  # Flat folder with all images
 font_path = "Fonts/Roboto.ttf"  # Path to a TTF font file
 image_size = (256, 128)
 font_size = 32
-num_samples_per_length = 3000
+num_samples_per_length = 6000
 min_word_length = 3
 max_word_length = 10  # Maximum is 10 to match the model's MAX_LETTERS
 
