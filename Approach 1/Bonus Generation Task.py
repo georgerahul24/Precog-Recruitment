@@ -6,12 +6,12 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuration
-output_dir = "output"
-fonts_dir = "../Fonts"
+output_dir = "report1"
+fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 40
-num_samples_per_word = 5  # Number of images per word
-num_required_fonts = 42
+num_samples_per_word = 1  # Number of images per word
+num_required_fonts = 5
 words_list = []
 noise_probability = 0.1
 line_probability = 0.1

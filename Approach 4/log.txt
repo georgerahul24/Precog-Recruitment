@@ -1,0 +1,992 @@
+ 1739037616.068773 Epoch [1/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037631.126814 Epoch [2/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037646.1009321 Epoch [3/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037660.874109 Epoch [4/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037675.472194 Epoch [5/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037690.097578 Epoch [6/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037704.122185 Epoch [7/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037718.141231 Epoch [8/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037733.1424088 Epoch [9/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037747.289196 Epoch [10/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037762.41799 Epoch [11/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037777.0439548 Epoch [12/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037792.966083 Epoch [13/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037808.9032 Epoch [14/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037824.7538402 Epoch [15/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037841.323958 Epoch [16/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037856.950419 Epoch [17/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037872.4952981 Epoch [18/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037889.187619 Epoch [19/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037905.566827 Epoch [20/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037922.383125 Epoch [21/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037938.93116 Epoch [22/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037954.845021 Epoch [23/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037970.130368 Epoch [24/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739037985.497001 Epoch [25/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038001.375128 Epoch [26/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038016.827219 Epoch [27/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038034.444279 Epoch [28/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038050.0084171 Epoch [29/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038067.069449 Epoch [30/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038082.905362 Epoch [31/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038100.101998 Epoch [32/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038115.8139431 Epoch [33/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038131.8496552 Epoch [34/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038148.2319539 Epoch [35/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038163.929465 Epoch [36/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038178.7971299 Epoch [37/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038194.8982909 Epoch [38/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038211.3549209 Epoch [39/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038228.078392 Epoch [40/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038244.509932 Epoch [41/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038261.3716779 Epoch [42/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038277.720361 Epoch [43/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038293.0422652 Epoch [44/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038308.575285 Epoch [45/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038323.444269 Epoch [46/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038339.022578 Epoch [47/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038354.069139 Epoch [48/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038369.131774 Epoch [49/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038384.59412 Epoch [50/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction:  | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038399.347851 Epoch [51/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: 2 | Actual: ggd7m
+  Prediction:  | Actual: f8f8g
+ 1739038414.7478669 Epoch [52/1000] - Test Accuracy: 0.00000%
+Sample Predictions:
+  Prediction: ggggdnn | Actual: ggd7m
+  Prediction: 4fg | Actual: f8f8g
+ 1739038429.775603 Epoch [53/1000] - Test Accuracy: 1.44231%
+Sample Predictions:
+  Prediction: g4nn | Actual: ggd7m
+  Prediction: f6f6 | Actual: f8f8g
+ 1739038444.8012989 Epoch [54/1000] - Test Accuracy: 18.26923%
+Sample Predictions:
+  Prediction: g47nn | Actual: ggd7m
+  Prediction: f8f5g | Actual: f8f8g
+ 1739038461.819835 Epoch [55/1000] - Test Accuracy: 18.26923%
+Sample Predictions:
+  Prediction: gyd7nn | Actual: ggd7m
+  Prediction: f6f8g | Actual: f8f8g
+ 1739038478.023682 Epoch [56/1000] - Test Accuracy: 39.90385%
+Sample Predictions:
+  Prediction: ggd7nn | Actual: ggd7m
+  Prediction: f6f8g | Actual: f8f8g
+ 1739038494.151813 Epoch [57/1000] - Test Accuracy: 46.15385%
+Sample Predictions:
+  Prediction: gd7nn | Actual: ggd7m
+  Prediction: f6f3g | Actual: f8f8g
+ 1739038510.72666 Epoch [58/1000] - Test Accuracy: 60.09615%
+Sample Predictions:
+  Prediction: gd7n | Actual: ggd7m
+  Prediction: f68f8g | Actual: f8f8g
+ 1739038526.672448 Epoch [59/1000] - Test Accuracy: 62.50000%
+Sample Predictions:
+  Prediction: gd7nn | Actual: ggd7m
+  Prediction: f66f8g | Actual: f8f8g
+ 1739038544.16522 Epoch [60/1000] - Test Accuracy: 65.86538%
+Sample Predictions:
+  Prediction: ggd7n | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038561.826587 Epoch [61/1000] - Test Accuracy: 75.96154%
+Sample Predictions:
+  Prediction: gd7m | Actual: ggd7m
+  Prediction: f6f8g | Actual: f8f8g
+ 1739038579.9895282 Epoch [62/1000] - Test Accuracy: 78.36538%
+Sample Predictions:
+  Prediction: gd7 | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038597.372847 Epoch [63/1000] - Test Accuracy: 72.59615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038614.494365 Epoch [64/1000] - Test Accuracy: 77.40385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f8g | Actual: f8f8g
+ 1739038631.065651 Epoch [65/1000] - Test Accuracy: 85.09615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038647.132491 Epoch [66/1000] - Test Accuracy: 81.25000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038663.8868322 Epoch [67/1000] - Test Accuracy: 84.13462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038680.418793 Epoch [68/1000] - Test Accuracy: 81.25000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f8g | Actual: f8f8g
+ 1739038698.007154 Epoch [69/1000] - Test Accuracy: 77.88462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038715.485566 Epoch [70/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038732.816843 Epoch [71/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: ff8g | Actual: f8f8g
+ 1739038750.241787 Epoch [72/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038767.757377 Epoch [73/1000] - Test Accuracy: 89.42308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038784.726878 Epoch [74/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038801.477298 Epoch [75/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038818.195615 Epoch [76/1000] - Test Accuracy: 91.34615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038835.078951 Epoch [77/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038851.4730308 Epoch [78/1000] - Test Accuracy: 85.57692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038868.190916 Epoch [79/1000] - Test Accuracy: 87.01923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038885.590158 Epoch [80/1000] - Test Accuracy: 89.42308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038902.392662 Epoch [81/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038917.5153978 Epoch [82/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038932.894923 Epoch [83/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038948.261855 Epoch [84/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038963.509954 Epoch [85/1000] - Test Accuracy: 85.57692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038978.843938 Epoch [86/1000] - Test Accuracy: 89.42308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739038994.068751 Epoch [87/1000] - Test Accuracy: 89.42308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039009.240315 Epoch [88/1000] - Test Accuracy: 85.57692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039024.571305 Epoch [89/1000] - Test Accuracy: 87.50000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039039.9195478 Epoch [90/1000] - Test Accuracy: 87.50000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8gg | Actual: f8f8g
+ 1739039055.278121 Epoch [91/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039070.642863 Epoch [92/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039085.9302132 Epoch [93/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039101.183796 Epoch [94/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039116.483199 Epoch [95/1000] - Test Accuracy: 91.82692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039132.186729 Epoch [96/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039147.6945632 Epoch [97/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039163.113334 Epoch [98/1000] - Test Accuracy: 87.01923%
+Sample Predictions:
+  Prediction: ggd77m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039178.4420888 Epoch [99/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039193.8750951 Epoch [100/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039209.232599 Epoch [101/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039224.51574 Epoch [102/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039239.941679 Epoch [103/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039255.201834 Epoch [104/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039270.58975 Epoch [105/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd77m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039285.963594 Epoch [106/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039301.281919 Epoch [107/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039316.5090911 Epoch [108/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039331.815371 Epoch [109/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039347.257493 Epoch [110/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd77m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039362.703181 Epoch [111/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039378.216012 Epoch [112/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039393.53229 Epoch [113/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039408.982872 Epoch [114/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039424.2886531 Epoch [115/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039439.605448 Epoch [116/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039454.9134421 Epoch [117/1000] - Test Accuracy: 91.82692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039470.310068 Epoch [118/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039485.687516 Epoch [119/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039500.886615 Epoch [120/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039518.926432 Epoch [121/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039732.057746 Epoch [122/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039750.5717351 Epoch [123/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039850.895435 Epoch [124/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739039988.961453 Epoch [125/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739040535.4566479 Epoch [126/1000] - Test Accuracy: 91.82692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739040651.121312 Epoch [127/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739042156.1037 Epoch [128/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739042179.059254 Epoch [129/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739043235.6307871 Epoch [130/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739043251.217152 Epoch [131/1000] - Test Accuracy: 89.42308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739046353.264844 Epoch [132/1000] - Test Accuracy: 91.82692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8fg | Actual: f8f8g
+ 1739046764.111326 Epoch [133/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739049756.3696508 Epoch [134/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739050421.842134 Epoch [135/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739050437.2470882 Epoch [136/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739050452.623809 Epoch [137/1000] - Test Accuracy: 88.94231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739050468.2022002 Epoch [138/1000] - Test Accuracy: 89.90385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739053316.989391 Epoch [139/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739056080.923737 Epoch [140/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739057743.888928 Epoch [141/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739058904.111396 Epoch [142/1000] - Test Accuracy: 91.82692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739060829.512361 Epoch [143/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739063350.0468569 Epoch [144/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739065064.577846 Epoch [145/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739068424.30131 Epoch [146/1000] - Test Accuracy: 92.78846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739068723.6831071 Epoch [147/1000] - Test Accuracy: 86.53846%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739070608.252704 Epoch [148/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739073423.455212 Epoch [149/1000] - Test Accuracy: 88.46154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f8g | Actual: f8f8g
+ 1739076037.886156 Epoch [150/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739077931.140817 Epoch [151/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739080650.8134441 Epoch [152/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739083360.481866 Epoch [153/1000] - Test Accuracy: 90.38462%
+Sample Predictions:
+  Prediction: ggdd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739084340.771789 Epoch [154/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739087022.652857 Epoch [155/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739089056.746572 Epoch [156/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f8g | Actual: f8f8g
+ 1739091713.430378 Epoch [157/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739094338.449964 Epoch [158/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739096357.7662258 Epoch [159/1000] - Test Accuracy: 97.59615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739098004.4677582 Epoch [160/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739101045.953312 Epoch [161/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739103521.882685 Epoch [162/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739105324.6388202 Epoch [163/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739108359.187149 Epoch [164/1000] - Test Accuracy: 84.13462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111106.60756 Epoch [165/1000] - Test Accuracy: 87.98077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111652.6836941 Epoch [166/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111669.8628879 Epoch [167/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111686.325206 Epoch [168/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f88g | Actual: f8f8g
+ 1739111702.131456 Epoch [169/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111719.02471 Epoch [170/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111734.817597 Epoch [171/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111750.5609212 Epoch [172/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111766.762123 Epoch [173/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111782.485749 Epoch [174/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111798.805459 Epoch [175/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111814.685407 Epoch [176/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: gd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111830.312309 Epoch [177/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111845.7508311 Epoch [178/1000] - Test Accuracy: 97.59615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111861.115 Epoch [179/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111876.337514 Epoch [180/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111892.169568 Epoch [181/1000] - Test Accuracy: 90.86538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111907.630155 Epoch [182/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111923.199091 Epoch [183/1000] - Test Accuracy: 97.59615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111938.859225 Epoch [184/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111954.9344761 Epoch [185/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111970.443721 Epoch [186/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739111985.8575401 Epoch [187/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112001.2721379 Epoch [188/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112016.606997 Epoch [189/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112032.088097 Epoch [190/1000] - Test Accuracy: 98.07692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112047.774914 Epoch [191/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112063.454535 Epoch [192/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112079.754548 Epoch [193/1000] - Test Accuracy: 97.59615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112094.9923441 Epoch [194/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112110.5693839 Epoch [195/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112126.463829 Epoch [196/1000] - Test Accuracy: 98.55769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112142.471037 Epoch [197/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112157.341772 Epoch [198/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112172.496934 Epoch [199/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112188.0155761 Epoch [200/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112203.4343119 Epoch [201/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112219.734089 Epoch [202/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112235.8810399 Epoch [203/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112251.6565309 Epoch [204/1000] - Test Accuracy: 93.26923%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112267.0932748 Epoch [205/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112282.6178079 Epoch [206/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112297.794792 Epoch [207/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: ff8g | Actual: f8f8g
+ 1739112313.163445 Epoch [208/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112329.0927842 Epoch [209/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112344.1550221 Epoch [210/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112360.402698 Epoch [211/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112376.10911 Epoch [212/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112391.3591459 Epoch [213/1000] - Test Accuracy: 91.34615%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112407.8814652 Epoch [214/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112424.002857 Epoch [215/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112439.4195771 Epoch [216/1000] - Test Accuracy: 96.15385%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112454.462323 Epoch [217/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112469.869366 Epoch [218/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88f8g | Actual: f8f8g
+ 1739112485.8590798 Epoch [219/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112501.845168 Epoch [220/1000] - Test Accuracy: 98.07692%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112517.550215 Epoch [221/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112533.5548868 Epoch [222/1000] - Test Accuracy: 98.55769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112549.5676868 Epoch [223/1000] - Test Accuracy: 98.07692%
+Sample Predictions:
+  Prediction: gd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112565.119296 Epoch [224/1000] - Test Accuracy: 92.30769%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f88g | Actual: f8f8g
+ 1739112580.955201 Epoch [225/1000] - Test Accuracy: 91.34615%
+Sample Predictions:
+  Prediction: gd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112596.723517 Epoch [226/1000] - Test Accuracy: 90.86538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112612.140386 Epoch [227/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112628.266165 Epoch [228/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112645.323682 Epoch [229/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112661.4247098 Epoch [230/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112677.2005131 Epoch [231/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112692.864327 Epoch [232/1000] - Test Accuracy: 93.75000%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112708.756747 Epoch [233/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112724.0028028 Epoch [234/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112739.222954 Epoch [235/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112754.773003 Epoch [236/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112771.034113 Epoch [237/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112787.045061 Epoch [238/1000] - Test Accuracy: 95.67308%
+Sample Predictions:
+  Prediction: gggd7m | Actual: ggd7m
+  Prediction: f8fg | Actual: f8f8g
+ 1739112803.6206489 Epoch [239/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112819.4376872 Epoch [240/1000] - Test Accuracy: 97.11538%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112835.96275 Epoch [241/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112851.55678 Epoch [242/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112866.910628 Epoch [243/1000] - Test Accuracy: 94.23077%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112882.6182039 Epoch [244/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112899.239031 Epoch [245/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112914.772514 Epoch [246/1000] - Test Accuracy: 94.71154%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112930.387862 Epoch [247/1000] - Test Accuracy: 96.63462%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f8g | Actual: f8f8g
+ 1739112946.4108238 Epoch [248/1000] - Test Accuracy: 95.19231%
+Sample Predictions:
+  Prediction: ggd7m | Actual: ggd7m
+  Prediction: f8f88g | Actual: f8f8g

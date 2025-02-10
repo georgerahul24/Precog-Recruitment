@@ -3,11 +3,11 @@ from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
 # Configuration
-output_dir = "../train"
-font_path = "./Fonts/roboto.ttf"
+output_dir = "report1"
+font_path = "../Fonts/Roboto.ttf"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_class = 100
+num_samples_per_class = 1
 # words_list = "Rudra Choudhary Aditya Peketi Vardhan George Rahul Sri Rama Venkata Dinakar Venapati Aashrith Reddy Hrishikesh Milind Gawas Akshath Puneeth Gupta".split()
 words_list = []
 # Load additional words from the dictionary file

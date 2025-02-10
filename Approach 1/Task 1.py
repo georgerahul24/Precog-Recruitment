@@ -6,12 +6,12 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-output_dir = "../train"
-fonts_dir = "../Fonts"
+output_dir = "report1"
+fonts_dir = "Fonts"
 image_size = (256, 128)
 font_size = 32
-num_samples_per_word = 100  # Number of images per word
-num_required_fonts = 42
+num_samples_per_word = 1  # Number of images per word
+num_required_fonts = 1
 
 words_list = "Rudra Choudhary Aditya Peketi Vardhan George Rahul Sri Rama Venkata Dinakar Venapati Aashrith Reddy Hrishikesh Milind Gawas Akshath Puneeth Gupta".split()
 # Load words from dictionary file
